@@ -1,9 +1,5 @@
-function App() {
-    return (
-        <>
-            I Am the Walrus
-        </>
-    )
-}
+const App = () => {
+    return <>I Am the Walrus</>;
+};
 
-export default App
+export default App;
