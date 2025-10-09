@@ -3,6 +3,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --background-color-dark: #121212;
     --background-color-light: #fdfdfd;
