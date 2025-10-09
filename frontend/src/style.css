@@ -22,8 +22,18 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
+    --background-color-average-end: #f87171;
+    --background-color-average-start: #fca5a5;
     --background-color-dark: #121212;
+    --background-color-excellent-end: #10b981;
+    --background-color-excellent-start: #6ee7b7;
+    --background-color-good-end: #f59e0b;
+    --background-color-good-start: #fbbf24;
+    --background-color-great-end: #34d399;
+    --background-color-great-start: #a7f3d0;
     --background-color-light: #fdfdfd;
+    --background-color-poor-end: #ef4444;
+    --background-color-poor-start: #fee2e2;
     --color-dark: #e5e7eb;
     --color-light: #1f2937;
     --font-lora: "Lora", sans-serif;
