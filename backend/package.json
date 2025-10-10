@@ -20,6 +20,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "tsc": "tsc"
     },
+    "type": "module",
     "version": "1.0.0",
     "dependencies": {
         "dotenv": "^17.2.3",
