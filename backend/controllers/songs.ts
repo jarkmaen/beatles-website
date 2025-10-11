@@ -1,12 +1,15 @@
 import { Router } from "express";
 
-import { Song } from "../models/index.js";
+import { Song, SongRating } from "../models/index.js";
 
 const router = Router();
 
 router.get("/", async (_req, res) => {
     try {
-        const songs = await Song.findAll();
+        const songs = await Song.findAll({
+            include: [{ model: SongRating }]
+        });
+
         res.json(songs);
     } catch (error) {
         res.status(500).json({ error: "Server error" });
@@ -23,7 +26,9 @@ router.get("/random", async (_req, res) => {
         }
 
         const randomID = Math.floor(Math.random() * count) + 1;
-        const song = await Song.findByPk(randomID);
+        const song = await Song.findByPk(randomID, {
+            include: [{ model: SongRating }]
+        });
 
         res.json(song);
     } catch (error) {
