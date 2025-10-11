@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import { Song } from "../models/index.js";
 
 const router = Router();
@@ -29,3 +30,5 @@ router.get("/random", async (_req, res) => {
         res.status(500).json({ error: "Server error" });
     }
 });
+
+export default router;
