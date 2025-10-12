@@ -1,6 +1,12 @@
 import sgtPeppersLonelyHeartsClubBandImage from "../assets/images/sgt_peppers_lonely_hearts_club_band.jpg";
+import type { RootState } from "../store.ts";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+    const songs = useSelector((state: RootState) => state.songs.songs);
+
+    console.log(songs);
+
     return (
         <>
             <div className="flex flex-row gap-8 items-center justify-center">
