@@ -16,7 +16,7 @@ router.get("/", async (_req, res) => {
     }
 });
 
-router.get("/random", async (_req, res) => {
+router.get("/song-of-the-day", async (_req, res) => {
     try {
         const count = await Song.count();
 

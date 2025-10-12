@@ -4,16 +4,16 @@ import { sequelize } from "../utils/db.js";
 class SongRating extends Model {
     public id!: number;
     public song_id!: number;
-    public bassline: number | undefined;
-    public chord_progression: number | undefined;
-    public cultural_significance: number | undefined;
-    public full_instrumentation: number | undefined;
-    public lyrics: number | undefined;
-    public originality_innovation: number | undefined;
-    public percentage: number | undefined;
-    public percussion: number | undefined;
-    public solo: number | undefined;
-    public vocals: number | undefined;
+    public bassline?: number;
+    public chord_progression?: number;
+    public cultural_significance?: number;
+    public full_instrumentation?: number;
+    public lyrics?: number;
+    public originality_innovation?: number;
+    public percentage?: number;
+    public percussion?: number;
+    public solo?: number;
+    public vocals?: number;
 }
 
 SongRating.init(
@@ -27,8 +27,8 @@ SongRating.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "songs",
-                key: "id"
+                key: "id",
+                model: "songs"
             }
         },
         bassline: DataTypes.SMALLINT,
