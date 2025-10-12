@@ -1,4 +1,4 @@
-import songsReducer from "./reducers/songs.ts";
+import songsReducer from "./reducers/songs";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({

@@ -1,5 +1,5 @@
-import type { AppDispatch } from "../store.ts";
-import { getSongOfTheDay, getSongs } from "../reducers/songs.ts";
+import type { AppDispatch } from "../store";
+import { getSongOfTheDay, getSongs } from "../reducers/songs";
 import { useDispatch } from "react-redux";
 
 export const useInitialization = () => {

@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
-import useInitialization from "./hooks/useInitialization.ts";
+import useInitialization from "./hooks/useInitialization";
 import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 
