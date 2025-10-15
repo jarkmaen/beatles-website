@@ -4,7 +4,7 @@ export interface Song {
     commentary: string;
     commentary_landing?: string | null;
     rank: number;
-    song_rating?: SongRating[];
+    SongRatings?: SongRating[];
     title: string;
 }
 
