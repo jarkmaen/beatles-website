@@ -43,8 +43,37 @@ const Home = () => {
                     </h3>
                     <div className="space-y-3">
                         {songOfTheDay?.SongRatings?.length &&
-                            Object.entries(ratingCategory).map(
-                                ([key, { label, max }]) => (
+                            Object.entries(ratingCategory)
+                                .filter(
+                                    ([key]) =>
+                                        key !== "cultural_significance" &&
+                                        songOfTheDay.SongRatings![0][
+                                            key as keyof SongRating
+                                        ] !== null
+                                )
+                                .sort(
+                                    (
+                                        [keyA, { max: maxA }],
+                                        [keyB, { max: maxB }]
+                                    ) => {
+                                        const valueA =
+                                            songOfTheDay.SongRatings![0][
+                                                keyA as keyof SongRating
+                                            ] as number;
+                                        const valueB =
+                                            songOfTheDay.SongRatings![0][
+                                                keyB as keyof SongRating
+                                            ] as number;
+
+                                        const percentageA =
+                                            (valueA / maxA) * 100;
+                                        const percentageB =
+                                            (valueB / maxB) * 100;
+
+                                        return percentageB - percentageA;
+                                    }
+                                )
+                                .map(([key, { label, max }]) => (
                                     <RatingBar
                                         key={key}
                                         label={label}
@@ -55,8 +84,7 @@ const Home = () => {
                                             ] as number
                                         }
                                     />
-                                )
-                            )}
+                                ))}
                     </div>
                 </div>
                 <div className="dark:prose-invert max-w-none prose prose-lg">
