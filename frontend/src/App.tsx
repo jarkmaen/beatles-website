@@ -1,3 +1,4 @@
+import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import useInitialization from "./hooks/useInitialization";
@@ -17,6 +18,7 @@ const App = () => {
             <main className="py-12">
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/blogs" element={<BlogPost />} />
                 </Routes>
             </main>
         </div>
