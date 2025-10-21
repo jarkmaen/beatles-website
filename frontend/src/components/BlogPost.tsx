@@ -48,17 +48,20 @@ const BlogPost = () => {
                 </div>
             </div>
             <div className="space-y-8">
-                {songs.map((song, i) => (
-                    <div key={song.id}>
-                        <RankedSong
-                            bottom={i === songs.length - 1}
-                            commentary={song.commentary}
-                            rank={song.rank}
-                            title={song.title}
-                            top={i === 0}
-                        />
-                    </div>
-                ))}
+                {songs
+                    .slice()
+                    .sort((a, b) => b.rank - a.rank)
+                    .map((song, i) => (
+                        <div key={song.id}>
+                            <RankedSong
+                                bottom={i === songs.length - 1}
+                                commentary={song.commentary}
+                                rank={song.rank}
+                                title={song.title}
+                                top={i === 0}
+                            />
+                        </div>
+                    ))}
             </div>
         </div>
     );
