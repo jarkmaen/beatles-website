@@ -41,3 +41,23 @@
     --font-lora: "Lora", sans-serif;
     --font-montserrat: "Montserrat", sans-serif;
 }
+
+.has-tooltip:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip {
+    background-color: #333;
+    border-radius: 6px;
+    bottom: 125%;
+    color: #fff;
+    left: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    visibility: hidden;
+    width: max-content;
+    z-index: 10;
+}

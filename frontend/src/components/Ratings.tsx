@@ -12,6 +12,14 @@ const Ratings = () => {
                                         unfold_more
                                     </span>
                                 </button>
+                                <div className="flex has-tooltip items-center justify-center ml-1 relative">
+                                    <span className="cursor-pointer material-symbols-outlined text-base">
+                                        info
+                                    </span>
+                                    <div className="tooltip">
+                                        THE TITLE OF THE SONG
+                                    </div>
+                                </div>
                             </div>
                         </th>
                     </tr>
