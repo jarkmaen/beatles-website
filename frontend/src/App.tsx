@@ -1,6 +1,7 @@
 import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Ratings from "./components/Ratings";
 import useInitialization from "./hooks/useInitialization";
 import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
@@ -19,6 +20,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blogs" element={<BlogPost />} />
+                    <Route path="/ratings" element={<Ratings />} />
                 </Routes>
             </main>
         </div>
