@@ -6,14 +6,14 @@ const Ratings = () => {
                     <tr>
                         <th className="px-6 py-3" scope="col">
                             <div className="flex items-center">
-                                SONG
-                                <button className="ml-1">
-                                    <span className="material-symbols-outlined text-[16px]">
+                                <span>SONG</span>
+                                <button className="flex items-center justify-center ml-1 text-[16px]">
+                                    <span className="material-symbols-outlined">
                                         unfold_more
                                     </span>
                                 </button>
                                 <div className="flex has-tooltip items-center justify-center ml-1 relative">
-                                    <span className="cursor-pointer material-symbols-outlined text-base">
+                                    <span className="cursor-pointer material-symbols-outlined">
                                         info
                                     </span>
                                     <div className="tooltip">
