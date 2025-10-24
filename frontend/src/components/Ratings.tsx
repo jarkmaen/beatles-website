@@ -1,27 +1,23 @@
+import TableHeader from "./TableHeader";
+import type { RootState } from "../store";
+import { headerData } from "../constants/headerData";
+import { useSelector } from "react-redux";
+
 const Ratings = () => {
+    // const songs = useSelector((state: RootState) => state.songs.songs);
+
     return (
         <div className="flex-grow">
             <table className="dark:text-gray-300 min-w-full text-gray-600 text-left text-sm">
                 <thead className="bg-gray-50 dark:bg-gray-700/20 dark:text-gray-400 sticky text-gray-700 text-xs top-0 tracking-wider">
                     <tr>
-                        <th className="px-6 py-3" scope="col">
-                            <div className="flex items-center">
-                                <span>SONG</span>
-                                <button className="flex items-center justify-center ml-1 text-[16px]">
-                                    <span className="material-symbols-outlined">
-                                        unfold_more
-                                    </span>
-                                </button>
-                                <div className="flex has-tooltip items-center justify-center ml-1 relative">
-                                    <span className="cursor-pointer material-symbols-outlined">
-                                        info
-                                    </span>
-                                    <div className="tooltip">
-                                        THE TITLE OF THE SONG
-                                    </div>
-                                </div>
-                            </div>
-                        </th>
+                        {headerData.map((h) => (
+                            <TableHeader
+                                key={h.title}
+                                title={h.title}
+                                tooltip={h.tooltip}
+                            />
+                        ))}
                     </tr>
                 </thead>
             </table>
