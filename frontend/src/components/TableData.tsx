@@ -32,11 +32,11 @@ const TableData = ({ song }: Props) => {
 
     return (
         <>
-            <td className="dark:text-primary-dark font-bold px-6 py-4 text-light">
+            <td className="dark:text-primary-dark font-bold px-6 py-4 text-primary-light">
                 {song.rank}
             </td>
             <th
-                className="dark:text-primary-dark font-bold font-lora px-6 py-4 text-base text-light whitespace-nowrap"
+                className="dark:text-primary-dark font-bold font-lora px-6 py-4 text-base text-primary-light whitespace-nowrap"
                 scope="row"
             >
                 {song.title}

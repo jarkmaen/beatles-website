@@ -39,8 +39,12 @@
     --background-color-light: #fdfdfd;
 
     /* table cell backgrounds */
-    --background-color-table-dark: #1e1e1e;
-    --background-color-table-light: #ffffff;
+    --background-color-table-cell-dark: #1e1e1e;
+    --background-color-table-cell-light: #ffffff;
+
+    /* table header backgrounds */
+    --background-color-table-header-dark: #191b1f;
+    --background-color-table-header-light: #f9fafb;
 
     /* divider colors */
     --color-divider-dark: #323333;

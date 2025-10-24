@@ -8,9 +8,9 @@ const Ratings = () => {
     const songs = useSelector((state: RootState) => state.songs.songs);
 
     return (
-        <div className="flex-grow">
-            <table className="dark:text-secondary-dark min-w-full text-secondary-light text-left text-sm">
-                <thead className="bg-gray-50 dark:bg-gray-700/20 dark:text-muted-dark sticky text-secondary-light text-xs top-0 tracking-wider">
+        <div className="dark:text-muted-dark flex-grow text-secondary-light">
+            <table className="min-w-full text-left text-sm">
+                <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
                     <tr>
                         {headerData.map((h) => (
                             <TableHeader
@@ -24,7 +24,7 @@ const Ratings = () => {
                 <tbody className="divide-y">
                     {songs.map((song) => (
                         <tr
-                            className="border-light bg-table-light  dark:bg-table-dark dark:border-dark dark:hover:bg-gray-800/50 hover:bg-gray-50 transition-colors"
+                            className="bg-table-cell-light border-divider-light dark:bg-table-cell-dark dark:border-divider-dark dark:hover:bg-table-header-dark hover:bg-table-header-light transition-colors"
                             key={song.id}
                         >
                             <TableData song={song} />
