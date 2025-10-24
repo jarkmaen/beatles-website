@@ -8,8 +8,8 @@ const Ratings = () => {
     const songs = useSelector((state: RootState) => state.songs.songs);
 
     return (
-        <div className="dark:text-muted-dark flex-grow text-secondary-light">
-            <table className="min-w-full text-left text-sm">
+        <div className="dark:text-muted-dark flex text-secondary-light">
+            <table className="text-left text-sm">
                 <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
                     <tr>
                         {headerData.map((h) => (

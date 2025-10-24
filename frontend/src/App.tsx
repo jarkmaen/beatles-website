@@ -13,17 +13,24 @@ const App = () => {
         stateInitializer();
     }, []);
 
+    const containerClasses = "container mx-auto px-8";
+    const isRatingsPage = location.pathname === "/ratings";
+
     return (
-        <div className="container mx-auto px-8">
-            <Header />
-            <main className="py-12">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/blogs" element={<BlogPost />} />
-                    <Route path="/ratings" element={<Ratings />} />
-                </Routes>
-            </main>
-        </div>
+        <>
+            <div className={containerClasses}>
+                <Header />
+            </div>
+            <div className={isRatingsPage ? "" : containerClasses}>
+                <main className="py-12">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/blogs" element={<BlogPost />} />
+                        <Route path="/ratings" element={<Ratings />} />
+                    </Routes>
+                </main>
+            </div>
+        </>
     );
 };
 
