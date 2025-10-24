@@ -9,7 +9,7 @@ const ThemeToggle = () => {
 
     return (
         <button
-            className="dark:hover:text-dark dark:text-gray-300 flex hover:text-light items-center justify-center text-gray-700"
+            className="dark:hover:text-primary-dark dark:text-secondary-dark flex hover:text-primary-light items-center justify-center text-secondary-light"
             onClick={toggleTheme}
         >
             <span className="dark:!hidden material-symbols-outlined">

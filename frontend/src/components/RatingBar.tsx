@@ -24,7 +24,7 @@ const RatingBar = ({ label, max, value }: Props) => {
 
     return (
         <div className="relative">
-            <div className="dark:text-dark flex justify-between text-light">
+            <div className="dark:text-primary-dark flex justify-between text-primary-light">
                 <span>{label}</span>
                 <span className="font-bold">{percentage}%</span>
             </div>

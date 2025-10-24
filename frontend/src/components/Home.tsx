@@ -15,8 +15,6 @@ const Home = () => {
             ? albumCoverMap[songOfTheDay.album]
             : albumCoverMap["Single"];
 
-    console.log(songOfTheDay);
-
     return (
         <>
             <div className="flex flex-row gap-8 items-center justify-center">
@@ -25,20 +23,20 @@ const Home = () => {
                     src={albumCover}
                 />
                 <div>
-                    <h2 className="dark:text-gray-400 font-body mb-2 text-gray-500 text-xl tracking-widest">
+                    <h2 className="dark:text-muted-dark font-body mb-2 text-muted-light text-xl tracking-widest">
                         BEATLES SONG OF THE DAY
                     </h2>
-                    <h1 className="dark:text-dark font-bold font-lora text-6xl text-light">
+                    <h1 className="dark:text-primary-dark font-bold font-lora text-6xl text-primary-light">
                         {songOfTheDay?.title}
                     </h1>
-                    <p className="dark:text-gray-300 font-body text-2xl text-gray-600">
+                    <p className="dark:text-secondary-dark font-body text-2xl text-secondary-light">
                         {songOfTheDay?.album}
                     </p>
                 </div>
             </div>
             <div className="gap-12 grid grid-cols-2 max-w-4xl mt-16 mx-auto">
                 <div className="space-y-4">
-                    <h3 className="dark:text-dark font-bold font-lora text-2xl text-light">
+                    <h3 className="dark:text-primary-dark font-bold font-lora text-2xl text-primary-light">
                         Rating Breakdown
                     </h3>
                     <div className="space-y-3">
@@ -88,20 +86,20 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="dark:prose-invert max-w-none prose prose-lg">
-                    <h3 className="dark:text-dark font-bold font-lora text-2xl text-light">
+                    <h3 className="font-bold font-lora text-2xl">
                         Commentary
                     </h3>
                     <p>{songOfTheDay?.commentary}</p>
                 </div>
             </div>
             <div className="mt-16 text-center">
-                <p className="dark:text-gray-400 text-gray-500">
+                <p className="dark:text-muted-dark text-muted-light">
                     Overall Score
                 </p>
-                <p className="dark:text-dark font-bold font-display text-6xl text-light">
+                <p className="font-bold font-display text-6xl">
                     {songOfTheDay?.SongRatings?.[0].percentage}%
                 </p>
-                <p className="dark:text-gray-300 mt-2 text-gray-600 text-lg">
+                <p className="dark:text-secondary-dark mt-2 text-lg text-secondary-light">
                     Rank #{songOfTheDay?.rank}
                 </p>
             </div>

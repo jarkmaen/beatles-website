@@ -8,17 +8,17 @@ const BlogPost = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <div className="mb-12">
-                <h1 className="dark:text-dark font-bold font-lora text-6xl text-center text-light">
+                <h1 className="dark:text-primary-dark font-bold font-lora text-6xl text-center text-primary-light">
                     The Beatles: Ranked
                 </h1>
-                <div className="dark:text-gray-400 flex items-center justify-center mb-8 mt-8 space-x-4 text-gray-500 text-sm">
+                <div className="dark:text-muted-dark flex items-center justify-center mb-8 mt-8 space-x-4 text-muted-light text-sm">
                     <span>October 21, 2025</span>
-                    <span className="dark:text-gray-500 select-none text-gray-400">
+                    <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
-                    <span>Author</span>
+                    <span>By Jonas van Maldeghem</span>
                 </div>
-                <div className="dark:text-gray-300 max-w-none mx-auto prose text-gray-600">
+                <div className="dark:prose-invert max-w-none prose prose-lg">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore

@@ -42,13 +42,19 @@
     --background-color-table-dark: #1e1e1e;
     --background-color-table-light: #ffffff;
 
-    /* border colors */
-    --border-dark: #323333;
-    --border-light: #e8e9eb;
+    /* divider colors */
+    --color-divider-dark: #323333;
+    --color-divider-light: #e8e9eb;
 
     /* text colors */
-    --color-dark: #e5e7eb;
-    --color-light: #1f2937;
+    --color-muted-dark: #99a1af;
+    --color-muted-light: #6a7282;
+    --color-primary-dark: #e5e7eb;
+    --color-primary-light: #1f2937;
+    --color-secondary-dark: #d1d5db;
+    --color-secondary-light: #4b5563;
+    --color-subtle-accent-dark: #6a7282;
+    --color-subtle-accent-light: #99a1af;
 
     /* typography variables */
     --font-lora: "Lora", sans-serif;

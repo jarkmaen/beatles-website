@@ -14,28 +14,28 @@ const RankedSong = ({
     top = false
 }: Props) => {
     const wrapper = top
-        ? "border-light/10 border-t dark:border-dark/10 pt-8"
+        ? "border-divider-light border-t dark:border-divider-dark pt-8"
         : "";
 
     return (
         <>
             <div className={wrapper}>
                 <div className="flex gap-6 items-start">
-                    <div className="dark:text-gray-500 flex-shrink-0 font-bold font-lora text-4xl text-gray-400 text-right w-24">
+                    <div className="dark:text-subtle-accent-dark flex-shrink-0 font-bold font-lora text-4xl text-subtle-accent-light text-right w-24">
                         #{rank}
                     </div>
                     <div className="flex-grow">
-                        <h2 className="dark:text-dark font-bold font-lora text-3xl text-light">
+                        <h2 className="dark:text-primary-dark font-bold font-lora text-3xl text-primary-light">
                             {title}
                         </h2>
-                        <div className="dark:text-gray-300 max-w-none mt-2 prose text-gray-600">
+                        <div className="dark:prose-invert max-w-none mt-2 prose prose-lg">
                             <p>{commentary}</p>
                         </div>
                     </div>
                 </div>
             </div>
             {!bottom && (
-                <hr className="border-light/10 dark:border-dark/10 my-8" />
+                <hr className="border-divider-light dark:border-divider-dark my-8" />
             )}
         </>
     );
