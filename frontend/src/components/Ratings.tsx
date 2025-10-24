@@ -1,10 +1,11 @@
+import TableData from "./TableData";
 import TableHeader from "./TableHeader";
 import type { RootState } from "../store";
 import { headerData } from "../constants/headerData";
 import { useSelector } from "react-redux";
 
 const Ratings = () => {
-    // const songs = useSelector((state: RootState) => state.songs.songs);
+    const songs = useSelector((state: RootState) => state.songs.songs);
 
     return (
         <div className="flex-grow">
@@ -20,6 +21,16 @@ const Ratings = () => {
                         ))}
                     </tr>
                 </thead>
+                <tbody className="divide-y">
+                    {songs.map((song) => (
+                        <tr
+                            className="border-light bg-table-light  dark:bg-table-dark dark:border-dark dark:hover:bg-gray-800/50 hover:bg-gray-50 transition-colors"
+                            key={song.id}
+                        >
+                            <TableData song={song} />
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         </div>
     );
