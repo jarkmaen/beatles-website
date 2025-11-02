@@ -9,9 +9,9 @@ A full stack web application for sharing a systematic ranking of every Beatles s
 ## Tech stack
 
 - **Frontend:** React, Redux, Tailwind
-- **Backend:** Node.js, Express
+- **Backend:** Node.js, Express, REST API
 - **Database:** PostgreSQL
-- **Other:** TypeScript, REST API, AWS
+- **Other:** TypeScript, AWS
 
 ## Screenshots
 
