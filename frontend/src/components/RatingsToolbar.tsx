@@ -1,6 +1,15 @@
 import { albums } from "../constants/albums";
 
-const RatingsToolbar = () => {
+type Props = {
+    search: string;
+    setSearch: React.Dispatch<React.SetStateAction<string>>;
+};
+
+const RatingsToolbar = ({ search, setSearch }: Props) => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearch(event.target.value);
+    };
+
     return (
         <div className="border-divider-light border-t dark:border-divider-dark ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] w-screen">
             <div className="container mx-auto px-8 py-6">
@@ -8,8 +17,10 @@ const RatingsToolbar = () => {
                     <div className="flex-grow relative">
                         <input
                             className="bg-table-cell-light border border-divider-light dark:bg-table-cell-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-10 pr-4 py-2 rounded-md w-full"
+                            onChange={handleChange}
                             placeholder="Search by song title..."
                             type="text"
+                            value={search}
                         />
                         <div className="absolute flex inset-y-0 items-center left-0 pl-3 pointer-events-none">
                             <span className="material-symbols-outlined text-muted-dark">
