@@ -2,12 +2,21 @@ import { albums } from "../constants/albums";
 
 type Props = {
     album: string;
+    hideNaked: boolean;
     search: string;
     setAlbum: React.Dispatch<React.SetStateAction<string>>;
+    setHideNaked: React.Dispatch<React.SetStateAction<boolean>>;
     setSearch: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const RatingsToolbar = ({ album, search, setAlbum, setSearch }: Props) => {
+const RatingsToolbar = ({
+    album,
+    hideNaked,
+    search,
+    setAlbum,
+    setHideNaked,
+    setSearch
+}: Props) => {
     return (
         <div className="border-divider-light border-t dark:border-divider-dark ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] w-screen">
             <div className="container mx-auto px-8 py-6">
@@ -46,7 +55,11 @@ const RatingsToolbar = ({ album, search, setAlbum, setSearch }: Props) => {
                         </div>
                     </div>
                     <div className="flex items-center">
-                        <input type="checkbox" />
+                        <input
+                            checked={hideNaked}
+                            onChange={(e) => setHideNaked(e.target.checked)}
+                            type="checkbox"
+                        />
                         <label className="ml-2 block text-sm text-primary-light dark:text-primary-dark">
                             Hide "Naked" album
                         </label>
