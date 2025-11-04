@@ -7,18 +7,26 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 const Ratings = () => {
+    const [album, setAlbum] = useState("");
     const [search, setSearch] = useState("");
     const songs = useSelector((state: RootState) => state.songs.songs);
 
-    const filteredSongs = songs.filter(
-        (song) =>
-            search === "" ||
-            song.title.toLowerCase().includes(search.toLowerCase())
-    );
+    const filteredSongs = songs.filter((song) => {
+        const matchesAlbum = album === "" || song.album === album;
+        const matchesSearch = song.title
+            .toLowerCase()
+            .includes(search.toLowerCase());
+        return matchesSearch && matchesAlbum;
+    });
 
     return (
         <>
-            <RatingsToolbar search={search} setSearch={setSearch} />
+            <RatingsToolbar
+                album={album}
+                search={search}
+                setAlbum={setAlbum}
+                setSearch={setSearch}
+            />
             <div className="dark:text-muted-dark flex text-secondary-light">
                 <table className="text-left text-sm">
                     <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">

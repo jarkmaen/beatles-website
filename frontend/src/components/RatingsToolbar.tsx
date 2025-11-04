@@ -1,15 +1,13 @@
 import { albums } from "../constants/albums";
 
 type Props = {
+    album: string;
     search: string;
+    setAlbum: React.Dispatch<React.SetStateAction<string>>;
     setSearch: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const RatingsToolbar = ({ search, setSearch }: Props) => {
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearch(event.target.value);
-    };
-
+const RatingsToolbar = ({ album, search, setAlbum, setSearch }: Props) => {
     return (
         <div className="border-divider-light border-t dark:border-divider-dark ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] w-screen">
             <div className="container mx-auto px-8 py-6">
@@ -17,7 +15,7 @@ const RatingsToolbar = ({ search, setSearch }: Props) => {
                     <div className="flex-grow relative">
                         <input
                             className="bg-table-cell-light border border-divider-light dark:bg-table-cell-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-10 pr-4 py-2 rounded-md w-full"
-                            onChange={handleChange}
+                            onChange={(e) => setSearch(e.target.value)}
                             placeholder="Search by song title..."
                             type="text"
                             value={search}
@@ -29,11 +27,15 @@ const RatingsToolbar = ({ search, setSearch }: Props) => {
                         </div>
                     </div>
                     <div className="relative">
-                        <select className="appearance-none bg-table-cell-light border border-divider-light dark:bg-table-cell-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-3 pr-10 py-2 rounded-md w-full">
+                        <select
+                            className="appearance-none bg-table-cell-light border border-divider-light dark:bg-table-cell-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-3 pr-10 py-2 rounded-md w-full"
+                            onChange={(e) => setAlbum(e.target.value)}
+                            value={album}
+                        >
                             <option value="">All songs</option>
                             {albums.map((album) => (
-                                <option key={album} value={album}>
-                                    {album}
+                                <option key={album.value} value={album.value}>
+                                    {album.label}
                                 </option>
                             ))}
                         </select>
