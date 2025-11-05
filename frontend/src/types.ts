@@ -27,3 +27,5 @@ export interface SongsState {
     songOfTheDay: Song | null;
     songs: Song[];
 }
+
+export type SortDirection = "asc" | "desc" | null;
