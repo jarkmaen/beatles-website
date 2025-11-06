@@ -1,5 +1,5 @@
 import ThemeToggle from "./ThemeToggle";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -12,11 +12,25 @@ const Header = () => {
             </Link>
             <div className="flex space-x-6">
                 <div className="flex font-montserrat items-center space-x-6 text-sm tracking-widest">
-                    <Link to="/blogs">BLOG</Link>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? "font-bold" : undefined
+                        }
+                        to="/blogs"
+                    >
+                        BLOG
+                    </NavLink>
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
-                    <Link to="/ratings">RATINGS</Link>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? "font-bold" : undefined
+                        }
+                        to="/ratings"
+                    >
+                        RATINGS
+                    </NavLink>
                 </div>
                 <ThemeToggle />
             </div>
