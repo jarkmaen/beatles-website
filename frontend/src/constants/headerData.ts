@@ -27,7 +27,7 @@ export const headerData: HeaderDef[] = [
     },
     {
         sortKey: "originality_innovation",
-        title: "ORIGINALITY / INNOVATION",
+        title: "ORIGINALITY/INNOVATION",
         tooltip:
             "0-2: NOT PARTICULARLY INNOVATIVE\n3-4: HAS AN ORIGINAL ELEMENT\n5-6: NOTICABLY ORIGINAL\n7-8: GROUNDBREAKING"
     },
@@ -57,5 +57,9 @@ export const headerData: HeaderDef[] = [
         title: "CULTURAL SIGNIFICANCE",
         tooltip: "0: NO SPECIAL SIGNIFICANCE\n1: A SPECIAL SIGNIFICANCE"
     },
-    { sortKey: null, title: "TOTAL POINTS", tooltip: "" }
+    {
+        sortKey: null,
+        title: "TOTAL POINTS",
+        tooltip: "SUMMED POINTS / MAX POTENTIAL POINTS\n(ONLY RATED CATEGORIES)"
+    }
 ];
