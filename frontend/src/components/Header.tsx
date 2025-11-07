@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="flex font-montserrat items-center space-x-6 text-sm tracking-widest">
                     <NavLink
                         className={({ isActive }) =>
-                            isActive ? "font-bold" : undefined
+                            isActive ? "underline" : undefined
                         }
                         to="/blogs"
                     >
@@ -25,7 +25,7 @@ const Header = () => {
                     </span>
                     <NavLink
                         className={({ isActive }) =>
-                            isActive ? "font-bold" : undefined
+                            isActive ? "underline" : undefined
                         }
                         to="/ratings"
                     >
