@@ -89,7 +89,7 @@ const Ratings = () => {
                 setSearch={setSearch}
             />
             <div className="dark:text-muted-dark flex text-secondary-light">
-                <table className="text-left text-sm">
+                <table className="table-fixed text-left text-sm">
                     <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
                         <tr>
                             {headerData.map((h) => (

@@ -27,9 +27,14 @@ const TableHeader = ({
         ? "arrow_downward"
         : "unfold_more";
 
+    const thClass =
+        columnSortKey === "title"
+            ? "flex items-center w-[230px]"
+            : "flex items-center";
+
     return (
         <th className="px-6 py-3" scope="col">
-            <div className="flex items-center">
+            <div className={thClass}>
                 <span>{title}</span>
                 {columnSortKey && (
                     <button

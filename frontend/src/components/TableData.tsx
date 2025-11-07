@@ -36,7 +36,7 @@ const TableData = ({ song }: Props) => {
                 {song.rank}
             </td>
             <th
-                className="dark:text-primary-dark font-bold font-lora px-6 py-4 text-base text-primary-light whitespace-nowrap"
+                className="dark:text-primary-dark font-bold font-lora px-6 py-4 text-base text-primary-light"
                 scope="row"
             >
                 {song.title}
