@@ -41,7 +41,7 @@ const RatingsToolbar = ({
                             onChange={(e) => setAlbum(e.target.value)}
                             value={album}
                         >
-                            <option value="">All songs</option>
+                            <option value="">All albums and singles</option>
                             {albums.map((album) => (
                                 <option key={album.value} value={album.value}>
                                     {album.label}
