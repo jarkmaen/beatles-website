@@ -50,7 +50,15 @@ const TableHeader = ({
                     <span className="!text-[20px] cursor-pointer material-symbols-outlined">
                         info
                     </span>
-                    <div className="tooltip whitespace-pre-line">{tooltip}</div>
+                    {columnSortKey === null ? (
+                        <div className="tooltip-left whitespace-pre-line">
+                            {tooltip}
+                        </div>
+                    ) : (
+                        <div className="tooltip-top whitespace-pre-line">
+                            {tooltip}
+                        </div>
+                    )}
                 </div>
             </div>
         </th>

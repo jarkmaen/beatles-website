@@ -65,12 +65,29 @@
     --font-montserrat: "Montserrat", sans-serif;
 }
 
-.has-tooltip:hover .tooltip {
+.has-tooltip:hover .tooltip-left,
+.has-tooltip:hover .tooltip-top {
     opacity: 1;
     visibility: visible;
 }
 
-.tooltip {
+.tooltip-left {
+    background-color: #333;
+    border-radius: 6px;
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: calc(100% + 0.5rem);
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+    visibility: hidden;
+    width: max-content;
+    z-index: 10;
+}
+
+.tooltip-top {
     background-color: #333;
     border-radius: 6px;
     bottom: 125%;
