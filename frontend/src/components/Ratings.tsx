@@ -88,7 +88,7 @@ const Ratings = () => {
                 setHideNaked={setHideNaked}
                 setSearch={setSearch}
             />
-            <div className="dark:text-muted-dark flex overflow-x-auto text-secondary-light">
+            <div className="dark:text-muted-dark overflow-auto text-secondary-light">
                 <table className="table-fixed text-left text-sm">
                     <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
                         <tr>

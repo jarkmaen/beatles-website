@@ -16,24 +16,25 @@ const App = () => {
 
     const isRatingsPage = location.pathname === "/ratings";
 
-    const containerClasses = "container mx-auto px-8";
-    const mainClasses = isRatingsPage ? "" : "py-12";
+    const contentWrapperClasses = isRatingsPage ? "container mx-auto px-8" : "";
+    const mainClasses = isRatingsPage ? "flex flex-col min-h-0" : "py-12";
+    const outerClasses = isRatingsPage
+        ? "flex flex-col h-screen"
+        : "container mx-auto px-8";
 
     return (
-        <>
-            <div className={containerClasses}>
+        <div className={outerClasses}>
+            <div className={contentWrapperClasses}>
                 <Header />
             </div>
-            <div className={isRatingsPage ? "" : containerClasses}>
-                <main className={mainClasses}>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/blogs" element={<BlogPost />} />
-                        <Route path="/ratings" element={<Ratings />} />
-                    </Routes>
-                </main>
-            </div>
-        </>
+            <main className={mainClasses}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/blogs" element={<BlogPost />} />
+                    <Route path="/ratings" element={<Ratings />} />
+                </Routes>
+            </main>
+        </div>
     );
 };
 
