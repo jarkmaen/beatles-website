@@ -1,3 +1,4 @@
+import About from "./components/About";
 import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -30,6 +31,7 @@ const App = () => {
             <main className={mainClasses}>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/blogs" element={<BlogPost />} />
                     <Route path="/ratings" element={<Ratings />} />
                 </Routes>

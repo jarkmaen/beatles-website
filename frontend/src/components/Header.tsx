@@ -31,6 +31,17 @@ const Header = () => {
                     >
                         RATINGS
                     </NavLink>
+                    <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
+                        |
+                    </span>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? "underline" : undefined
+                        }
+                        to="/about"
+                    >
+                        ABOUT
+                    </NavLink>
                 </div>
                 <ThemeToggle />
             </div>
