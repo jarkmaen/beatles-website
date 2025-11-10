@@ -1,3 +1,12 @@
+CREATE TABLE contact_messages (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    message TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE song_ratings (
     id SERIAL PRIMARY KEY,
     song_id INT REFERENCES songs(id),
