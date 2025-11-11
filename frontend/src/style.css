@@ -46,6 +46,11 @@
     --background-color-table-header-dark: #191b1f;
     --background-color-table-header-light: #f9fafb;
 
+    /* border colors */
+    --color-border-dark: #2d2d2d;
+    --color-border-focus: #60a5fa;
+    --color-border-light: #e5e7eb;
+
     /* divider colors */
     --color-divider-dark: #323333;
     --color-divider-light: #e8e9eb;

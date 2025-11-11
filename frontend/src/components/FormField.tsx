@@ -15,6 +15,9 @@ const FormField = ({
     textarea,
     type
 }: Props) => {
+    const baseClasses =
+        "bg-table-cell-light block border-0 dark:bg-table-cell-dark dark:inset-ring-border-dark dark:text-primary-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none px-3 py-2 rounded-md shadow-xs text-primary-light w-full";
+
     return (
         <div>
             <label className="block dark:text-secondary-dark text-secondary-light text-sm">
@@ -23,14 +26,14 @@ const FormField = ({
             <div className="mt-2">
                 {textarea ? (
                     <textarea
-                        className="bg-table-cell-light block border-0 dark:bg-table-cell-dark dark:text-primary-dark px-3 py-2 rounded-md shadow-sm text-primary-light w-full"
+                        className={baseClasses}
                         maxLength={maxLength}
                         required={required}
                         rows={rows}
                     />
                 ) : (
                     <input
-                        className="bg-table-cell-light block border-0 dark:bg-table-cell-dark dark:text-primary-dark px-3 py-2 rounded-md shadow-sm text-primary-light w-full"
+                        className={baseClasses}
                         maxLength={maxLength}
                         required={required}
                         type={type}

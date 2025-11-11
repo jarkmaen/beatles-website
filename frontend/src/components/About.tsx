@@ -38,7 +38,7 @@ const About = () => {
                 Get in Touch
             </h2>
             <form className="space-y-6">
-                <div className="gap-x-6 gap-y-6 grid grid-cols-1">
+                <div className="gap-x-6 gap-y-6 grid grid-cols-2">
                     <FormField label="First Name" maxLength={100} type="text" />
                     <FormField label="Last Name" maxLength={100} type="text" />
                 </div>
@@ -57,7 +57,7 @@ const About = () => {
                 />
                 <div className="pt-4">
                     <button
-                        className="bg-primary-light dark:bg-primary-dark flex font-semibold justify-center px-6 py-3 rounded-md shadow-sm text-sm w-full"
+                        className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-primary-light flex font-bold hover:bg-opacity-50 hover:bg-primary-light/90 hover:cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-primary-dark text-sm transition-colors w-auto"
                         type="submit"
                     >
                         Submit
