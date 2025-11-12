@@ -108,7 +108,7 @@ const Ratings = () => {
                     <tbody className="divide-y">
                         {sortedSongs.map((song) => (
                             <tr
-                                className="bg-table-cell-light border-divider-light dark:bg-table-cell-dark dark:border-divider-dark dark:hover:bg-table-header-dark hover:bg-table-header-light transition-colors"
+                                className="bg-surface-light border-divider-light dark:bg-surface-dark dark:border-divider-dark dark:hover:bg-table-header-dark hover:bg-table-header-light transition-colors"
                                 key={song.id}
                             >
                                 <TableData song={song} />

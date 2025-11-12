@@ -38,9 +38,9 @@
     --background-color-dark: #121212;
     --background-color-light: #fdfdfd;
 
-    /* table cell backgrounds */
-    --background-color-table-cell-dark: #1e1e1e;
-    --background-color-table-cell-light: #ffffff;
+    /* component backgrounds */
+    --background-color-surface-dark: #1e1e1e;
+    --background-color-surface-light: #ffffff;
 
     /* table header backgrounds */
     --background-color-table-header-dark: #191b1f;

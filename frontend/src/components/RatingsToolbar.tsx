@@ -23,7 +23,7 @@ const RatingsToolbar = ({
                 <div className="flex gap-4">
                     <div className="flex-grow relative">
                         <input
-                            className="bg-table-cell-light border border-divider-light dark:bg-table-cell-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-10 pr-4 py-2 rounded-md w-full"
+                            className="bg-surface-light border border-divider-light dark:bg-surface-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-10 pr-4 py-2 rounded-md w-full"
                             onChange={(e) => setSearch(e.target.value)}
                             placeholder="Search by song title..."
                             type="text"
@@ -37,7 +37,7 @@ const RatingsToolbar = ({
                     </div>
                     <div className="relative">
                         <select
-                            className="appearance-none bg-table-cell-light border border-divider-light dark:bg-table-cell-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-3 pr-10 py-2 rounded-md w-full"
+                            className="appearance-none bg-surface-light border border-divider-light dark:bg-surface-dark dark:border-divider-dark focus:ring-2 focus:ring-blue-500 outline-none pl-3 pr-10 py-2 rounded-md w-full"
                             onChange={(e) => setAlbum(e.target.value)}
                             value={album}
                         >

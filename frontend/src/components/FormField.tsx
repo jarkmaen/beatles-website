@@ -16,7 +16,7 @@ const FormField = ({
     type
 }: Props) => {
     const baseClasses =
-        "bg-table-cell-light block border-0 dark:bg-table-cell-dark dark:inset-ring-border-dark dark:text-primary-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none px-3 py-2 rounded-md shadow-xs text-primary-light w-full";
+        "bg-surface-light block border-0 dark:bg-surface-dark dark:inset-ring-border-dark dark:text-primary-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none px-3 py-2 rounded-md shadow-xs text-primary-light w-full";
 
     return (
         <div>
