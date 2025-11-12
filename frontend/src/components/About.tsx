@@ -55,14 +55,12 @@ const About = () => {
                     rows={4}
                     textarea
                 />
-                <div className="pt-4">
-                    <button
-                        className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-primary-light flex font-bold hover:bg-opacity-50 hover:bg-primary-light/90 hover:cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-primary-dark text-sm transition-colors w-auto"
-                        type="submit"
-                    >
-                        Submit
-                    </button>
-                </div>
+                <button
+                    className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black flex font-bold hover:bg-primary-light/90 hover:cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-white text-sm transition-colors"
+                    type="submit"
+                >
+                    Submit
+                </button>
             </form>
         </div>
     );
