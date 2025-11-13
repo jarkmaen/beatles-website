@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/messages
+Content-Type: application/json
+
+{
+    "email": "john@doe.com",
+    "first_name": "John",
+    "last_name": "Doe",
+    "message": "Hello, World!"
+}
