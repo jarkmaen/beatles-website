@@ -1,6 +1,33 @@
+import * as messagesService from "../services/messages";
 import FormField from "./FormField";
+import { useState } from "react";
 
 const About = () => {
+    const [email, setEmail] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+
+        try {
+            await messagesService.send({
+                email,
+                first_name: firstName || undefined,
+                last_name: lastName || undefined,
+                message
+            });
+
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setMessage("");
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     return (
         <div className="max-w-4xl mx-auto">
             <h1 className="dark:text-primary-dark font-bold font-lora mb-8 text-6xl text-center text-primary-light">
@@ -37,23 +64,39 @@ const About = () => {
             <h2 className="dark:text-primary-dark font-bold font-lora mb-8 text-4xl text-center text-primary-light">
                 Get in Touch
             </h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="gap-x-6 gap-y-6 grid grid-cols-2">
-                    <FormField label="First Name" maxLength={100} type="text" />
-                    <FormField label="Last Name" maxLength={100} type="text" />
+                    <FormField
+                        label="First Name"
+                        maxLength={100}
+                        setValue={setFirstName}
+                        type="text"
+                        value={firstName}
+                    />
+                    <FormField
+                        label="Last Name"
+                        maxLength={100}
+                        type="text"
+                        value={lastName}
+                        setValue={setLastName}
+                    />
                 </div>
                 <FormField
                     label="Email Address"
                     maxLength={255}
                     required
+                    setValue={setEmail}
                     type="email"
+                    value={email}
                 />
                 <FormField
                     label="Message"
                     maxLength={3500}
                     required
                     rows={4}
+                    setValue={setMessage}
                     textarea
+                    value={message}
                 />
                 <button
                     className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black flex font-bold hover:bg-primary-light/90 hover:cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-white text-sm transition-colors"

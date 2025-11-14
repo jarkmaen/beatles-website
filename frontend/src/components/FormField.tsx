@@ -3,8 +3,10 @@ type Props = {
     maxLength?: number;
     required?: boolean;
     rows?: number;
+    setValue: React.Dispatch<React.SetStateAction<string>>;
     textarea?: boolean;
     type?: string;
+    value: string;
 };
 
 const FormField = ({
@@ -12,8 +14,10 @@ const FormField = ({
     maxLength,
     required,
     rows,
+    setValue,
     textarea,
-    type
+    type,
+    value
 }: Props) => {
     const baseClasses =
         "bg-surface-light block border-0 dark:bg-surface-dark dark:inset-ring-border-dark dark:text-primary-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none px-3 py-2 rounded-md shadow-xs text-primary-light w-full";
@@ -28,15 +32,19 @@ const FormField = ({
                     <textarea
                         className={baseClasses}
                         maxLength={maxLength}
+                        onChange={(e) => setValue(e.target.value)}
                         required={required}
                         rows={rows}
+                        value={value}
                     />
                 ) : (
                     <input
                         className={baseClasses}
                         maxLength={maxLength}
+                        onChange={(e) => setValue(e.target.value)}
                         required={required}
                         type={type}
+                        value={value}
                     />
                 )}
             </div>
