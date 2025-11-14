@@ -1,3 +1,10 @@
+export interface Message {
+    email: string;
+    first_name?: string | null;
+    last_name?: string | null;
+    message: string;
+}
+
 export interface Song {
     id: number;
     album: string;
