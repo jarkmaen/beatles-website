@@ -1,4 +1,5 @@
 import * as messagesService from "../services/messages";
+import Alert from "./Alert";
 import FormField from "./FormField";
 import { useState } from "react";
 
@@ -8,8 +9,14 @@ const About = () => {
     const [lastName, setLastName] = useState("");
     const [message, setMessage] = useState("");
 
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
+
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+
+        setError(false);
+        setSuccess(false);
 
         try {
             await messagesService.send({
@@ -23,8 +30,9 @@ const About = () => {
             setLastName("");
             setEmail("");
             setMessage("");
+            setSuccess(true);
         } catch (error) {
-            console.log(error);
+            setError(true);
         }
     };
 
@@ -98,6 +106,20 @@ const About = () => {
                     textarea
                     value={message}
                 />
+                {error && (
+                    <Alert
+                        message="Something went wrong. Please try again later."
+                        title="Error"
+                        variant="error"
+                    />
+                )}
+                {success && (
+                    <Alert
+                        message="Thank you! Your message has been sent."
+                        title="Success!"
+                        variant="success"
+                    />
+                )}
                 <button
                     className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black flex font-bold hover:bg-primary-light/90 hover:cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-white text-sm transition-colors"
                     type="submit"
