@@ -109,19 +109,19 @@ const About = () => {
                 {error && (
                     <Alert
                         message="Something went wrong. Please try again later."
-                        title="Error"
+                        onClose={() => setError(false)}
                         variant="error"
                     />
                 )}
                 {success && (
                     <Alert
                         message="Thank you! Your message has been sent."
-                        title="Success!"
+                        onClose={() => setSuccess(false)}
                         variant="success"
                     />
                 )}
                 <button
-                    className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black flex font-bold hover:bg-primary-light/90 hover:cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-white text-sm transition-colors"
+                    className="bg-primary-light dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black flex font-bold hover:bg-primary-light/90 cursor-pointer justify-center px-6 py-3 rounded-md shadow-sm text-white text-sm transition-colors"
                     type="submit"
                 >
                     Submit
