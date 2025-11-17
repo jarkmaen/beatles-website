@@ -29,7 +29,12 @@ const RankedSong = ({
                             {title}
                         </h2>
                         <div className="dark:prose-invert max-w-none mt-2 prose prose-lg">
-                            <p>{commentary}</p>
+                            {commentary
+                                .replace(/\\n\\n/g, "\n\n")
+                                .split("\n\n")
+                                .map((paragraph, i) => (
+                                    <p key={i}>{paragraph}</p>
+                                ))}
                         </div>
                     </div>
                 </div>
