@@ -86,10 +86,13 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="dark:prose-invert max-w-none prose prose-lg">
-                    <h3 className="font-bold font-lora text-2xl">
-                        Commentary
-                    </h3>
-                    <p>{songOfTheDay?.commentary}</p>
+                    <h3 className="font-bold font-lora text-2xl">Commentary</h3>
+                    {songOfTheDay?.commentary
+                        .replace(/\\n\\n/g, "\n\n")
+                        .split("\n\n")
+                        .map((paragraph, i) => (
+                            <p key={i}>{paragraph}</p>
+                        ))}
                 </div>
             </div>
             <div className="mt-16 text-center">
