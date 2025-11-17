@@ -140,7 +140,7 @@ const About = () => {
                                 cx="12"
                                 cy="12"
                                 r="10"
-                                stroke-width="4"
+                                strokeWidth="4"
                                 stroke="currentColor"
                             ></circle>
                             <path
