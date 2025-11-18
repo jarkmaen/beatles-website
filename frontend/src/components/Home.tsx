@@ -1,3 +1,4 @@
+import CoverImage from "./CoverImage";
 import RatingBar from "./RatingBar";
 import type { RootState } from "../store";
 import type { SongRating } from "../types";
@@ -18,10 +19,7 @@ const Home = () => {
     return (
         <>
             <div className="flex flex-row gap-8 items-center justify-center">
-                <img
-                    className="h-56 object-cover rounded-lg shadow-2xl w-56"
-                    src={albumCover}
-                />
+                <CoverImage src={albumCover} />
                 <div>
                     <h2 className="dark:text-muted-dark font-body mb-2 text-muted-light text-xl tracking-widest">
                         BEATLES SONG OF THE DAY
