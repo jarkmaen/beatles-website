@@ -11,15 +11,12 @@ const Home = () => {
         (state: RootState) => state.songs.songOfTheDay
     );
 
-    const albumCover =
-        songOfTheDay && albumCoverMap[songOfTheDay.album]
-            ? albumCoverMap[songOfTheDay.album]
-            : albumCoverMap["Single"];
-
     return (
         <>
             <div className="flex flex-row gap-8 items-center justify-center">
-                <CoverImage src={albumCover} />
+                <CoverImage
+                    src={songOfTheDay && albumCoverMap[songOfTheDay.album]}
+                />
                 <div>
                     <h2 className="dark:text-muted-dark font-body mb-2 text-muted-light text-xl tracking-widest">
                         BEATLES SONG OF THE DAY
