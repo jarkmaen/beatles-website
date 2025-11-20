@@ -1,4 +1,6 @@
+import TooltipPortal from "./TooltipPortal";
 import type { SortDirection } from "../types";
+import { useRef, useState } from "react";
 
 type Props = {
     activeSortKey: string | null;
@@ -17,7 +19,18 @@ const TableHeader = ({
     title,
     tooltip
 }: Props) => {
+    const [tooltipPosition, setTooltipPosition] = useState<{
+        left: number;
+        top: number;
+    } | null>(null);
+
+    const iconRef = useRef<HTMLSpanElement>(null);
     const isActive = activeSortKey === columnSortKey;
+
+    const headerContentClass =
+        columnSortKey === "title"
+            ? "flex items-center w-[230px]"
+            : "flex items-center";
 
     const icon = !isActive
         ? "unfold_more"
@@ -27,14 +40,31 @@ const TableHeader = ({
         ? "arrow_downward"
         : "unfold_more";
 
-    const thClass =
-        columnSortKey === "title"
-            ? "flex items-center w-[230px]"
-            : "flex items-center";
+    const hideTooltip = () => setTooltipPosition(null);
+
+    const showTooltip = () => {
+        if (!iconRef.current) {
+            return;
+        }
+
+        const rect = iconRef.current.getBoundingClientRect();
+
+        if (columnSortKey === null) {
+            setTooltipPosition({
+                left: rect.left - 10,
+                top: rect.top + rect.height / 2
+            });
+        } else {
+            setTooltipPosition({
+                left: rect.left + rect.width / 2,
+                top: rect.top - 8
+            });
+        }
+    };
 
     return (
         <th className="px-6 py-3" scope="col">
-            <div className={thClass}>
+            <div className={headerContentClass}>
                 <span>{title}</span>
                 {columnSortKey && (
                     <button
@@ -46,20 +76,29 @@ const TableHeader = ({
                         </span>
                     </button>
                 )}
-                <div className="flex has-tooltip justify-center ml-1 relative">
-                    <span className="!text-[20px] cursor-pointer material-symbols-outlined">
+                <div className="flex justify-center ml-1">
+                    <span
+                        className="!text-[20px] cursor-pointer material-symbols-outlined"
+                        onMouseEnter={showTooltip}
+                        onMouseLeave={hideTooltip}
+                        ref={iconRef}
+                    >
                         info
                     </span>
-                    {columnSortKey === null ? (
-                        <div className="tooltip-left whitespace-pre-line">
-                            {tooltip}
-                        </div>
-                    ) : (
-                        <div className="tooltip-top whitespace-pre-line">
-                            {tooltip}
-                        </div>
-                    )}
                 </div>
+                {tooltipPosition && (
+                    <TooltipPortal position={tooltipPosition}>
+                        <div
+                            className={`font-bold text-xs ${
+                                columnSortKey === null
+                                    ? "tooltip-left"
+                                    : "tooltip-top"
+                            }`}
+                        >
+                            {tooltip}
+                        </div>
+                    </TooltipPortal>
+                )}
             </div>
         </th>
     );
