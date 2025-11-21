@@ -1,4 +1,5 @@
 import About from "./components/About";
+import BlogList from "./components/BlogList";
 import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -32,7 +33,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/blogs" element={<BlogPost />} />
+                    <Route path="/blog" element={<BlogPost />} />
+                    <Route path="/blogs" element={<BlogList />} />
                     <Route path="/ratings" element={<Ratings />} />
                 </Routes>
             </main>

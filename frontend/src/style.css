@@ -56,6 +56,8 @@
     --color-divider-light: #e8e9eb;
 
     /* text colors */
+    --color-accent-dark: #60a5fa;
+    --color-accent-light: #3b82f6;
     --color-muted-dark: #99a1af;
     --color-muted-light: #6a7282;
     --color-primary-dark: #e5e7eb;
