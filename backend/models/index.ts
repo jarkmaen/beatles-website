@@ -1,3 +1,4 @@
+import BlogPost from "./blogPost.js";
 import ContactMessage from "./contactMessage.js";
 import Song from "./song.js";
 import SongRating from "./songRating.js";
@@ -5,4 +6,4 @@ import SongRating from "./songRating.js";
 Song.hasMany(SongRating, { foreignKey: "song_id" });
 SongRating.belongsTo(Song, { foreignKey: "song_id" });
 
-export { ContactMessage, Song, SongRating };
+export { BlogPost, ContactMessage, Song, SongRating };
