@@ -1,3 +1,13 @@
+CREATE TABLE blog_posts (
+    id SERIAL PRIMARY KEY,
+    author TEXT NOT NULL,
+    content JSONB NOT NULL,
+    intro TEXT NOT NULL,
+    slug TEXT UNIQUE NOT NULL,
+    title TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE contact_messages (
     id SERIAL PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
