@@ -1,68 +1,38 @@
-import RankedSong from "./RankedSong";
+import BlogContent from "./BlogContent";
 import type { RootState } from "../store";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const BlogPost = () => {
-    const songs = useSelector((state: RootState) => state.songs.songs);
+    const { slug } = useParams();
+    const blogs = useSelector((state: RootState) => state.blogs.blogs);
+
+    const blog = blogs.find((b) => b.slug === slug);
+
+    if (!blog) {
+        return;
+    }
 
     return (
         <div className="max-w-4xl mx-auto">
             <div className="mb-12">
                 <h1 className="dark:text-primary-dark font-bold font-lora text-6xl text-center text-primary-light">
-                    The Beatles: Ranked
+                    {blog.title}
                 </h1>
                 <div className="dark:text-muted-dark flex items-center justify-center mb-8 mt-8 space-x-4 text-muted-light text-sm">
-                    <span>October 21, 2025</span>
+                    <span>
+                        {new Date(blog.created_at).toLocaleDateString()}
+                    </span>
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
-                    <span>By Jonas van Maldeghem</span>
+                    <span>By {blog.author}</span>
                 </div>
                 <div className="dark:prose-invert max-w-none prose prose-lg">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                    </p>
-                    <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem
-                        aperiam, eaque ipsa quae ab illo inventore veritatis et
-                        quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                        enim ipsam voluptatem quia voluptas sit aspernatur aut
-                        odit aut fugit, sed quia consequuntur magni dolores eos
-                        qui ratione voluptatem sequi nesciunt. Neque porro
-                        quisquam est, qui dolorem ipsum quia dolor sit amet,
-                        consectetur, adipisci velit, sed quia non numquam eius
-                        modi tempora incidunt ut labore et dolore magnam aliquam
-                        quaerat voluptatem. Ut enim ad minima veniam, quis
-                        nostrum exercitationem ullam corporis suscipit
-                        laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                    </p>
+                    <div dangerouslySetInnerHTML={{ __html: blog.intro }} />
                 </div>
             </div>
-            <div className="space-y-8">
-                {songs
-                    .slice()
-                    .sort((a, b) => b.rank - a.rank)
-                    .map((song, i) => (
-                        <div key={song.id}>
-                            <RankedSong
-                                bottom={i === songs.length - 1}
-                                commentary={song.commentary}
-                                rank={song.rank}
-                                title={song.title}
-                                top={i === 0}
-                            />
-                        </div>
-                    ))}
-            </div>
+            <BlogContent block={blog.content} />
         </div>
     );
 };

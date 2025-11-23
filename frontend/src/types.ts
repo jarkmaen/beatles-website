@@ -1,20 +1,27 @@
 export interface Blog {
     id: number;
     author: string;
-    content: BlogContentBlock[];
+    content: BlogContentBlock;
     intro: string;
     slug: string;
     title: string;
     created_at: Date;
 }
 
-export interface BlogContentBlock {
-    type: string;
-    data: any;
-}
-
 export interface BlogsState {
     blogs: Blog[];
+}
+
+export interface DefaultRankingBlock {
+    type: "default_ranking";
+}
+
+export interface ManualRankingBlock {
+    type: "manual_ranking";
+    items: {
+        commentary: string;
+        title: string;
+    }[];
 }
 
 export interface Message {
@@ -53,5 +60,12 @@ export interface SongsState {
     songOfTheDay: Song | null;
     songs: Song[];
 }
+
+export interface TextBlock {
+    type: "text";
+    paragraphs: string[];
+}
+
+export type BlogContentBlock = DefaultRankingBlock | ManualRankingBlock | TextBlock;
 
 export type SortDirection = "asc" | "desc" | null;

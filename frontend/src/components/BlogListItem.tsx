@@ -8,7 +8,7 @@ type Props = {
 };
 
 const BlogListItem = ({ blog, bottom }: Props) => {
-    const path = `/blog/${blog.slug}`;
+    const path = `/blogs/${blog.slug}`;
 
     return (
         <>
