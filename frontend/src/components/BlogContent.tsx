@@ -24,7 +24,6 @@ const BlogContent = ({ block }: Props) => {
                                     commentary={song.commentary}
                                     rank={song.rank}
                                     title={song.title}
-                                    top={i === 0}
                                 />
                             </div>
                         ))}
