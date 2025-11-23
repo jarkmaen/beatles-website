@@ -1,3 +1,4 @@
+import Divider from "./Divider";
 import type { Blog } from "../types";
 import { Link } from "react-router-dom";
 
@@ -31,9 +32,7 @@ const BlogListItem = ({ blog, bottom }: Props) => {
             >
                 READ MORE
             </Link>
-            {!bottom && (
-                <hr className="border-divider-light dark:border-divider-dark my-8" />
-            )}
+            {!bottom && <Divider />}
         </>
     );
 };
