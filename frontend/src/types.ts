@@ -14,7 +14,6 @@ export interface BlogContentBlock {
 }
 
 export interface BlogsState {
-    blogPost: Blog | null;
     blogs: Blog[];
 }
 
