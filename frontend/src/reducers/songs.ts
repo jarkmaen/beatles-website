@@ -23,17 +23,17 @@ const slice = createSlice({
 
 const { setSongOfTheDay, setSongs } = slice.actions;
 
-export const getSongs = () => {
-    return async (dispatch: any) => {
-        const data = await songsService.getAll();
-        dispatch(setSongs(data));
-    };
-};
-
 export const getSongOfTheDay = () => {
     return async (dispatch: any) => {
         const data = await songsService.getSongOfTheDay();
         dispatch(setSongOfTheDay(data));
+    };
+};
+
+export const getSongs = () => {
+    return async (dispatch: any) => {
+        const data = await songsService.getAll();
+        dispatch(setSongs(data));
     };
 };
 

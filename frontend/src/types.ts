@@ -1,3 +1,23 @@
+export interface Blog {
+    id: number;
+    author: string;
+    content: BlogContentBlock[];
+    intro: string;
+    slug: string;
+    title: string;
+    created_at: Date;
+}
+
+export interface BlogContentBlock {
+    type: string;
+    data: any;
+}
+
+export interface BlogsState {
+    blogPost: Blog | null;
+    blogs: Blog[];
+}
+
 export interface Message {
     email: string;
     first_name?: string | null;
