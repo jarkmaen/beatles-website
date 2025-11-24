@@ -64,7 +64,10 @@ export interface SongsState {
 
 export interface Text {
     type: "text";
-    paragraphs: string[];
+    items: (
+        | { type: "heading"; text: string }
+        | { type: "paragraph"; text: string }
+    )[];
 }
 
 export type BlogContent = DefaultRanking | ManualRanking | Text;

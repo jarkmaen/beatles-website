@@ -50,14 +50,19 @@ const BlogContent = ({ content }: Props) => {
         case blogContentTypes.text: {
             return (
                 <div className="dark:prose-invert max-w-none prose prose-lg">
-                    {content.paragraphs.map((paragraph, i) => (
-                        <p key={i}>{paragraph}</p>
-                    ))}
+                    {content.items.map((item) => {
+                        if (item.type === "heading") {
+                            return <h2 className="font-lora">{item.text}</h2>;
+                        } else if (item.type === "paragraph") {
+                            return <p>{item.text}</p>;
+                        }
+                    })}
                 </div>
             );
         }
-        default:
+        default: {
             return null;
+        }
     }
 };
 
