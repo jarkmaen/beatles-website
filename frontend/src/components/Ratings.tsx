@@ -3,7 +3,7 @@ import TableData from "./TableData";
 import TableHeader from "./TableHeader";
 import type { RootState } from "../store";
 import type { Song, SongRating, SortDirection } from "../types";
-import { headerData } from "../constants/headerData";
+import { tableHeaderData } from "../constants/tableHeaderData";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -92,14 +92,14 @@ const Ratings = () => {
                 <table className="table-fixed text-left text-sm">
                     <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
                         <tr>
-                            {headerData.map((h) => (
+                            {tableHeaderData.map((h) => (
                                 <TableHeader
                                     activeSortKey={sortKey}
                                     columnSortKey={h.sortKey}
-                                    key={h.title}
+                                    key={h.label}
+                                    label={h.label}
                                     onSort={handleSort}
                                     sortDirection={sortDirection}
-                                    title={h.title}
                                     tooltip={h.tooltip}
                                 />
                             ))}

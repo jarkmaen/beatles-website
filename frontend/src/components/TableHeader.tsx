@@ -5,18 +5,18 @@ import { useRef, useState } from "react";
 type Props = {
     activeSortKey: string | null;
     columnSortKey: string | null;
+    label: string;
     onSort: (key: string | null) => void;
     sortDirection: SortDirection;
-    title: string;
     tooltip: string;
 };
 
 const TableHeader = ({
     activeSortKey,
     columnSortKey,
+    label,
     onSort,
     sortDirection,
-    title,
     tooltip
 }: Props) => {
     const [tooltipPosition, setTooltipPosition] = useState<{
@@ -65,7 +65,7 @@ const TableHeader = ({
     return (
         <th className="px-6 py-3" scope="col">
             <div className={headerContentClass}>
-                <span>{title}</span>
+                <span>{label}</span>
                 {columnSortKey && (
                     <button
                         onClick={() => onSort(columnSortKey)}

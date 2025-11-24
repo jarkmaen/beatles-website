@@ -1,7 +1,7 @@
 export interface Blog {
     id: number;
     author: string;
-    content: BlogContentBlock;
+    content: BlogContent;
     intro: string;
     slug: string;
     title: string;
@@ -12,11 +12,11 @@ export interface BlogsState {
     blogs: Blog[];
 }
 
-export interface DefaultRankingBlock {
+export interface DefaultRanking {
     type: "default_ranking";
 }
 
-export interface ManualRankingBlock {
+export interface ManualRanking {
     type: "manual_ranking";
     items: {
         commentary: string;
@@ -61,14 +61,11 @@ export interface SongsState {
     songs: Song[];
 }
 
-export interface TextBlock {
+export interface Text {
     type: "text";
     paragraphs: string[];
 }
 
-export type BlogContentBlock =
-    | DefaultRankingBlock
-    | ManualRankingBlock
-    | TextBlock;
+export type BlogContent = DefaultRanking | ManualRanking | Text;
 
 export type SortDirection = "asc" | "desc" | null;

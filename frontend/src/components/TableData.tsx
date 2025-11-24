@@ -1,12 +1,12 @@
 import type { Song, SongRating } from "../types";
-import { ratingCategory } from "../constants/ratingCategories";
+import { ratingCategories } from "../constants/ratingCategories";
 
 type Props = {
     song: Song;
 };
 
 const TableData = ({ song }: Props) => {
-    const categories: (keyof typeof ratingCategory)[] = [
+    const categories: (keyof typeof ratingCategories)[] = [
         "full_instrumentation",
         "vocals",
         "lyrics",
@@ -27,7 +27,7 @@ const TableData = ({ song }: Props) => {
 
     const totalPoints = categories.reduce<number>((sum, i, j) => {
         const value = values[j];
-        return sum + (typeof value === "number" ? ratingCategory[i].max : 0);
+        return sum + (typeof value === "number" ? ratingCategories[i].maxPoints : 0);
     }, 0);
 
     return (

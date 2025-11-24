@@ -1,4 +1,4 @@
-import { albums } from "../constants/albums";
+import { albumNames } from "../constants/albumNames";
 
 type Props = {
     album: string;
@@ -42,11 +42,15 @@ const RatingsToolbar = ({
                             value={album}
                         >
                             <option value="">All albums and singles</option>
-                            {albums.map((album) => (
-                                <option key={album.value} value={album.value}>
-                                    {album.label}
-                                </option>
-                            ))}
+                            {albumNames.map((name) => {
+                                const label =
+                                    name === "Single" ? "Singles" : name;
+                                return (
+                                    <option key={name} value={name}>
+                                        {label}
+                                    </option>
+                                );
+                            })}
                         </select>
                         <div className="absolute flex inset-y-0 items-center pointer-events-none pr-3 right-0">
                             <span className="material-symbols-outlined text-muted-dark">

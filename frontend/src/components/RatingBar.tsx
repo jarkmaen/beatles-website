@@ -14,12 +14,12 @@ const getBarColor = (percentage: number) => {
 
 type Props = {
     label: string;
-    max: number;
-    value: number;
+    maxPoints: number;
+    points: number;
 };
 
-const RatingBar = ({ label, max, value }: Props) => {
-    const percentage = Math.round((value / max) * 100);
+const RatingBar = ({ label, maxPoints, points }: Props) => {
+    const percentage = Math.round((points / maxPoints) * 100);
     const barColor = getBarColor(percentage);
 
     return (

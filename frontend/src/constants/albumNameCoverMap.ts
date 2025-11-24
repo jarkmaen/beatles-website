@@ -14,7 +14,7 @@ import whiteAlbumCover from "../assets/images/the_beatles.jpg";
 import withTheBeatlesCover from "../assets/images/with_the_beatles.png";
 import yellowSubmarineCover from "../assets/images/yellow_submarine.jpg";
 
-export const albumCoverMap: Record<string, string> = {
+export const albumNameCoverMap: Record<string, string> = {
     "A Hard Day's Night": hardDaysNightCover,
     "Abbey Road": abbeyRoadCover,
     "Beatles for Sale": beatlesForSaleCover,

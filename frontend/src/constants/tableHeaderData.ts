@@ -1,65 +1,65 @@
-export type HeaderDef = {
+export type TableHeaderDef = {
+    label: string;
     sortKey: string | null;
-    title: string;
     tooltip: string;
 };
 
-export const headerData: HeaderDef[] = [
-    { sortKey: "rank", title: "#", tooltip: "SONG RANK" },
-    { sortKey: "title", title: "SONG", tooltip: "THE TITLE OF THE SONG" },
+export const tableHeaderData: TableHeaderDef[] = [
+    { label: "#", sortKey: "rank", tooltip: "SONG RANK" },
+    { label: "SONG", sortKey: "title", tooltip: "THE TITLE OF THE SONG" },
     {
+        label: "FULL INSTRUMENTATION",
         sortKey: "full_instrumentation",
-        title: "FULL INSTRUMENTATION",
         tooltip:
             "0-1: HURTS THE SONG\n2-4: DOES THE JOB\n5-7: SUITS THE SONG\n8-10: LIFTS THE SONG"
     },
     {
+        label: "VOCALS",
         sortKey: "vocals",
-        title: "VOCALS",
         tooltip:
             "0-3: GOOD, NOTHING SPECIAL\n4-6: GOOD WITH STANDOUT MOMENTS\n7-8: ALLROUND GREAT VOCALS\n9-10: EXCEPTIONAL (LEAD/HARMONIES)"
     },
     {
+        label: "LYRICS",
         sortKey: "lyrics",
-        title: "LYRICS",
         tooltip:
             "0-2: LYRICS LACK QUALITY\n3-4: BASIC LYRICS\n5-6: LYRICS ADD VALUE TO THE SONG\n7-8: STANDOUT LYRICS"
     },
     {
+        label: "ORIGINALITY/INNOVATION",
         sortKey: "originality_innovation",
-        title: "ORIGINALITY/INNOVATION",
         tooltip:
             "0-2: NOT PARTICULARLY INNOVATIVE\n3-4: HAS AN ORIGINAL ELEMENT\n5-6: NOTICABLY ORIGINAL\n7-8: GROUNDBREAKING"
     },
     {
+        label: "BASSLINE",
         sortKey: "bassline",
-        title: "BASSLINE",
         tooltip: "0-1: DOES THE JOB\n2-3: ADDS TO THE SONG\n4-5: STANDOUT BASS"
     },
     {
+        label: "PERCUSSION",
         sortKey: "percussion",
-        title: "PERCUSSION",
         tooltip:
             "0-1: DOES THE JOB\n2-3: ADDS TO THE SONG\n4-5: STANDOUT PERCUSSION"
     },
     {
+        label: "SOLO",
         sortKey: "solo",
-        title: "SOLO",
         tooltip: "0: LACKLUSTER\n1-3: SOLID SOLO\n4: LIFTS THE SONG"
     },
     {
+        label: "CHORD PROGRESSION",
         sortKey: "chord_progression",
-        title: "CHORD PROGRESSION",
         tooltip: "0-2: FUNCTIONAL\n3-4: ELEVATES THE SONG"
     },
     {
+        label: "CULTURAL SIGNIFICANCE",
         sortKey: "cultural_significance",
-        title: "CULTURAL SIGNIFICANCE",
         tooltip: "0: NO SPECIAL SIGNIFICANCE\n1: A SPECIAL SIGNIFICANCE"
     },
     {
+        label: "TOTAL POINTS",
         sortKey: null,
-        title: "TOTAL POINTS",
         tooltip: "SUMMED POINTS / MAX POTENTIAL POINTS\n(ONLY RATED CATEGORIES)"
     }
 ];

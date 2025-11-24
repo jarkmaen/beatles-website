@@ -2,8 +2,8 @@ import CoverImage from "./CoverImage";
 import RatingBar from "./RatingBar";
 import type { RootState } from "../store";
 import type { SongRating } from "../types";
-import { albumCoverMap } from "../constants/albumCovers";
-import { ratingCategory } from "../constants/ratingCategories";
+import { albumNameCoverMap } from "../constants/albumNameCoverMap";
+import { ratingCategories } from "../constants/ratingCategories";
 import { useSelector } from "react-redux";
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
         <>
             <div className="flex flex-row gap-8 items-center justify-center">
                 <CoverImage
-                    src={songOfTheDay && albumCoverMap[songOfTheDay.album]}
+                    src={songOfTheDay && albumNameCoverMap[songOfTheDay.album]}
                 />
                 <div>
                     <h2 className="dark:text-muted-dark font-body mb-2 text-muted-light text-xl tracking-widest">
@@ -36,7 +36,7 @@ const Home = () => {
                     </h3>
                     <div className="space-y-3">
                         {songOfTheDay?.SongRatings?.length &&
-                            Object.entries(ratingCategory)
+                            Object.entries(ratingCategories)
                                 .filter(
                                     ([key]) =>
                                         key !== "cultural_significance" &&
@@ -46,8 +46,8 @@ const Home = () => {
                                 )
                                 .sort(
                                     (
-                                        [keyA, { max: maxA }],
-                                        [keyB, { max: maxB }]
+                                        [keyA, { maxPoints: maxA }],
+                                        [keyB, { maxPoints: maxB }]
                                     ) => {
                                         const valueA =
                                             songOfTheDay.SongRatings![0][
@@ -66,12 +66,12 @@ const Home = () => {
                                         return percentageB - percentageA;
                                     }
                                 )
-                                .map(([key, { label, max }]) => (
+                                .map(([key, { label, maxPoints }]) => (
                                     <RatingBar
                                         key={key}
                                         label={label}
-                                        max={max}
-                                        value={
+                                        maxPoints={maxPoints}
+                                        points={
                                             songOfTheDay.SongRatings![0][
                                                 key as keyof SongRating
                                             ] as number
