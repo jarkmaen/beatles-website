@@ -1,17 +1,18 @@
 import RankedSong from "./RankedSong";
 import type { BlogContentBlock } from "../types";
 import type { RootState } from "../store";
+import { blogContentTypes } from "../constants/blogContentTypes";
 import { useSelector } from "react-redux";
 
 type Props = {
-    block: BlogContentBlock;
+    content: BlogContentBlock;
 };
 
-const BlogContent = ({ block }: Props) => {
+const BlogContent = ({ content }: Props) => {
     const songs = useSelector((state: RootState) => state.songs.songs);
 
-    switch (block.type) {
-        case "default_ranking": {
+    switch (content.type) {
+        case blogContentTypes.defaultRanking: {
             return (
                 <div className="space-y-8">
                     {songs
@@ -30,10 +31,10 @@ const BlogContent = ({ block }: Props) => {
                 </div>
             );
         }
-        case "manual_ranking": {
+        case blogContentTypes.manualRanking: {
             return (
                 <div className="space-y-8">
-                    {block.items.map((item, i) => (
+                    {content.items.map((item, i) => (
                         <div key={i}>
                             <h1 className="font-bold">{item.title}</h1>
                             <p className="mt-2">{item.commentary}</p>
@@ -42,10 +43,10 @@ const BlogContent = ({ block }: Props) => {
                 </div>
             );
         }
-        case "text": {
+        case blogContentTypes.text: {
             return (
                 <div className="dark:prose-invert max-w-none prose prose-lg">
-                    {block.paragraphs.map((paragraph, i) => (
+                    {content.paragraphs.map((paragraph, i) => (
                         <p key={i}>{paragraph}</p>
                     ))}
                 </div>

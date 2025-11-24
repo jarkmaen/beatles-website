@@ -66,6 +66,9 @@ export interface TextBlock {
     paragraphs: string[];
 }
 
-export type BlogContentBlock = DefaultRankingBlock | ManualRankingBlock | TextBlock;
+export type BlogContentBlock =
+    | DefaultRankingBlock
+    | ManualRankingBlock
+    | TextBlock;
 
 export type SortDirection = "asc" | "desc" | null;
