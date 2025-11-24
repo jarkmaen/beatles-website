@@ -1,5 +1,6 @@
 import type { Blog } from "../types";
 import { Link } from "react-router-dom";
+import { renderParagraphs } from "../utils";
 
 type Props = {
     blog: Blog;
@@ -33,11 +34,11 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
             </div>
             {isBlogPostPage ? (
                 <div className="dark:prose-invert max-w-none prose prose-lg">
-                    <div dangerouslySetInnerHTML={{ __html: blog.intro }} />
+                    {renderParagraphs(blog.intro)}
                 </div>
             ) : (
                 <div className="dark:prose-invert h-40 max-w-none overflow-hidden prose prose-lg relative">
-                    <div dangerouslySetInnerHTML={{ __html: blog.intro }} />
+                    {renderParagraphs(blog.intro)}
                     <div className="absolute bg-gradient-to-t bottom-0 dark:from-dark from-light h-12 left-0 to-transparent transition-colors w-full"></div>
                 </div>
             )}
