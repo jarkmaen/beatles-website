@@ -62,4 +62,4 @@ export const tableHeaderData: TableHeaderDef[] = [
         sortKey: null,
         tooltip: "SUMMED POINTS / MAX POTENTIAL POINTS\n(ONLY RATED CATEGORIES)"
     }
-];
+] as const;

@@ -30,4 +30,4 @@ export const albumNameCoverMap: Record<string, string> = {
     "The Beatles (White Album)": whiteAlbumCover,
     "With the Beatles": withTheBeatlesCover,
     "Yellow Submarine": yellowSubmarineCover
-};
+} as const;

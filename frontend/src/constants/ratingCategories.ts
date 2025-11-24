@@ -8,4 +8,4 @@ export const ratingCategories = {
     percussion: { label: "Percussion", maxPoints: 5 },
     solo: { label: "Solo", maxPoints: 4 },
     vocals: { label: "Vocals", maxPoints: 10 }
-};
+} as const;
