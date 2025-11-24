@@ -19,7 +19,13 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
                 </h1>
             )}
             <div className="dark:text-muted-dark flex items-center justify-center mb-8 mt-8 space-x-4 text-muted-light text-sm">
-                <span>{new Date(blog.created_at).toLocaleDateString()}</span>
+                <span>
+                    {new Date(blog.created_at).toLocaleDateString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric"
+                    })}
+                </span>
                 <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                     |
                 </span>
