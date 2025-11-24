@@ -19,7 +19,7 @@ const BlogPost = () => {
         <div className="max-w-4xl mx-auto">
             <BlogIntro blog={blog} isBlogPostPage={true} />
             <Divider />
-            <BlogContent block={blog.content} />
+            <BlogContent content={blog.content} />
         </div>
     );
 };

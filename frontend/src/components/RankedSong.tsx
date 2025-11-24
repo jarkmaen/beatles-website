@@ -7,7 +7,7 @@ type Props = {
     title: string;
 };
 
-const RankedSong = ({ bottom = false, commentary, rank, title }: Props) => {
+const RankedSong = ({ bottom, commentary, rank, title }: Props) => {
     return (
         <>
             <div className="flex gap-6 items-start">

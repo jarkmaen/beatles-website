@@ -20,6 +20,7 @@ export interface ManualRanking {
     type: "manual_ranking";
     items: {
         commentary: string;
+        rank: number;
         title: string;
     }[];
 }

@@ -36,8 +36,12 @@ const BlogContent = ({ content }: Props) => {
                 <div className="space-y-8">
                     {content.items.map((item, i) => (
                         <div key={i}>
-                            <h1 className="font-bold">{item.title}</h1>
-                            <p className="mt-2">{item.commentary}</p>
+                            <RankedSong
+                                bottom={i === content.items.length - 1}
+                                commentary={item.commentary}
+                                rank={item.rank}
+                                title={item.title}
+                            />
                         </div>
                     ))}
                 </div>
