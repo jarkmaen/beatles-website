@@ -17,6 +17,15 @@ CREATE TABLE contact_messages (
     created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE songs (
+    id SERIAL PRIMARY KEY,
+    album TEXT NOT NULL,
+    commentary TEXT NOT NULL,
+    commentary_landing TEXT,
+    rank INT NOT NULL,
+    title TEXT NOT NULL
+);
+
 CREATE TABLE song_ratings (
     id SERIAL PRIMARY KEY,
     song_id INT REFERENCES songs(id),
@@ -30,13 +39,4 @@ CREATE TABLE song_ratings (
     percussion SMALLINT,
     solo SMALLINT,
     vocals SMALLINT
-);
-
-CREATE TABLE songs (
-    id SERIAL PRIMARY KEY,
-    album TEXT NOT NULL,
-    commentary TEXT NOT NULL,
-    commentary_landing TEXT,
-    rank INT NOT NULL,
-    title TEXT NOT NULL
 );
