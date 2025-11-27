@@ -4,6 +4,7 @@ import type { RootState } from "../store";
 import type { SongRating } from "../types";
 import { albumNameCoverMap } from "../constants/albumNameCoverMap";
 import { ratingCategories } from "../constants/ratingCategories";
+import { renderParagraphs } from "../utils";
 import { useSelector } from "react-redux";
 
 const Home = () => {
@@ -82,12 +83,7 @@ const Home = () => {
                 </div>
                 <div className="dark:prose-invert max-w-none prose prose-lg">
                     <h3 className="font-bold font-lora text-2xl">Commentary</h3>
-                    {songOfTheDay?.commentary
-                        .replace(/\\n\\n/g, "\n\n")
-                        .split("\n\n")
-                        .map((paragraph, i) => (
-                            <p key={i}>{paragraph}</p>
-                        ))}
+                    {renderParagraphs(songOfTheDay?.commentary)}
                 </div>
             </div>
             <div className="mt-16 text-center">

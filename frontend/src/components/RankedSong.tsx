@@ -1,4 +1,5 @@
 import Divider from "./Divider";
+import { renderParagraphs } from "../utils";
 
 type Props = {
     bottom: boolean;
@@ -19,12 +20,7 @@ const RankedSong = ({ bottom, commentary, rank, title }: Props) => {
                         {title}
                     </h2>
                     <div className="dark:prose-invert max-w-none mt-2 prose prose-lg">
-                        {commentary
-                            .replace(/\\n\\n/g, "\n\n")
-                            .split("\n\n")
-                            .map((paragraph, i) => (
-                                <p key={i}>{paragraph}</p>
-                            ))}
+                        {renderParagraphs(commentary)}
                     </div>
                 </div>
             </div>
