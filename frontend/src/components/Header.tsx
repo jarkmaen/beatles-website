@@ -12,36 +12,42 @@ const Header = () => {
             </Link>
             <div className="flex space-x-6">
                 <div className="flex font-montserrat items-center space-x-6 text-sm tracking-widest">
-                    <NavLink
-                        className={({ isActive }) =>
-                            isActive ? "underline" : undefined
-                        }
-                        to="/blogs"
-                    >
-                        BLOG
-                    </NavLink>
+                    <div className="text-center w-[75px]">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? "font-bold" : undefined
+                            }
+                            to="/blogs"
+                        >
+                            BLOG
+                        </NavLink>
+                    </div>
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
-                    <NavLink
-                        className={({ isActive }) =>
-                            isActive ? "underline" : undefined
-                        }
-                        to="/ratings"
-                    >
-                        RATINGS
-                    </NavLink>
+                    <div className="text-center w-[75px]">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? "font-bold" : undefined
+                            }
+                            to="/ratings"
+                        >
+                            RATINGS
+                        </NavLink>
+                    </div>
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
-                    <NavLink
-                        className={({ isActive }) =>
-                            isActive ? "underline" : undefined
-                        }
-                        to="/about"
-                    >
-                        ABOUT
-                    </NavLink>
+                    <div className="text-center w-[75px]">
+                        <NavLink
+                            className={({ isActive }) =>
+                                isActive ? "font-bold" : undefined
+                            }
+                            to="/about"
+                        >
+                            ABOUT
+                        </NavLink>
+                    </div>
                 </div>
                 <ThemeToggle />
             </div>
