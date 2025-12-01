@@ -1,5 +1,12 @@
 {
     "author": "",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "pg": "^8.16.3",
+        "sequelize": "^6.37.7"
+    },
     "description": "",
     "devDependencies": {
         "@eslint/js": "^9.37.0",
@@ -22,12 +29,5 @@
         "tsc": "tsc"
     },
     "type": "module",
-    "version": "1.0.0",
-    "dependencies": {
-        "cors": "^2.8.5",
-        "dotenv": "^17.2.3",
-        "express": "^5.1.0",
-        "pg": "^8.16.3",
-        "sequelize": "^6.37.7"
-    }
+    "version": "1.0.0"
 }
