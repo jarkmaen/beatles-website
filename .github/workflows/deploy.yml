@@ -9,9 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
+      - name: Checkout
+        uses: actions/checkout@v6
       - name: Run deploy script on EC2
         uses: appleboy/ssh-action@v1
         with:
