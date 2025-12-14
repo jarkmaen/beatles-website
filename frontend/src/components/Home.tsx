@@ -14,23 +14,23 @@ const Home = () => {
 
     return (
         <>
-            <div className="flex flex-row gap-8 items-center justify-center">
+            <div className="flex flex-col gap-8 items-center justify-center sm:flex-row">
                 <CoverImage
                     src={songOfTheDay && albumNameCoverMap[songOfTheDay.album]}
                 />
-                <div>
-                    <h2 className="dark:text-muted-dark font-body mb-2 text-muted-light text-xl tracking-widest">
+                <div className="sm:text-left text-center">
+                    <h2 className="dark:text-muted-dark font-body mb-2 sm:text-xl text-muted-light text-lg tracking-widest">
                         BEATLES SONG OF THE DAY
                     </h2>
-                    <h1 className="dark:text-primary-dark font-bold font-lora text-6xl text-primary-light">
+                    <h1 className="dark:text-primary-dark font-bold font-lora sm:text-6xl text-4xl text-primary-light">
                         {songOfTheDay?.title}
                     </h1>
-                    <p className="dark:text-secondary-dark font-body text-2xl text-secondary-light">
+                    <p className="dark:text-secondary-dark font-body sm:text-2xl text-secondary-light text-xl">
                         {songOfTheDay?.album}
                     </p>
                 </div>
             </div>
-            <div className="gap-12 grid grid-cols-2 max-w-4xl mt-16 mx-auto">
+            <div className="gap-8 grid grid-cols-1 max-w-4xl mt-12 mx-auto sm:gap-12 sm:grid-cols-2 sm:mt-16">
                 <div className="space-y-4">
                     <h3 className="dark:text-primary-dark font-bold font-lora text-2xl text-primary-light">
                         Rating Breakdown
@@ -90,7 +90,7 @@ const Home = () => {
                 <p className="dark:text-muted-dark text-muted-light">
                     Overall Score
                 </p>
-                <p className="font-bold font-display text-6xl">
+                <p className="font-bold font-lora text-6xl">
                     {songOfTheDay?.SongRatings?.[0].percentage}%
                 </p>
                 <p className="dark:text-secondary-dark mt-2 text-lg text-secondary-light">

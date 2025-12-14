@@ -18,11 +18,13 @@ const App = () => {
 
     const isRatingsPage = location.pathname === "/ratings";
 
-    const contentWrapperClasses = isRatingsPage ? "container mx-auto px-8" : "";
+    const contentWrapperClasses = isRatingsPage
+        ? "container mx-auto px-4 sm:px-8"
+        : "";
     const mainClasses = isRatingsPage ? "flex flex-col min-h-0" : "py-12";
     const outerClasses = isRatingsPage
         ? "flex flex-col h-screen"
-        : "container mx-auto px-8";
+        : "container mx-auto px-4 sm:px-8";
 
     return (
         <div className={outerClasses}>
