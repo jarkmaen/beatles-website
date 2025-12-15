@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header className="flex justify-between py-6">
             <Link
-                className="dark:text-primary-dark font-bold font-lora text-4xl text-primary-light tracking-wider"
+                className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-3xl text-primary-light tracking-wider"
                 to="/"
             >
                 fab.two
