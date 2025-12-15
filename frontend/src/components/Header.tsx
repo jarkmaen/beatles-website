@@ -1,3 +1,4 @@
+import HamburgerMenu from "./HamburgerMenu";
 import ThemeToggle from "./ThemeToggle";
 import { Link, NavLink } from "react-router-dom";
 
@@ -11,7 +12,7 @@ const Header = () => {
                 fab.two
             </Link>
             <div className="flex space-x-6">
-                <div className="flex font-montserrat items-center space-x-6 text-sm tracking-widest">
+                <div className="font-montserrat hidden items-center sm:flex space-x-6 text-sm tracking-widest">
                     <div className="text-center w-[75px]">
                         <NavLink
                             className={({ isActive }) =>
@@ -49,6 +50,7 @@ const Header = () => {
                         </NavLink>
                     </div>
                 </div>
+                <HamburgerMenu />
                 <ThemeToggle />
             </div>
         </header>
