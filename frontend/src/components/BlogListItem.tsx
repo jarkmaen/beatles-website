@@ -10,7 +10,7 @@ type Props = {
 
 const BlogListItem = ({ blog, bottom }: Props) => {
     return (
-        <>
+        <div>
             <BlogIntro blog={blog} isBlogPostPage={false} />
             <Link
                 className="dark:text-accent-dark font-bold hover:underline inline-block mt-4 text-accent-light text-sm tracking-widest"
@@ -19,7 +19,7 @@ const BlogListItem = ({ blog, bottom }: Props) => {
                 READ MORE
             </Link>
             {!bottom && <Divider />}
-        </>
+        </div>
     );
 };
 
