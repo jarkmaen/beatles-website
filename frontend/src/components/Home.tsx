@@ -81,7 +81,7 @@ const Home = () => {
                                 ))}
                     </div>
                 </div>
-                <div className="dark:prose-invert max-w-none prose prose-lg">
+                <div className="dark:prose-invert hyphens-auto max-w-none prose prose-lg">
                     <h3 className="font-bold font-lora text-2xl">Commentary</h3>
                     {renderParagraphs(songOfTheDay?.commentary)}
                 </div>
