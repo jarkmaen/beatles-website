@@ -3,9 +3,11 @@ type Props = {
 };
 
 const Divider = ({ marginSize = 8 }: Props) => {
+    const marginClass = marginSize === 4 ? "my-4" : "my-8";
+
     return (
         <hr
-            className={`border-divider-light dark:border-divider-dark my-${marginSize}`}
+            className={`border-divider-light dark:border-divider-dark ${marginClass}`}
         />
     );
 };
