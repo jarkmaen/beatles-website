@@ -9,8 +9,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 const App = () => {
-    const stateInitializer = useInitialization();
     const location = useLocation();
+    const stateInitializer = useInitialization();
 
     useEffect(() => {
         stateInitializer();
@@ -29,7 +29,7 @@ const App = () => {
     return (
         <div className={outerClasses}>
             <div className={contentWrapperClasses}>
-                <Header />
+                <Header key={location.pathname} />
             </div>
             <main className={mainClasses}>
                 <Routes>

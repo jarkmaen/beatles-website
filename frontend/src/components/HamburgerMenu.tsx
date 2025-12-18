@@ -21,7 +21,6 @@ const HamburgerMenu = () => {
                                 className={({ isActive }) =>
                                     isActive ? "font-bold" : undefined
                                 }
-                                onClick={() => setOpen(false)}
                                 to="/blogs"
                             >
                                 BLOG
@@ -33,7 +32,6 @@ const HamburgerMenu = () => {
                                 className={({ isActive }) =>
                                     isActive ? "font-bold" : undefined
                                 }
-                                onClick={() => setOpen(false)}
                                 to="/ratings"
                             >
                                 RATINGS
@@ -45,7 +43,6 @@ const HamburgerMenu = () => {
                                 className={({ isActive }) =>
                                     isActive ? "font-bold" : undefined
                                 }
-                                onClick={() => setOpen(false)}
                                 to="/about"
                             >
                                 ABOUT
