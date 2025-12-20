@@ -19,8 +19,8 @@ const RatingsToolbar = ({
 }: Props) => {
     return (
         <div className="border-divider-light border-t dark:border-divider-dark ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] w-screen">
-            <div className="container mx-auto px-8 py-6">
-                <div className="flex gap-4">
+            <div className="container mx-auto px-4 py-4 sm:px-8 sm:py-6">
+                <div className="flex flex-col gap-4 sm:flex-row">
                     <div className="flex-grow relative">
                         <input
                             className="bg-surface-light border-0 dark:bg-surface-dark dark:inset-ring-border-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none pl-10 pr-4 py-2 rounded-md w-full"
