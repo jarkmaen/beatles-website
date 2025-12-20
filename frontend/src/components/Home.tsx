@@ -1,5 +1,6 @@
 import CoverImage from "./CoverImage";
 import RatingBar from "./RatingBar";
+import ShrinkWrapTitle from "./ShrinkWrapTitle";
 import type { RootState } from "../store";
 import type { SongRating } from "../types";
 import { albumNameCoverMap } from "../constants/albumNameCoverMap";
@@ -27,9 +28,7 @@ const Home = () => {
                         <h2 className="dark:text-muted-dark font-body mb-2 sm:text-xl text-muted-light text-lg tracking-widest">
                             BEATLES SONG OF THE DAY
                         </h2>
-                        <h1 className="dark:text-primary-dark font-bold font-lora sm:text-6xl text-4xl text-primary-light">
-                            {songOfTheDay?.title}
-                        </h1>
+                        <ShrinkWrapTitle title={songOfTheDay?.title} />
                         <p className="dark:text-secondary-dark font-body sm:text-2xl text-secondary-light text-xl">
                             {songOfTheDay?.album}
                         </p>
