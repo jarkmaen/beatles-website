@@ -1,6 +1,7 @@
 import BlogContent from "./BlogContent";
 import BlogIntro from "./BlogIntro";
 import Divider from "./Divider";
+import PageNotFound from "./PageNotFound";
 import type { RootState } from "../store";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -10,15 +11,15 @@ const BlogPost = () => {
     const { slug } = useParams();
     const blogs = useSelector((state: RootState) => state.blogs.blogs);
 
-    const blog = blogs.find((b) => b.slug === slug);
-
-    if (!blog) {
-        return;
-    }
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const blog = blogs.find((b) => b.slug === slug);
+
+    if (!blog) {
+        return <PageNotFound />;
+    }
 
     return (
         <div className="max-w-4xl mx-auto">

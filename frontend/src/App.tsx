@@ -3,6 +3,7 @@ import BlogList from "./components/BlogList";
 import BlogPost from "./components/BlogPost";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import PageNotFound from "./components/PageNotFound";
 import Ratings from "./components/Ratings";
 import useInitialization from "./hooks/useInitialization";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -40,6 +41,7 @@ const App = () => {
             </div>
             <main className={mainClasses}>
                 <Routes>
+                    <Route path="*" element={<PageNotFound />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/blogs" element={<BlogList />} />
