@@ -16,16 +16,16 @@ const Alert = ({ message, onClose, variant }: Props) => {
         : "bg-red-50 dark:bg-red-900/20 p-4 rounded-md";
 
     const iconClass = isSuccess
-        ? "dark:text-green-500 material-symbols-outlined text-green-400"
-        : "dark:text-red-500 material-symbols-outlined text-red-400";
+        ? "dark:text-green-500 material-symbols-outlined select-none text-green-400"
+        : "dark:text-red-500 material-symbols-outlined select-none text-red-400";
 
     const textClass = isSuccess
-        ? "dark:text-green-400 mt-2 text-green-700 text-sm"
-        : "dark:text-red-400 mt-2 text-red-700 text-sm";
+        ? "dark:text-green-400 mt-2 text-green-700"
+        : "dark:text-red-400 mt-2 text-red-700";
 
     const titleClass = isSuccess
-        ? "dark:text-green-300 text-green-800 text-sm"
-        : "dark:text-red-300 text-red-800 text-sm";
+        ? "dark:text-green-300 text-green-800"
+        : "dark:text-red-300 text-red-800";
 
     return (
         <div className="space-y-4">
@@ -35,13 +35,11 @@ const Alert = ({ message, onClose, variant }: Props) => {
                         {isSuccess ? "check_circle" : "error"}
                     </span>
                     <div className="flex flex-1 justify-between ml-3">
-                        <div>
-                            <h3 className={titleClass}>
+                        <div className="flex flex-col text-sm">
+                            <span className={titleClass}>
                                 {isSuccess ? "Success" : "Error"}
-                            </h3>
-                            <div className={textClass}>
-                                <p>{message}</p>
-                            </div>
+                            </span>
+                            <span className={textClass}>{message}</span>
                         </div>
                         <div className="flex items-center ml-6">
                             <button

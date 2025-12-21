@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <header className="flex justify-between py-6">
+        <header className="flex justify-between py-3 sm:py-6">
             <Link
                 className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-3xl text-primary-light tracking-wider"
                 to="/"

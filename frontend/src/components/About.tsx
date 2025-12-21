@@ -42,10 +42,10 @@ const About = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
-            <h1 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-6xl text-4xl text-center text-primary-light">
+            <h1 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-6xl text-5xl text-center text-primary-light">
                 About Us
             </h1>
-            <div className="dark:prose-invert hyphens-auto max-w-none prose prose-lg">
+            <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -73,9 +73,9 @@ const About = () => {
                 </p>
             </div>
             <hr className="border-divider-light dark:border-divider-dark my-12" />
-            <h3 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-4xl text-2xl text-center text-primary-light">
+            <h2 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-5xl text-3xl text-center text-primary-light">
                 Get in Touch
-            </h3>
+            </h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="gap-x-6 gap-y-6 grid grid-cols-2">
                     <FormField

@@ -49,7 +49,7 @@ const BlogContent = ({ content }: Props) => {
         }
         case blogContentTypes.text: {
             return (
-                <div className="dark:prose-invert hyphens-auto max-w-none prose prose-lg">
+                <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
                     {content.items.map((item, i) => {
                         if (item.type === "heading") {
                             return (

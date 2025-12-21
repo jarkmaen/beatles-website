@@ -14,7 +14,7 @@ const HamburgerMenu = () => {
                 <span className="material-symbols-outlined">dehaze</span>
             </button>
             {isOpen && (
-                <div className="absolute bg-surface-light border border-border-light dark:bg-surface-dark dark:border-border-dark mr-0 p-4 right-4 rounded-lg shadow-xl top-20 w-48 z-10">
+                <div className="absolute bg-surface-light border border-border-light dark:bg-surface-dark dark:border-border-dark mr-0 p-4 right-4 rounded-lg shadow-xl top-14 w-48 z-10">
                     <div className="flex-col font-montserrat text-sm tracking-widest">
                         <HeaderNavLink label="BLOG" to="/blogs" />
                         <Divider marginSize={4} />

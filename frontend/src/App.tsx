@@ -21,7 +21,9 @@ const App = () => {
     const contentWrapperClasses = isRatingsPage
         ? "container mx-auto px-4 sm:px-8"
         : "";
-    const mainClasses = isRatingsPage ? "flex flex-col min-h-0" : "py-12";
+    const mainClasses = isRatingsPage
+        ? "flex flex-col min-h-0"
+        : "py-8 sm:py-12";
     const outerClasses = isRatingsPage
         ? "flex flex-col h-screen"
         : "container mx-auto px-4 sm:px-8";
@@ -30,6 +32,11 @@ const App = () => {
         <div className={outerClasses}>
             <div className={contentWrapperClasses}>
                 <Header key={location.pathname} />
+                <div
+                    className={`${
+                        isRatingsPage ? "block" : "block sm:hidden"
+                    } border-divider-light border-t dark:border-divider-dark ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] w-screen`}
+                />
             </div>
             <main className={mainClasses}>
                 <Routes>

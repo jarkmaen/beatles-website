@@ -27,7 +27,7 @@ const RankedSong = ({ bottom, commentary, rank, title }: Props) => {
                     </div>
                 </div>
             </div>
-            <div className="block dark:prose-invert hyphens-auto max-w-none mt-2 prose prose-lg sm:hidden">
+            <div className="block dark:prose-invert hyphens-auto max-w-none mt-2 prose sm:hidden">
                 {renderParagraphs(commentary)}
             </div>
             {!bottom && <Divider />}
