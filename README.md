@@ -27,8 +27,6 @@ graph LR
         Actions[GitHub Actions]
     end
 
-    User -- "Port 80" --> Container
-
     Developer -- "git push" --> Repository
     Repository -- "triggers" --> Actions
     Actions -- "SSH" --> Deploy
@@ -37,6 +35,8 @@ graph LR
 
     Frontend <--> |"API Requests"| Backend
     Backend <--> DB
+
+    User -- "Port 80" --> Container
 ```
 
 ## Tech stack
