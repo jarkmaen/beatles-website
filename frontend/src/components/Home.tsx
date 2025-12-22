@@ -1,4 +1,5 @@
 import CoverImage from "./CoverImage";
+import LoadingScreen from "./LoadingScreen";
 import RatingBar from "./RatingBar";
 import ShrinkWrapTitle from "./ShrinkWrapTitle";
 import type { RootState } from "../store";
@@ -12,6 +13,10 @@ const Home = () => {
     const songOfTheDay = useSelector(
         (state: RootState) => state.songs.songOfTheDay
     );
+
+    if (!songOfTheDay) {
+        return <LoadingScreen />;
+    }
 
     return (
         <>

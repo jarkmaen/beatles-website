@@ -1,6 +1,7 @@
 import BlogContent from "./BlogContent";
 import BlogIntro from "./BlogIntro";
 import Divider from "./Divider";
+import LoadingScreen from "./LoadingScreen";
 import PageNotFound from "./PageNotFound";
 import type { RootState } from "../store";
 import { useEffect } from "react";
@@ -8,8 +9,8 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const BlogPost = () => {
+    const { blogs, loading } = useSelector((state: RootState) => state.blogs);
     const { slug } = useParams();
-    const blogs = useSelector((state: RootState) => state.blogs.blogs);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -17,7 +18,9 @@ const BlogPost = () => {
 
     const blog = blogs.find((b) => b.slug === slug);
 
-    if (!blog) {
+    if (loading) {
+        return <LoadingScreen />;
+    } else if (!blog) {
         return <PageNotFound />;
     }
 

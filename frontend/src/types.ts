@@ -10,6 +10,7 @@ export interface Blog {
 
 export interface BlogsState {
     blogs: Blog[];
+    loading: boolean;
 }
 
 export interface DefaultRanking {

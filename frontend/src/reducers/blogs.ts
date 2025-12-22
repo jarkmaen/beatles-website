@@ -4,7 +4,8 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState: BlogsState = {
-    blogs: []
+    blogs: [],
+    loading: true
 };
 
 const slice = createSlice({
@@ -13,16 +14,27 @@ const slice = createSlice({
     reducers: {
         setBlogs(state, action: PayloadAction<Blog[]>) {
             state.blogs = action.payload;
+            state.loading = false;
+        },
+        setLoading(state, action: PayloadAction<boolean>) {
+            state.loading = action.payload;
         }
     }
 });
 
-const { setBlogs } = slice.actions;
+const { setBlogs, setLoading } = slice.actions;
 
 export const getBlogs = () => {
     return async (dispatch: any) => {
-        const data = await blogsService.getAll();
-        dispatch(setBlogs(data));
+        dispatch(setLoading(true));
+
+        try {
+            const data = await blogsService.getAll();
+            dispatch(setBlogs(data));
+        } catch (error) {
+            console.error(error);
+            dispatch(setLoading(false));
+        }
     };
 };
 
