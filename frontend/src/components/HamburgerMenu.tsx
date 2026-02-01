@@ -39,7 +39,7 @@ const HamburgerMenu = () => {
                     <div className="flex-col font-montserrat text-sm tracking-widest">
                         <HeaderNavLink label="HOME" to="/" />
                         <Divider marginSize={4} />
-                        <HeaderNavLink label="BLOG" to="/blogs" />
+                        <HeaderNavLink label="RANKINGS" to="/blogs/the-beatles-ranked" />
                         <Divider marginSize={4} />
                         <HeaderNavLink label="RATINGS" to="/ratings" />
                         <Divider marginSize={4} />

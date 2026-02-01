@@ -8,7 +8,7 @@ type Props = {
 
 const HeaderNavLink = ({ isDesktop, label, to }: Props) => {
     return (
-        <div className={`text-center ${isDesktop ? "w-[75px]" : ""}`}>
+        <div className={`text-center ${isDesktop ? "w-[90px]" : ""}`}>
             <NavLink
                 className={({ isActive }) =>
                     isActive ? "font-bold" : undefined

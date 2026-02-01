@@ -14,7 +14,7 @@ const Header = () => {
             </Link>
             <div className="flex space-x-6">
                 <div className="font-montserrat hidden items-center sm:flex space-x-6 text-sm tracking-widest">
-                    <HeaderNavLink isDesktop label="BLOG" to="/blogs" />
+                    <HeaderNavLink isDesktop label="RANKINGS" to="/blogs/the-beatles-ranked" />
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
