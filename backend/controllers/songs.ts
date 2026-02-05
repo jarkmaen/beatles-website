@@ -1,5 +1,6 @@
 import { Router } from "express";
 
+import { random } from "../utils/randomNumberGenerator.js";
 import { Song, SongRating } from "../models/index.js";
 
 const router = Router();
@@ -25,7 +26,7 @@ router.get("/song-of-the-day", async (_req, res) => {
             return;
         }
 
-        const randomID = Math.floor(Math.random() * count) + 1;
+        const randomID = random(count);
         const song = await Song.findByPk(randomID, {
             include: [{ model: SongRating }]
         });
