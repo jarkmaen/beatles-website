@@ -1,198 +1,189 @@
-N,Song,Percentage,Full Instrumentation,Vocals,Lyrics,Originality / Innovation,Bassline,Percussion,Solo,Chord Progression,Cultural Significance,Total Points,Total Potential Points
-1,I Saw Her Standing There,45.45%,4,6,3,4,2,2,1,2,1,25,55
-2,Misery,17.65%,2,3,3,1,0,0,,0,0,9,51
-3,Ask Me Why,41.18%,4,7,2,3,1,1,,3,0,21,51
-4,Please Please Me,43.14%,3,7,2,4,1,3,,1,1,22,51
-5,Love Me Do,16.36%,2,2,0,3,0,0,1,0,1,9,55
-6,P.S. I Love You,21.82%,2,4,1,2,1,1,,1,0,12,55
-7,Do You Want to Know a Secret,39.22%,4,5,3,3,2,1,,2,0,20,51
-8,There's a Place,29.41%,3,4,3,2,0,2,,1,0,15,51
-9,From Me to You,33.33%,3,5,1,3,1,2,,1,1,17,51
-10,Thank You Girl,31.37%,3,5,2,2,0,3,,1,0,16,51
-11,She Loves You,43.14%,4,5,3,3,1,3,,2,1,22,51
-12,I'll Get You,17.65%,3,3,1,1,0,0,,1,0,9,51
-13,It Won't Be Long,37.25%,5,7,1,3,0,1,,2,0,19,51
-14,All I've Got to Do,43.14%,4,7,2,3,1,3,,2,0,22,51
-15,All My Loving,38.18%,5,5,2,2,2,1,1,2,1,21,55
-16,Don't Bother Me,23.64%,3,1,3,2,1,2,0,1,0,13,55
-17,Little Child,16.36%,2,2,0,1,1,1,1,1,0,9,55
-18,Hold Me Tight,21.57%,2,3,1,2,0,2,,1,0,11,51
-19,I Wanna Be Your Man,9.09%,2,1,0,0,0,1,1,0,0,5,55
-20,Not a Second Time,27.27%,3,3,1,3,1,2,1,1,0,15,55
-21,I Want to Hold Your Hand,39.22%,4,5,2,3,1,3,,1,1,20,51
-22,This Boy,64.71%,8,10,4,5,2,1,,3,0,33,51
-23,I Call Your Name,30.91%,3,2,3,3,1,3,0,2,0,17,55
-24,A Hard Day's Night,40.00%,4,4,3,3,0,3,2,2,1,22,55
-25,I Should Have Known Better,20.00%,2,4,2,1,0,0,1,1,0,11,55
-26,If I Fell,47.06%,4,8,4,5,0,0,,3,0,24,51
-27,I'm Happy Just to Dance With You,29.41%,3,3,2,2,1,2,,2,0,15,51
-28,And I Love Her,54.55%,7,4,2,5,2,3,4,3,0,30,55
-29,Tell Me Why,33.33%,3,4,2,2,2,2,,2,0,17,51
-30,Can't Buy Me Love,29.09%,3,4,2,2,0,1,2,1,1,16,55
-31,Any Time at All,30.91%,4,3,3,3,0,1,2,1,0,17,55
-32,I'll Cry Instead,21.57%,3,2,3,1,1,1,,0,0,11,51
-33,Things We Said Today,39.22%,4,5,3,3,1,2,,2,0,20,51
-34,When I Get Home,37.25%,3,6,3,2,1,2,,2,0,19,51
-35,You Can't Do That,38.18%,4,6,4,1,2,2,1,1,0,21,55
-36,I'll Be Back,37.25%,5,6,3,3,0,0,,2,0,19,51
-37,I Feel Fine,43.64%,3,6,3,5,0,4,0,2,1,24,55
-38,She's a Woman,25.45%,1,2,3,3,2,1,1,1,0,14,55
-39,No Reply,49.02%,5,7,4,4,0,2,,2,1,25,51
-40,I'm a Loser,30.91%,2,3,5,2,2,1,1,1,0,17,55
-41,Baby's in Black,29.09%,3,6,2,2,0,2,0,1,0,16,55
-42,I'll Follow the Sun,43.48%,5,6,4,3,,1,0,1,0,20,46
-43,Eight Days a Week,37.25%,5,4,2,3,1,2,,1,1,19,51
-44,Every Little Thing,32.73%,5,3,2,3,0,2,1,2,0,18,55
-45,I Don't Want to Spoil the Party,29.09%,2,5,4,1,0,1,1,2,0,16,55
-46,What You're Doing,36.36%,4,6,2,4,1,2,0,1,0,20,55
-47,Yes It Is,47.06%,6,6,5,5,0,0,,2,0,24,51
-48,I'm Down,29.09%,4,6,2,1,0,2,0,1,0,16,55
-49,Help!,60.78%,6,8,5,5,2,2,,2,1,31,51
-50,The Night Before,25.45%,3,2,3,1,1,2,1,1,0,14,55
-51,You've Got to Hide Your Love Away,31.37%,4,4,4,2,0,0,,2,0,16,51
-52,I Need You,27.45%,2,4,3,2,0,1,,2,0,14,51
-53,Another Girl,25.49%,2,4,2,2,1,1,,1,0,13,51
-54,You're Going to Lose That Girl,29.09%,2,5,2,2,0,2,1,2,0,16,55
-55,Ticket to Ride,50.98%,4,5,4,5,1,4,,2,1,26,51
-56,It's Only Love,37.25%,5,4,3,3,1,1,,2,0,19,51
-57,You Like Me Too Much,21.82%,2,3,2,2,0,1,1,1,0,12,55
-58,Tell Me What You See,31.37%,4,5,2,2,0,2,,1,0,16,51
-59,I've Just Seen a Face,42.00%,3,5,3,4,,0,3,2,1,21,50
-60,Yesterday,90.24%,10,9,6,8,,,,3,1,37,41
-61,We Can Work It Out,54.90%,5,6,6,5,1,2,,2,1,28,51
-62,Day Tripper,54.90%,5,6,5,3,3,4,,1,1,28,51
-63,Drive My Car,50.91%,5,5,5,5,2,3,2,1,0,28,55
-64,Norwegian Wood (This Bird Has Flown),68.63%,8,6,6,7,2,3,,2,1,35,51
-65,You Won't See Me,58.82%,7,6,5,4,2,4,,2,0,30,51
-66,Nowhere Man,60.00%,6,7,7,4,4,1,2,2,0,33,55
-67,Think for Yourself,49.02%,5,4,4,4,4,2,,2,0,25,51
-68,The Word,49.02%,5,5,4,4,3,2,,2,0,25,51
-69,Michelle,61.82%,5,7,5,6,3,1,2,4,1,34,55
-70,What Goes On,27.27%,3,4,2,2,2,1,0,1,0,15,55
-71,Girl,66.67%,8,8,7,6,2,1,,2,0,34,51
-72,I'm Looking Through You,45.10%,5,5,5,3,1,2,,2,0,23,51
-73,In My Life,67.27%,7,7,8,5,2,3,3,2,0,37,55
-74,Wait,50.98%,6,6,4,4,1,2,,3,0,26,51
-75,If I Needed Someone,47.06%,4,7,4,4,2,1,,2,0,24,51
-76,Run for Your Life,36.36%,3,4,5,3,2,1,1,1,0,20,55
-77,Paperback Writer,64.71%,7,7,4,6,3,3,,2,1,33,51
-78,Rain,60.78%,6,5,4,6,4,5,,1,0,31,51
-79,Taxman,47.27%,4,6,6,3,3,1,2,1,0,26,55
-80,Eleanor Rigby,85.37%,9,6,8,8,,,,3,1,35,41
-81,I'm Only Sleeping,58.18%,6,4,5,5,3,2,4,3,0,32,55
-82,Love You To,71.43%,8,4,6,8,,3,,,1,30,42
-83,"Here, There and Everywhere",50.98%,6,8,4,4,1,1,,2,0,26,51
-84,Yellow Submarine,66.67%,8,6,6,7,1,3,,2,1,34,51
-85,She Said She Said,47.06%,4,3,5,4,2,4,,2,0,24,51
-86,Good Day Sunshine,29.09%,4,3,2,3,0,2,1,1,0,16,55
-87,And Your Bird Can Sing,50.91%,4,6,5,3,3,1,4,2,0,28,55
-88,For No One,69.09%,7,9,7,6,2,1,4,2,0,38,55
-89,Doctor Robert,45.10%,4,6,5,4,2,1,,1,0,23,51
-90,I Want to Tell You,58.82%,7,6,5,5,2,3,,2,0,30,51
-91,Got to Get You Into My Life,49.02%,6,6,3,5,2,1,,2,0,25,51
-92,Tomorrow Never Knows,80.85%,9,8,7,8,1,4,,,1,38,47
-93,Strawberry Fields Forever,88.24%,10,8,8,8,1,5,,4,1,45,51
-94,Penny Lane,80.00%,10,7,8,6,3,2,4,3,1,44,55
-95,Sgt. Pepper's Lonely Hearts Club Band,62.75%,8,5,5,7,2,2,,2,1,32,51
-96,With a Little Help From My Friends,47.06%,5,3,5,4,3,1,,2,1,24,51
-97,Lucy in the Sky With Diamonds,72.55%,7,5,7,6,5,3,,3,1,37,51
-98,Getting Better,56.86%,5,6,6,4,3,2,,2,1,29,51
-99,Fixing a Hole,47.27%,5,4,4,4,2,2,2,2,1,26,55
-100,She's Leaving Home,70.73%,8,6,6,6,,,,2,1,29,41
-101,Being for the Benefit of Mr. Kite!,76.47%,10,4,7,8,4,2,,3,1,39,51
-102,Within You Without You,73.81%,8,4,8,6,,4,,,1,31,42
-103,When I'm Sixty-Four,68.63%,9,7,7,5,2,2,,2,1,35,51
-104,Lovely Rita,52.73%,5,4,5,5,3,1,3,2,1,29,55
-105,Good Morning Good Morning,60.00%,8,3,5,6,4,4,1,1,1,33,55
-106,Sgt. Pepper's Lonely Hearts Club Band (Reprise),54.90%,8,5,3,5,2,2,,2,1,28,51
-107,A Day in the Life,92.16%,10,9,8,8,2,5,,4,1,47,51
-108,All You Need Is Love,47.27%,6,5,5,4,2,0,1,2,1,26,55
-109,Baby You're a Rich Man,47.06%,5,5,5,4,2,2,,1,0,24,51
-110,"Hello, Goodbye",60.78%,8,4,4,6,3,4,,1,1,31,51
-111,Magical Mystery Tour,47.06%,6,4,3,5,3,2,,1,0,24,51
-112,Your Mother Should Know,54.90%,6,7,4,4,3,2,,2,0,28,51
-113,I Am the Walrus,60.78%,8,4,6,8,0,1,,4,0,31,51
-114,The Fool on the Hill,50.91%,7,5,6,5,1,1,1,2,0,28,55
-115,Flying,30.30%,6,,,2,1,1,,0,0,10,33
-116,Blue Jay Way,38.30%,5,4,3,4,0,2,,,0,18,47
-117,Lady Madonna,65.45%,7,7,5,6,3,2,3,2,1,36,55
-118,The Inner Light,50.00%,6,3,5,5,,2,,2,0,23,46
-119,Hey Jude,78.43%,8,9,7,8,1,4,,2,1,40,51
-120,Back in the U.S.S.R.,63.64%,7,7,7,5,2,2,3,2,0,35,55
-121,Dear Prudence,70.59%,6,6,6,6,5,5,,2,0,36,51
-122,Glass Onion,52.94%,7,4,5,5,2,2,,2,0,27,51
-123,"Ob-La-Di, Ob-La-Da",68.63%,7,8,6,6,4,1,,2,1,35,51
-124,Wild Honey Pie,19.57%,2,2,0,3,,1,,1,0,9,46
-125,The Continuing Story of Bungalow Bill,52.94%,7,5,7,4,2,1,,1,0,27,51
-126,While My Guitar Gently Weeps,78.18%,8,8,7,6,3,3,4,3,1,43,55
-127,Happiness Is a Warm Gun,70.91%,7,10,7,7,1,2,1,4,0,39,55
-128,Martha My Dear,50.98%,8,3,5,5,1,1,,3,0,26,51
-129,I'm So Tired,54.90%,5,6,6,4,3,2,,2,0,28,51
-130,Blackbird,80.49%,8,8,8,5,,,,3,1,33,41
-131,Piggies,58.18%,7,6,7,6,1,1,2,2,0,32,55
-132,Rocky Raccoon,50.98%,6,6,6,5,1,1,,1,0,26,51
-133,Don't Pass Me By,23.53%,5,1,3,1,2,0,,0,0,12,51
-134,Why Don't We Do It in the Road,27.45%,2,6,2,3,0,1,,0,0,14,51
-135,I Will,54.90%,5,8,3,4,2,3,,3,0,28,51
-136,Julia,56.10%,5,7,6,3,,,,2,0,23,41
-137,Birthday,35.29%,5,5,2,2,1,2,,1,0,18,51
-138,Yer Blues,54.55%,7,6,5,4,2,3,1,2,0,30,55
-139,Mother Nature's Son,47.83%,7,4,4,3,,1,,3,0,22,46
-140,Everybody's Got Something to Hide Except Me and My Monkey,50.98%,5,6,3,5,3,2,,2,0,26,51
-141,Sexy Sadie,54.90%,5,6,6,5,2,2,,2,0,28,51
-142,Helter Skelter,70.91%,8,9,4,8,4,3,0,2,1,39,55
-143,"Long, Long, Long",70.59%,8,7,5,6,2,5,,3,0,36,51
-144,Revolution 1,52.73%,7,6,6,5,3,0,,1,1,29,55
-145,Honey Pie,56.36%,8,6,5,5,1,1,2,3,0,31,55
-146,Savoy Truffle,65.45%,8,7,5,6,2,4,1,3,0,36,55
-147,Cry Baby Cry,52.94%,5,5,4,4,3,4,,2,0,27,51
-148,Good Night,53.66%,8,5,3,4,,,,2,0,22,41
-149,Only a Northern Song,39.22%,2,2,6,4,2,3,,1,0,20,51
-150,All Together Now,45.10%,7,4,3,4,2,2,,1,0,23,51
-151,Hey Bulldog,58.18%,5,6,5,5,4,2,2,3,0,32,55
-152,It's All Too Much,33.33%,4,3,3,3,1,3,,0,0,17,51
-153,The Ballad of John and Yoko,60.78%,7,7,8,4,2,1,,1,1,31,51
-154,Old Brown Shoe,43.64%,5,3,3,3,4,2,2,2,0,24,55
-155,Come Together,78.18%,8,8,5,7,5,5,2,2,1,43,55
-156,Something,92.73%,10,9,7,6,5,5,4,4,1,51,55
-157,Maxwell's Silver Hammer,68.63%,8,6,7,6,3,3,,2,0,35,51
-158,Oh! Darling,62.75%,5,10,3,4,4,4,,2,0,32,51
-159,Octopus's Garden,65.45%,8,6,6,6,2,3,3,2,0,36,55
-160,I Want You (She's So Heavy),74.51%,8,7,5,7,5,3,,3,0,38,51
-161,Here Comes the Sun,74.51%,10,7,6,6,2,4,,2,1,38,51
-162,Because,73.91%,8,10,5,6,2,,,3,0,34,46
-163,You Never Give Me Your Money,88.24%,10,9,7,8,4,2,,4,1,45,51
-164,Sun King,66.67%,8,8,3,5,3,3,,3,1,34,51
-165,Mean Mr. Mustard,43.14%,6,3,5,3,2,1,,1,1,22,51
-166,Polythene Pam,45.45%,5,4,4,4,1,3,2,1,1,25,55
-167,She Came in Through the Bathroom Window,74.51%,7,7,7,5,4,4,,3,1,38,51
-168,Golden Slumbers,74.51%,9,9,5,5,2,4,,3,1,38,51
-169,Carry That Weight,54.90%,8,5,4,5,2,1,,2,1,28,51
-170,The End,63.64%,7,5,3,7,2,4,4,2,1,35,55
-171,Her Majesty,39.02%,3,3,4,3,,,,2,1,16,41
-172,You Know My Name (Look Up the Number),45.10%,7,4,2,5,1,3,,1,0,23,51
-173,Two of Us,54.35%,6,7,5,4,,2,,1,0,25,46
-174,Dig a Pony,49.09%,4,6,2,4,2,3,3,2,1,27,55
-175,Across the Universe,53.66%,1,6,8,5,,,,2,0,22,41
-176,I Me Mine,60.78%,4,5,7,5,3,4,,3,0,31,51
-177,Dig It,5.88%,2,1,0,0,0,0,,0,0,3,51
-178,Let It Be,69.09%,7,8,6,5,1,4,4,2,1,38,55
-179,I've Got a Feeling,62.75%,6,9,4,5,2,3,,2,1,32,51
-180,One After 909,32.73%,3,3,4,2,2,1,1,1,1,18,55
-181,The Long and Winding Road,37.25%,1,2,6,4,0,1,,4,1,19,51
-182,For You Blue,7.27%,1,2,0,0,0,0,0,1,0,4,55
-183,Get Back,56.36%,6,4,5,5,2,3,4,1,1,31,55
-184,Get Back (Naked),58.18%,7,4,5,5,2,3,4,1,1,32,55
-185,Dig a Pony (Naked),49.09%,4,6,2,4,2,3,3,2,1,27,55
-186,For You Blue (Naked),14.55%,4,2,0,0,0,0,1,1,0,8,55
-187,The Long and Winding Road (Naked),50.91%,7,3,6,4,0,1,2,4,1,28,55
-188,Two of Us (Naked),56.52%,7,7,5,4,,2,,1,0,26,46
-189,I've Got a Feeling (Naked),64.71%,7,9,4,5,2,3,,2,1,33,51
-190,One After 909 (Naked),34.55%,4,3,4,2,2,1,1,1,1,19,55
-191,Don't Let Me Down (Naked),78.18%,9,9,5,6,4,2,4,3,1,43,55
-192,I Me Mine (Naked),68.63%,8,5,7,5,3,4,,3,0,35,51
-193,Across the Universe (Naked),65.85%,6,6,8,5,,,,2,0,27,41
-194,Let It Be (Naked),63.64%,7,8,6,5,1,3,2,2,1,35,55
-195,Free as a Bird,56.36%,7,6,5,4,1,1,3,3,1,31,55
-196,Real Love,52.73%,6,3,6,5,0,1,3,4,1,29,55
-197,Now and Then,67.27%,6,7,6,8,2,2,3,2,1,37,55
+ID,Album,Rank,Title,Percentage,Full Instrumentation,Vocals,Lyrics,Originality / Innovation,Bassline,Percussion,Solo,Chord Progression,Cultural Significance,Total Points,Total Potential Points
+1,Please Please Me,115,I Saw Her Standing There,45.45%,4,6,3,4,2,2,1,2,1,25,55
+2,Please Please Me,183,Misery,17.65%,2,3,3,1,0,0,,0,0,9,51
+3,Please Please Me,128,Ask Me Why,41.18%,4,7,2,3,1,1,,3,0,21,51
+4,Please Please Me,126,Please Please Me,43.14%,3,7,2,4,1,3,,1,1,22,51
+5,Please Please Me,184,Love Me Do,16.36%,2,2,0,3,0,0,1,0,1,9,55
+6,Please Please Me,177,P.S. I Love You,21.82%,2,4,1,2,1,1,,1,0,12,55
+7,Please Please Me,133,Do You Want to Know a Secret,39.22%,4,5,3,3,2,1,,2,0,20,51
+8,Please Please Me,160,There's a Place,29.41%,3,4,3,2,0,2,,1,0,15,51
+9,Single,149,From Me to You,33.33%,3,5,1,3,1,2,,1,1,17,51
+10,Single,154,Thank You Girl,31.37%,3,5,2,2,0,3,,1,0,16,51
+11,Single,125,She Loves You,43.14%,4,5,3,3,1,3,,2,1,22,51
+12,Single,182,I'll Get You,17.65%,3,3,1,1,0,0,,1,0,9,51
+13,With the Beatles,143,It Won't Be Long,37.25%,5,7,1,3,0,1,,2,0,19,51
+14,With the Beatles,124,All I've Got to Do,43.14%,4,7,2,3,1,3,,2,0,22,51
+15,With the Beatles,137,All My Loving,38.18%,5,5,2,2,2,1,1,2,1,21,55
+16,With the Beatles,174,Don't Bother Me,23.64%,3,1,3,2,1,2,0,1,0,13,55
+17,With the Beatles,185,Little Child,16.36%,2,2,0,1,1,1,1,1,0,9,55
+18,With the Beatles,179,Hold Me Tight,21.57%,2,3,1,2,0,2,,1,0,11,51
+19,With the Beatles,186,I Wanna Be Your Man,9.09%,2,1,0,0,0,1,1,0,0,5,55
+20,With the Beatles,170,Not a Second Time,27.27%,3,3,1,3,1,2,1,1,0,15,55
+21,Single,132,I Want to Hold Your Hand,39.22%,4,5,2,3,1,3,,1,1,20,51
+22,Single,43,This Boy,64.71%,8,10,4,5,2,1,,3,0,33,51
+23,Single,157,I Call Your Name,30.91%,3,2,3,3,1,3,0,2,0,17,55
+24,A Hard Day's Night,129,A Hard Day's Night,40.00%,4,4,3,3,0,3,2,2,1,22,55
+25,A Hard Day's Night,180,I Should Have Known Better,20.00%,2,4,2,1,0,0,1,1,0,11,55
+26,A Hard Day's Night,113,If I Fell,47.06%,4,8,4,5,0,0,,3,0,24,51
+27,A Hard Day's Night,159,I'm Happy Just to Dance With You,29.41%,3,3,2,2,1,2,,2,0,15,51
+28,A Hard Day's Night,78,And I Love Her,54.55%,7,4,2,5,2,3,4,3,0,30,55
+29,A Hard Day's Night,148,Tell Me Why,33.33%,3,4,2,2,2,2,,2,0,17,51
+30,A Hard Day's Night,166,Can't Buy Me Love,29.09%,3,4,2,2,0,1,2,1,1,16,55
+31,A Hard Day's Night,156,Any Time at All,30.91%,4,3,3,3,0,1,2,1,0,17,55
+32,A Hard Day's Night,178,I'll Cry Instead,21.57%,3,2,3,1,1,1,,0,0,11,51
+33,A Hard Day's Night,131,Things We Said Today,39.22%,4,5,3,3,1,2,,2,0,20,51
+34,A Hard Day's Night,142,When I Get Home,37.25%,3,6,3,2,1,2,,2,0,19,51
+35,A Hard Day's Night,136,You Can't Do That,38.18%,4,6,4,1,2,2,1,1,0,21,55
+36,A Hard Day's Night,141,I'll Be Back,37.25%,5,6,3,3,0,0,,2,0,19,51
+37,Single,121,I Feel Fine,43.64%,3,6,3,5,0,4,0,2,1,24,55
+38,Single,173,She's a Woman,25.45%,1,2,3,3,2,1,1,1,0,14,55
+39,Beatles for Sale,102,No Reply,49.02%,5,7,4,4,0,2,,2,1,25,51
+40,Beatles for Sale,155,I'm a Loser,30.91%,2,3,5,2,2,1,1,1,0,17,55
+41,Beatles for Sale,165,Baby's in Black,29.09%,3,6,2,2,0,2,0,1,0,16,55
+42,Beatles for Sale,122,I'll Follow the Sun,43.48%,5,6,4,3,,1,0,1,0,20,46
+43,Beatles for Sale,140,Eight Days a Week,37.25%,5,4,2,3,1,2,,1,1,19,51
+44,Beatles for Sale,151,Every Little Thing,32.73%,5,3,2,3,0,2,1,2,0,18,55
+45,Beatles for Sale,164,I Don't Want to Spoil the Party,29.09%,2,5,4,1,0,1,1,2,0,16,55
+46,Beatles for Sale,145,What You're Doing,36.36%,4,6,2,4,1,2,0,1,0,20,55
+47,Single,112,Yes It Is,47.06%,6,6,5,5,0,0,,2,0,24,51
+48,Single,163,I'm Down,29.09%,4,6,2,1,0,2,0,1,0,16,55
+49,Help!,55,Help!,60.78%,6,8,5,5,2,2,,2,1,31,51
+50,Help!,172,The Night Before,25.45%,3,2,3,1,1,2,1,1,0,14,55
+51,Help!,153,You've Got to Hide Your Love Away,31.37%,4,4,4,2,0,0,,2,0,16,51
+52,Help!,168,I Need You,27.45%,2,4,3,2,0,1,,2,0,14,51
+53,Help!,171,Another Girl,25.49%,2,4,2,2,1,1,,1,0,13,51
+54,Help!,162,You're Going to Lose That Girl,29.09%,2,5,2,2,0,2,1,2,0,16,55
+55,Help!,93,Ticket to Ride,50.98%,4,5,4,5,1,4,,2,1,26,51
+56,Help!,139,It's Only Love,37.25%,5,4,3,3,1,1,,2,0,19,51
+57,Help!,176,You Like Me Too Much,21.82%,2,3,2,2,0,1,1,1,0,12,55
+58,Help!,152,Tell Me What You See,31.37%,4,5,2,2,0,2,,1,0,16,51
+59,Help!,127,I've Just Seen a Face,42.00%,3,5,3,4,,0,3,2,1,21,50
+60,Help!,3,Yesterday,90.24%,10,9,6,8,,,,3,1,37,41
+61,Single,76,We Can Work It Out,54.90%,5,6,6,5,1,2,,2,1,28,51
+62,Single,75,Day Tripper,54.90%,5,6,5,3,3,4,,1,1,28,51
+63,Rubber Soul,96,Drive My Car,50.91%,5,5,5,5,2,3,2,1,0,28,55
+64,Rubber Soul,33,Norwegian Wood (This Bird Has Flown),68.63%,8,6,6,7,2,3,,2,1,35,51
+65,Rubber Soul,59,You Won't See Me,58.82%,7,6,5,4,2,4,,2,0,30,51
+66,Rubber Soul,57,Nowhere Man,60.00%,6,7,7,4,4,1,2,2,0,33,55
+67,Rubber Soul,101,Think for Yourself,49.02%,5,4,4,4,4,2,,2,0,25,51
+68,Rubber Soul,100,The Word,49.02%,5,5,4,4,3,2,,2,0,25,51
+69,Rubber Soul,49,Michelle,61.82%,5,7,5,6,3,1,2,4,1,34,55
+70,Rubber Soul,169,What Goes On,27.27%,3,4,2,2,2,1,0,1,0,15,55
+71,Rubber Soul,38,Girl,66.67%,8,8,7,6,2,1,,2,0,34,51
+72,Rubber Soul,119,I'm Looking Through You,45.10%,5,5,5,3,1,2,,2,0,23,51
+73,Rubber Soul,35,In My Life,67.27%,7,7,8,5,2,3,3,2,0,37,55
+74,Rubber Soul,92,Wait,50.98%,6,6,4,4,1,2,,3,0,26,51
+75,Rubber Soul,111,If I Needed Someone,47.06%,4,7,4,4,2,1,,2,0,24,51
+76,Rubber Soul,144,Run for Your Life,36.36%,3,4,5,3,2,1,1,1,0,20,55
+77,Single,42,Paperback Writer,64.71%,7,7,4,6,3,3,,2,1,33,51
+78,Single,54,Rain,60.78%,6,5,4,6,4,5,,1,0,31,51
+79,Revolver,106,Taxman,47.27%,4,6,6,3,3,1,2,1,0,26,55
+80,Revolver,6,Eleanor Rigby,85.37%,9,6,8,8,,,,3,1,35,41
+81,Revolver,62,I'm Only Sleeping,58.18%,6,4,5,5,3,2,4,3,0,32,55
+82,Revolver,22,Love You To,71.43%,8,4,6,8,,3,,,1,30,42
+83,Revolver,91,"Here, There and Everywhere",50.98%,6,8,4,4,1,1,,2,0,26,51
+84,Revolver,37,Yellow Submarine,66.67%,8,6,6,7,1,3,,2,1,34,51
+85,Revolver,110,She Said She Said,47.06%,4,3,5,4,2,4,,2,0,24,51
+86,Revolver,161,Good Day Sunshine,29.09%,4,3,2,3,0,2,1,1,0,16,55
+87,Revolver,95,And Your Bird Can Sing,50.91%,4,6,5,3,3,1,4,2,0,28,55
+88,Revolver,29,For No One,69.09%,7,9,7,6,2,1,4,2,0,38,55
+89,Revolver,118,Doctor Robert,45.10%,4,6,5,4,2,1,,1,0,23,51
+90,Revolver,58,I Want to Tell You,58.82%,7,6,5,5,2,3,,2,0,30,51
+91,Revolver,99,Got to Get You Into My Life,49.02%,6,6,3,5,2,1,,2,0,25,51
+92,Revolver,7,Tomorrow Never Knows,80.85%,9,8,7,8,1,4,,,1,38,47
+93,Single,4,Strawberry Fields Forever,88.24%,10,8,8,8,1,5,,4,1,45,51
+94,Single,9,Penny Lane,80.00%,10,7,8,6,3,2,4,3,1,44,55
+95,Sgt. Pepper's Lonely Hearts Club Band,48,Sgt. Pepper's Lonely Hearts Club Band,62.75%,8,5,5,7,2,2,,2,1,32,51
+96,Sgt. Pepper's Lonely Hearts Club Band,109,With a Little Help From My Friends,47.06%,5,3,5,4,3,1,,2,1,24,51
+97,Sgt. Pepper's Lonely Hearts Club Band,21,Lucy in the Sky With Diamonds,72.55%,7,5,7,6,5,3,,3,1,37,51
+98,Sgt. Pepper's Lonely Hearts Club Band,63,Getting Better,56.86%,5,6,6,4,3,2,,2,1,29,51
+99,Sgt. Pepper's Lonely Hearts Club Band,105,Fixing a Hole,47.27%,5,4,4,4,2,2,2,2,1,26,55
+100,Sgt. Pepper's Lonely Hearts Club Band,25,She's Leaving Home,70.73%,8,6,6,6,,,,2,1,29,41
+101,Sgt. Pepper's Lonely Hearts Club Band,14,Being for the Benefit of Mr. Kite!,76.47%,10,4,7,8,4,2,,3,1,39,51
+102,Sgt. Pepper's Lonely Hearts Club Band,20,Within You Without You,73.81%,8,4,8,6,,4,,,1,31,42
+103,Sgt. Pepper's Lonely Hearts Club Band,32,When I'm Sixty-Four,68.63%,9,7,7,5,2,2,,2,1,35,51
+104,Sgt. Pepper's Lonely Hearts Club Band,87,Lovely Rita,52.73%,5,4,5,5,3,1,3,2,1,29,55
+105,Sgt. Pepper's Lonely Hearts Club Band,56,Good Morning Good Morning,60.00%,8,3,5,6,4,4,1,1,1,33,55
+106,Sgt. Pepper's Lonely Hearts Club Band,74,Sgt. Pepper's Lonely Hearts Club Band (Reprise),54.90%,8,5,3,5,2,2,,2,1,28,51
+107,Sgt. Pepper's Lonely Hearts Club Band,2,A Day in the Life,92.16%,10,9,8,8,2,5,,4,1,47,51
+108,Single,104,All You Need Is Love,47.27%,6,5,5,4,2,0,1,2,1,26,55
+109,Single,108,Baby You're a Rich Man,47.06%,5,5,5,4,2,2,,1,0,24,51
+110,Single,53,"Hello, Goodbye",60.78%,8,4,4,6,3,4,,1,1,31,51
+111,Magical Mystery Tour,107,Magical Mystery Tour,47.06%,6,4,3,5,3,2,,1,0,24,51
+112,Magical Mystery Tour,73,Your Mother Should Know,54.90%,6,7,4,4,3,2,,2,0,28,51
+113,Magical Mystery Tour,52,I Am the Walrus,60.78%,8,4,6,8,0,1,,4,0,31,51
+114,Magical Mystery Tour,94,The Fool on the Hill,50.91%,7,5,6,5,1,1,1,2,0,28,55
+115,Magical Mystery Tour,158,Flying,30.30%,6,,,2,1,1,,0,0,10,33
+116,Magical Mystery Tour,135,Blue Jay Way,38.30%,5,4,3,4,0,2,,,0,18,47
+117,Single,41,Lady Madonna,65.45%,7,7,5,6,3,2,3,2,1,36,55
+118,Single,97,The Inner Light,50.00%,6,3,5,5,,2,,2,0,23,46
+119,Single,10,Hey Jude,78.43%,8,9,7,8,1,4,,2,1,40,51
+120,Single,67,Revolution,56.36%,5,6,6,5,3,2,1,2,1,31,55
+121,The Beatles (White Album),45,Back in the U.S.S.R.,63.64%,7,7,7,5,2,2,3,2,0,35,55
+122,The Beatles (White Album),27,Dear Prudence,70.59%,6,6,6,6,5,5,,2,0,36,51
+123,The Beatles (White Album),84,Glass Onion,52.94%,7,4,5,5,2,2,,2,0,27,51
+124,The Beatles (White Album),31,"Ob-La-Di, Ob-La-Da",68.63%,7,8,6,6,4,1,,2,1,35,51
+125,The Beatles (White Album),181,Wild Honey Pie,19.57%,2,2,0,3,,1,,1,0,9,46
+126,The Beatles (White Album),83,The Continuing Story of Bungalow Bill,52.94%,7,5,7,4,2,1,,1,0,27,51
+127,The Beatles (White Album),11,While My Guitar Gently Weeps,78.18%,8,8,7,6,3,3,4,3,1,43,55
+128,The Beatles (White Album),23,Happiness Is a Warm Gun,70.91%,7,10,7,7,1,2,1,4,0,39,55
+129,The Beatles (White Album),90,Martha My Dear,50.98%,8,3,5,5,1,1,,3,0,26,51
+130,The Beatles (White Album),72,I'm So Tired,54.90%,5,6,6,4,3,2,,2,0,28,51
+131,The Beatles (White Album),8,Blackbird,80.49%,8,8,8,5,,,,3,1,33,41
+132,The Beatles (White Album),61,Piggies,58.18%,7,6,7,6,1,1,2,2,0,32,55
+133,The Beatles (White Album),89,Rocky Raccoon,50.98%,6,6,6,5,1,1,,1,0,26,51
+134,The Beatles (White Album),175,Don't Pass Me By,23.53%,5,1,3,1,2,0,,0,0,12,51
+135,The Beatles (White Album),167,Why Don't We Do It in the Road,27.45%,2,6,2,3,0,1,,0,0,14,51
+136,The Beatles (White Album),71,I Will,54.90%,5,8,3,4,2,3,,3,0,28,51
+137,The Beatles (White Album),68,Julia,56.10%,5,7,6,3,,,,2,0,23,41
+138,The Beatles (White Album),146,Birthday,35.29%,5,5,2,2,1,2,,1,0,18,51
+139,The Beatles (White Album),77,Yer Blues,54.55%,7,6,5,4,2,3,1,2,0,30,55
+140,The Beatles (White Album),103,Mother Nature's Son,47.83%,7,4,4,3,,1,,3,0,22,46
+141,The Beatles (White Album),88,Everybody's Got Something to Hide Except Me and My Monkey,50.98%,5,6,3,5,3,2,,2,0,26,51
+142,The Beatles (White Album),70,Sexy Sadie,54.90%,5,6,6,5,2,2,,2,0,28,51
+143,The Beatles (White Album),24,Helter Skelter,70.91%,8,9,4,8,4,3,0,2,1,39,55
+144,The Beatles (White Album),26,"Long, Long, Long",70.59%,8,7,5,6,2,5,,3,0,36,51
+145,The Beatles (White Album),86,Revolution 1,52.73%,7,6,6,5,3,0,,1,1,29,55
+146,The Beatles (White Album),66,Honey Pie,56.36%,8,6,5,5,1,1,2,3,0,31,55
+147,The Beatles (White Album),40,Savoy Truffle,65.45%,8,7,5,6,2,4,1,3,0,36,55
+148,The Beatles (White Album),82,Cry Baby Cry,52.94%,5,5,4,4,3,4,,2,0,27,51
+149,The Beatles (White Album),81,Good Night,53.66%,8,5,3,4,,,,2,0,22,41
+150,Yellow Submarine,130,Only a Northern Song,39.22%,2,2,6,4,2,3,,1,0,20,51
+151,Yellow Submarine,117,All Together Now,45.10%,7,4,3,4,2,2,,1,0,23,51
+152,Yellow Submarine,60,Hey Bulldog,58.18%,5,6,5,5,4,2,2,3,0,32,55
+153,Yellow Submarine,147,It's All Too Much,33.33%,4,3,3,3,1,3,,0,0,17,51
+154,Single,12,Don't Let Me Down,78.18%,9,9,5,6,4,2,4,3,1,43,55
+155,Single,51,The Ballad of John and Yoko,60.78%,7,7,8,4,2,1,,1,1,31,51
+156,Single,120,Old Brown Shoe,43.64%,5,3,3,3,4,2,2,2,0,24,55
+157,Abbey Road,13,Come Together,78.18%,8,8,5,7,5,5,2,2,1,43,55
+158,Abbey Road,1,Something,92.73%,10,9,7,6,5,5,4,4,1,51,55
+159,Abbey Road,30,Maxwell's Silver Hammer,68.63%,8,6,7,6,3,3,,2,0,35,51
+160,Abbey Road,47,Oh! Darling,62.75%,5,10,3,4,4,4,,2,0,32,51
+161,Abbey Road,39,Octopus's Garden,65.45%,8,6,6,6,2,3,3,2,0,36,55
+162,Abbey Road,16,I Want You (She's So Heavy),74.51%,8,7,5,7,5,3,,3,0,38,51
+163,Abbey Road,15,Here Comes the Sun,74.51%,10,7,6,6,2,4,,2,1,38,51
+164,Abbey Road,19,Because,73.91%,8,10,5,6,2,,,3,0,34,46
+165,Abbey Road,5,You Never Give Me Your Money,88.24%,10,9,7,8,4,2,,4,1,45,51
+166,Abbey Road,36,Sun King,66.67%,8,8,3,5,3,3,,3,1,34,51
+167,Abbey Road,123,Mean Mr. Mustard,43.14%,6,3,5,3,2,1,,1,1,22,51
+168,Abbey Road,114,Polythene Pam,45.45%,5,4,4,4,1,3,2,1,1,25,55
+169,Abbey Road,18,She Came in Through the Bathroom Window,74.51%,7,7,7,5,4,4,,3,1,38,51
+170,Abbey Road,17,Golden Slumbers,74.51%,9,9,5,5,2,4,,3,1,38,51
+171,Abbey Road,69,Carry That Weight,54.90%,8,5,4,5,2,1,,2,1,28,51
+172,Abbey Road,44,The End,63.64%,7,5,3,7,2,4,4,2,1,35,55
+173,Abbey Road,134,Her Majesty,39.02%,3,3,4,3,,,,2,1,16,41
+174,Single,116,You Know My Name (Look Up the Number),45.10%,7,4,2,5,1,3,,1,0,23,51
+175,Let It Be,79,Two of Us,54.35%,6,7,5,4,,2,,1,0,25,46
+176,Let It Be,98,Dig a Pony,49.09%,4,6,2,4,2,3,3,2,1,27,55
+177,Let It Be,80,Across the Universe,53.66%,1,6,8,5,,,,2,0,22,41
+178,Let It Be,50,I Me Mine,60.78%,4,5,7,5,3,4,,3,0,31,51
+179,Let It Be,188,Dig It,5.88%,2,1,0,0,0,0,,0,0,3,51
+180,Let It Be,28,Let It Be,69.09%,7,8,6,5,1,4,4,2,1,38,55
+181,Let It Be,46,I've Got a Feeling,62.75%,6,9,4,5,2,3,,2,1,32,51
+182,Let It Be,150,One After 909,32.73%,3,3,4,2,2,1,1,1,1,18,55
+183,Let It Be,138,The Long and Winding Road,37.25%,1,2,6,4,0,1,,4,1,19,51
+184,Let It Be,187,For You Blue,7.27%,1,2,0,0,0,0,0,1,0,4,55
+185,Let It Be,65,Get Back,56.36%,6,4,5,5,2,3,4,1,1,31,55
+186,Single,64,Free as a Bird,56.36%,7,6,5,4,1,1,3,3,1,31,55
+187,Single,85,Real Love,52.73%,6,3,6,5,0,1,3,4,1,29,55
+188,Single,34,Now and Then,67.27%,6,7,6,8,2,2,3,2,1,37,55
