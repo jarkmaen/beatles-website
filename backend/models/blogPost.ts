@@ -48,7 +48,7 @@ BlogPost.init(
     {
         modelName: "BlogPost",
         sequelize,
-        tableName: "blog_posts",
+        tableName: "blog_post",
         timestamps: false
     }
 );

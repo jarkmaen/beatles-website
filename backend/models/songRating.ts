@@ -45,7 +45,7 @@ SongRating.init(
     {
         modelName: "SongRating",
         sequelize,
-        tableName: "song_ratings",
+        tableName: "song_rating",
         timestamps: false
     }
 );

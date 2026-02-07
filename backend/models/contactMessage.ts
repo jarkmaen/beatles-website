@@ -42,7 +42,7 @@ ContactMessage.init(
     {
         modelName: "ContactMessage",
         sequelize,
-        tableName: "contact_messages",
+        tableName: "contact_message",
         timestamps: false
     }
 );

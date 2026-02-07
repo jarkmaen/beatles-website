@@ -1,24 +1,24 @@
-CREATE TABLE blog_posts (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE blog_post (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     author TEXT NOT NULL,
     content JSONB NOT NULL,
     intro TEXT NOT NULL,
-    slug TEXT UNIQUE NOT NULL,
+    slug TEXT NOT NULL UNIQUE,
     title TEXT NOT NULL,
-    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE contact_messages (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE contact_message (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
     first_name VARCHAR(100),
     last_name VARCHAR(100),
     message TEXT NOT NULL,
-    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE songs (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE song (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     album TEXT NOT NULL,
     commentary TEXT NOT NULL,
     commentary_landing TEXT,
@@ -26,9 +26,9 @@ CREATE TABLE songs (
     title TEXT NOT NULL
 );
 
-CREATE TABLE song_ratings (
-    id SERIAL PRIMARY KEY,
-    song_id INT REFERENCES songs(id),
+CREATE TABLE song_rating (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    song_id INT REFERENCES song(id),
     bassline SMALLINT,
     chord_progression SMALLINT,
     cultural_significance SMALLINT,

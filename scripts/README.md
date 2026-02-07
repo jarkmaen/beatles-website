@@ -24,21 +24,21 @@ This will create the output folder with three CSV files inside it. Then, connect
 
 ```
 # Create database
-postgres=# CREATE DATABASE dbname;
+postgres=# CREATE DATABASE db_name;
 
 # Connect to database
-postgres=# \c dbname
+postgres=# \c db_name
 
 # Load schema
-dbname=# \i /absolute/path/to/beatles-website/backend/schema.sql
+db_name=# \i /absolute/path/to/beatles-website/backend/schema.sql
 
 # Load data from CSVs
-dbname=# \COPY songs(album, commentary, commentary_landing, rank, title) FROM /absolute/path/to/beatles-website/scripts/output/songs.csv WITH CSV HEADER;
-dbname=# \COPY song_ratings(song_id, bassline, chord_progression, cultural_significance, full_instrumentation, lyrics, originality_innovation, percentage, percussion, solo, vocals) FROM /absolute/path/to/beatles-website/scripts/output/song_ratings.csv WITH CSV HEADER;
+db_name=# \COPY song(album, commentary, commentary_landing, rank, title) FROM /absolute/path/to/beatles-website/scripts/output/song.csv WITH CSV HEADER;
+db_name=# \COPY song_rating(song_id, bassline, chord_progression, cultural_significance, full_instrumentation, lyrics, originality_innovation, percentage, percussion, solo, vocals) FROM /absolute/path/to/beatles-website/scripts/output/song_rating.csv WITH CSV HEADER;
 ```
 
-Finally, create a .env file in the backend folder and add the PostgreSQL connection URL there like this:
+And finally, create a .env file in the backend folder and add a PostgreSQL connection URL in there like this:
 
 ```
-POSTGRESQL_URL=postgresql://<username>:<password>@<host>:<port>/<dbname>
+POSTGRESQL_URL=postgresql://<username>:<password>@<host>:<port>/<db_name>
 ```

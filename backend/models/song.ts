@@ -41,7 +41,7 @@ Song.init(
     {
         modelName: "Song",
         sequelize,
-        tableName: "songs",
+        tableName: "song",
         timestamps: false
     }
 );

@@ -8,43 +8,44 @@ DATA_DIR = ROOT / "data"
 OUTPUT_DIR = ROOT / "output"
 
 
-def parse_commentary_to_csv(input_filename, output_filename):
-    input_path = DATA_DIR / input_filename
-    output_path = OUTPUT_DIR / output_filename
-
-    with open(input_path, "r", encoding="utf-8") as f:
-        content = f.read()
-        blocks = content.strip().split("\n\n")
-
-    rows = []
-
-    for block in blocks:
-        lines = block.strip().split("\n")
-
-        header = lines[0]
-        parts = header.split(" ", 1)
-        rank = parts[0]
-        title = parts[1]
-
-        commentary = "\n".join(lines[1:])
-
-        # normalize punctuation
-        commentary = (
-            commentary.replace("…", "...").replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
-        )
-
-        rows.append((rank, title, commentary))
-
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["rank", "title", "commentary"])
-        writer.writerows(rows)
-
-
-def generate_song_ratings():
+def generate_song_csv():
     df = pd.read_csv(DATA_DIR / "spreadsheet.csv")
 
-    # drop columns not needed for ratings table
+    # select columns needed
+    df = df[["Album", "Rank", "Title"]]
+
+    df = df.rename(columns={"Album": "album", "Rank": "rank", "Title": "title"})
+
+    # add commentary by matching title -> commentary
+    commentary_df = pd.read_csv(OUTPUT_DIR / "commentary.csv")
+    df = df.merge(commentary_df[["commentary", "title"]], how="left", on="title")
+    df["commentary"] = df["commentary"].fillna("TBA")
+
+    # add landing commentary by matching title -> commentary
+    commentary_landing_df = pd.read_csv(OUTPUT_DIR / "commentary_landing.csv")
+    commentary_landing_df = commentary_landing_df.rename(columns={"commentary": "commentary_landing"})
+    df = df.merge(commentary_landing_df[["commentary_landing", "title"]], how="left", on="title")
+    df["commentary_landing"] = df["commentary_landing"].fillna("")
+
+    df = df[
+        [
+            "album",
+            "commentary",
+            "commentary_landing",
+            "rank",
+            "title",
+        ]
+    ]
+
+    df["rank"] = df["rank"].astype("Int64")
+
+    df.to_csv(OUTPUT_DIR / "song.csv", index=False)
+
+
+def generate_song_rating_csv():
+    df = pd.read_csv(DATA_DIR / "spreadsheet.csv")
+
+    # drop columns not needed
     df = df.drop(columns=["Album", "Title", "Rank", "Total Points", "Total Potential Points"])
 
     # convert "45.45%" -> 45.45
@@ -99,40 +100,40 @@ def generate_song_ratings():
     for col in int_cols:
         df[col] = df[col].astype("Int64")
 
-    df.to_csv(OUTPUT_DIR / "song_ratings.csv", index=False)
+    df.to_csv(OUTPUT_DIR / "song_rating.csv", index=False)
 
 
-def generate_songs():
-    df = pd.read_csv(DATA_DIR / "spreadsheet.csv")
+def parse_commentary(input_filename, output_filename):
+    input_path = DATA_DIR / input_filename
+    output_path = OUTPUT_DIR / output_filename
 
-    # select columns needed for songs table
-    df = df[["Album", "Rank", "Title"]]
-    df = df.rename(columns={"Album": "album", "Rank": "rank", "Title": "title"})
+    with open(input_path, "r", encoding="utf-8") as f:
+        content = f.read()
+        blocks = content.strip().split("\n\n")
 
-    # add commentary by matching title -> commentary
-    commentary_df = pd.read_csv(OUTPUT_DIR / "commentary.csv")
-    df = df.merge(commentary_df[["commentary", "title"]], how="left", on="title")
-    df["commentary"] = df["commentary"].fillna("TBA")
+    rows = []
 
-    # add landing commentary by matching title -> commentary
-    commentary_landing_df = pd.read_csv(OUTPUT_DIR / "commentary_landing.csv")
-    commentary_landing_df = commentary_landing_df.rename(columns={"commentary": "commentary_landing"})
-    df = df.merge(commentary_landing_df[["commentary_landing", "title"]], how="left", on="title")
-    df["commentary_landing"] = df["commentary_landing"].fillna("")
+    for block in blocks:
+        lines = block.strip().split("\n")
 
-    df = df[
-        [
-            "album",
-            "commentary",
-            "commentary_landing",
-            "rank",
-            "title",
-        ]
-    ]
+        header = lines[0]
+        parts = header.split(" ", 1)
+        rank = parts[0]
+        title = parts[1]
 
-    df["rank"] = df["rank"].astype("Int64")
+        commentary = "\n".join(lines[1:])
 
-    df.to_csv(OUTPUT_DIR / "songs.csv", index=False)
+        # normalize punctuation
+        commentary = (
+            commentary.replace("…", "...").replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+        )
+
+        rows.append((rank, title, commentary))
+
+    with open(output_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["rank", "title", "commentary"])
+        writer.writerows(rows)
 
 
 def main():
@@ -149,10 +150,8 @@ def main():
 
     OUTPUT_DIR.mkdir(exist_ok=True)
 
-    parse_commentary_to_csv("commentary.txt", "commentary.csv")
-    parse_commentary_to_csv("commentary_landing.txt", "commentary_landing.csv")
-
-    generate_song_ratings()
+    parse_commentary("commentary.txt", "commentary.csv")
+    parse_commentary("commentary_landing.txt", "commentary_landing.csv")
 
     required_output_files = [OUTPUT_DIR / "commentary.csv", OUTPUT_DIR / "commentary_landing.csv"]
 
@@ -161,7 +160,8 @@ def main():
             print("Missing file:", f)
             sys.exit(1)
 
-    generate_songs()
+    generate_song_csv()
+    generate_song_rating_csv()
 
 
 if __name__ == "__main__":
