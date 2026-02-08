@@ -1,10 +1,7 @@
-import { Router } from "express";
-
 import { BlogPost } from "../models/index.js";
+import { Request, Response } from "express";
 
-const router = Router();
-
-router.get("/", async (_req, res) => {
+export const getAllBlogs = async (_req: Request, res: Response) => {
     try {
         const blogs = await BlogPost.findAll({
             order: [["created_at", "DESC"]]
@@ -14,6 +11,4 @@ router.get("/", async (_req, res) => {
     } catch (error) {
         res.status(500).json({ error: "Server error" });
     }
-});
-
-export default router;
+};

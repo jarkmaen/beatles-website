@@ -2,9 +2,9 @@ import cors from "cors";
 import express from "express";
 
 import * as middleware from "./utils/middleware.js";
-import blogsRouter from "./controllers/blogs.js";
-import messagesRouter from "./controllers/messages.js";
-import songsRouter from "./controllers/songs.js";
+import blogsRouter from "./routes/blogs.js";
+import messagesRouter from "./routes/messages.js";
+import songsRouter from "./routes/songs.js"
 
 const app = express();
 
