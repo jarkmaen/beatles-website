@@ -1,0 +1,5 @@
+GET http://localhost:3000/api/songs
+
+###
+
+GET http://localhost:3000/api/songs/song-of-the-day
