@@ -1,7 +1,7 @@
 import * as config from "./utils/config.js";
 import * as logger from "./utils/logger.js";
 import app from "./app.js";
-import { connectToDatabase } from "./utils/db.js";
+import { connectToDatabase } from "./database/index.js";
 
 const start = async () => {
     await connectToDatabase();

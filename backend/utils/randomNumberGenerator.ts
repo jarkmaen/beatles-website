@@ -1,4 +1,4 @@
-const random = (count: number, offset: number = 0): number => {
+export const random = (count: number, offset: number = 0): number => {
     const seed = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
 
     const increment = 11;
@@ -9,5 +9,3 @@ const random = (count: number, offset: number = 0): number => {
 
     return (hash % count) + 1;
 };
-
-export { random };

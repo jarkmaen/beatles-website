@@ -1,5 +1,5 @@
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../utils/db.js";
+import { sequelize } from "../database/index.js";
 
 class Song extends Model {
     public id!: number;

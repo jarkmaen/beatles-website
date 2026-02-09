@@ -1,6 +1,12 @@
 import "dotenv/config";
 
-const PORT = process.env.PORT;
-const POSTGRESQL_URL = process.env.POSTGRESQL_URL;
+if (!process.env.PORT) {
+    throw new Error("PORT environment variable is not set");
+}
 
-export { PORT, POSTGRESQL_URL };
+if (!process.env.POSTGRESQL_URL) {
+    throw new Error("POSTGRESQL_URL environment variable is not set");
+}
+
+export const PORT = process.env.PORT;
+export const POSTGRESQL_URL = process.env.POSTGRESQL_URL;
