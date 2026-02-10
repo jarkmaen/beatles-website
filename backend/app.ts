@@ -3,9 +3,14 @@ import express from "express";
 
 import blogsRouter from "./routes/blogs.js";
 import messagesRouter from "./routes/messages.js";
+import path from "path";
 import songsRouter from "./routes/songs.js";
+import { fileURLToPath } from "url";
 import { requestLogger } from "./middlewares/requestLogger.js";
 import { unknownEndpoint } from "./middlewares/unknownEndpoint.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -19,5 +24,9 @@ app.use("/api/messages", messagesRouter);
 app.use("/api/songs", songsRouter);
 
 app.use(unknownEndpoint);
+
+app.use((_req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
 
 export default app;
