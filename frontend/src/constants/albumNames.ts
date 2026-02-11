@@ -4,7 +4,6 @@ export const albumNames = [
     "Beatles for Sale",
     "Help!",
     "Let It Be",
-    "Let It Be... Naked",
     "Magical Mystery Tour",
     "Please Please Me",
     "Revolver",

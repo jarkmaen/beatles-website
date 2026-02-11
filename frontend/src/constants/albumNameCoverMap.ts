@@ -3,7 +3,6 @@ import beatlesForSaleCover from "../assets/images/beatles_for_sale.jpg";
 import hardDaysNightCover from "../assets/images/a_hard_days_night.jpg";
 import helpCover from "../assets/images/help.png";
 import letItBeCover from "../assets/images/let_it_be.png";
-import letItBeNakedCover from "../assets/images/let_it_be_naked.jpg";
 import magicalMysteryTourCover from "../assets/images/magical_mystery_tour.jpg";
 import pastMastersCover from "../assets/images/past_masters.png";
 import pleasePleaseMeCover from "../assets/images/please_please_me.png";
@@ -20,7 +19,6 @@ export const albumNameCoverMap: Record<string, string> = {
     "Beatles for Sale": beatlesForSaleCover,
     "Help!": helpCover,
     "Let It Be": letItBeCover,
-    "Let It Be... Naked": letItBeNakedCover,
     "Magical Mystery Tour": magicalMysteryTourCover,
     "Please Please Me": pleasePleaseMeCover,
     Revolver: revolverCover,

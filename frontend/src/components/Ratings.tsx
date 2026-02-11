@@ -9,7 +9,6 @@ import { useState } from "react";
 
 const Ratings = () => {
     const [album, setAlbum] = useState("");
-    const [hideNaked, setHideNaked] = useState(false);
     const [search, setSearch] = useState("");
     const [sortDirection, setSortDirection] = useState<SortDirection>(null);
     const [sortKey, setSortKey] = useState<string | null>(null);
@@ -21,9 +20,8 @@ const Ratings = () => {
         const matchesSearch = song.title
             .toLowerCase()
             .includes(search.toLowerCase());
-        const nakedFilter = !hideNaked || song.album !== "Let It Be... Naked";
 
-        return matchesAlbum && matchesSearch && nakedFilter;
+        return matchesAlbum && matchesSearch;
     });
 
     const sortedSongs = [...filteredSongs];
@@ -82,10 +80,8 @@ const Ratings = () => {
         <>
             <RatingsToolbar
                 album={album}
-                hideNaked={hideNaked}
                 search={search}
                 setAlbum={setAlbum}
-                setHideNaked={setHideNaked}
                 setSearch={setSearch}
             />
             <div className="dark:text-muted-dark overflow-auto text-secondary-light">
