@@ -1,9 +1,7 @@
-export function renderParagraphs(text?: string) {
-    if (!text) {
-        return null;
-    } else {
-        return text
-            .split(/\n\s*\n/)
-            .map((paragraph, i) => <p key={i}>{paragraph}</p>);
-    }
-}
+export const renderParagraphs = (text: string) => {
+    return text
+        .split("\n")
+        .map((paragraph) => paragraph.trim())
+        .filter((paragraph) => paragraph !== "")
+        .map((paragraph, i) => <p key={i}>{paragraph}</p>);
+};
