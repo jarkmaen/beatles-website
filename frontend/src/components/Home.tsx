@@ -63,14 +63,14 @@ const Home = () => {
                                         [keyA, { maxPoints: maxA }],
                                         [keyB, { maxPoints: maxB }]
                                     ) => {
-                                        const valueA =
-                                            songOfTheDay.SongRatings![0][
-                                                keyA as keyof SongRating
-                                            ] as number;
-                                        const valueB =
-                                            songOfTheDay.SongRatings![0][
-                                                keyB as keyof SongRating
-                                            ] as number;
+                                        const valueA = songOfTheDay
+                                            .SongRatings![0][
+                                            keyA as keyof SongRating
+                                        ] as number;
+                                        const valueB = songOfTheDay
+                                            .SongRatings![0][
+                                            keyB as keyof SongRating
+                                        ] as number;
 
                                         const percentageA =
                                             (valueA / maxA) * 100;
@@ -98,7 +98,9 @@ const Home = () => {
                     <h5 className="dark:text-primary-dark font-bold font-lora sm:text-2xl text-primary-light text-xl">
                         Commentary
                     </h5>
-                    {renderParagraphs(songOfTheDay?.commentary)}
+                    {songOfTheDay.commentary_landing
+                        ? renderParagraphs(songOfTheDay.commentary_landing)
+                        : renderParagraphs(songOfTheDay.commentary)}
                 </div>
             </div>
             <div className="flex flex-col mt-12 sm:mt-16 text-center">
