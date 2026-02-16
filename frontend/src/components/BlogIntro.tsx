@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import type { Blog } from "../types";
 import { Link } from "react-router-dom";
 import { renderParagraphs } from "../utils";
@@ -38,7 +39,7 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
             </div>
             {isBlogPostPage ? (
                 <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
-                    {renderParagraphs(blog.intro)}
+                    <ReactMarkdown>{blog.intro}</ReactMarkdown>
                 </div>
             ) : (
                 <div className="dark:prose-invert h-40 hyphens-auto max-w-none overflow-hidden prose relative sm:prose-lg">
