@@ -4,7 +4,7 @@ type Props = {
     src: string | undefined;
 };
 
-export default function CoverImage({ src }: Props) {
+const CoverImage = ({ src }: Props) => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     return (
@@ -24,4 +24,6 @@ export default function CoverImage({ src }: Props) {
             )}
         </div>
     );
-}
+};
+
+export default CoverImage;
