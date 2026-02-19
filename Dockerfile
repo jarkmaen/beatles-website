@@ -7,7 +7,6 @@ COPY frontend/package*.json ./
 RUN npm install
 
 COPY frontend/src ./src
-COPY frontend/eslint.config.js ./
 COPY frontend/index.html ./
 COPY frontend/tsconfig*.json ./
 COPY frontend/vite.config.ts ./
@@ -24,10 +23,12 @@ COPY backend/package*.json ./
 RUN npm install
 
 COPY backend/controllers ./controllers
+COPY backend/database ./database
+COPY backend/middlewares ./middlewares
 COPY backend/models ./models
+COPY backend/routes ./routes
 COPY backend/utils ./utils
 COPY backend/app.ts ./
-COPY backend/eslint.config.mjs ./
 COPY backend/index.ts ./
 COPY backend/tsconfig.json ./
 
