@@ -10,11 +10,15 @@ const Header = () => {
                 className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-3xl text-primary-light tracking-wider"
                 to="/"
             >
-                fab.two
+                Fab Two
             </Link>
             <div className="flex space-x-6">
                 <div className="font-montserrat hidden items-center sm:flex space-x-6 text-sm tracking-widest">
-                    <HeaderNavLink isDesktop label="RANKINGS" to="/blogs/the-beatles-ranked" />
+                    <HeaderNavLink
+                        isDesktop
+                        label="RANKINGS"
+                        to="/blogs/the-beatles-ranked"
+                    />
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
                     </span>
