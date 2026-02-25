@@ -43,7 +43,7 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
                 </div>
             ) : (
                 <div className="dark:prose-invert h-40 hyphens-auto max-w-none overflow-hidden prose relative sm:prose-lg">
-                    {renderParagraphs(blog.intro)}
+                    <ReactMarkdown>{blog.intro}</ReactMarkdown>
                     <div className="absolute bg-gradient-to-t bottom-0 dark:from-dark from-light h-12 left-0 to-transparent transition-colors w-full"></div>
                 </div>
             )}
