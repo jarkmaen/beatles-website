@@ -62,6 +62,12 @@ const About = () => {
                     their solo careers... Anything related to The Beatles,
                     except the gossip!
                 </p>
+                <p>
+                    Also feel free to send us a message through the contact form
+                    below! Whether you strongly disagree with one of our takes
+                    or just want to send some appreciation, anything is welcome.
+                    We'll try to get back to you as soon as we can!
+                </p>
             </div>
             <hr className="border-divider-light dark:border-divider-dark my-12" />
             <h2 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-5xl text-3xl text-center text-primary-light">
