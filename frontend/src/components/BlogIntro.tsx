@@ -1,7 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import type { Blog } from "../types";
 import { Link } from "react-router-dom";
-import { renderParagraphs } from "../utils";
 
 type Props = {
     blog: Blog;
