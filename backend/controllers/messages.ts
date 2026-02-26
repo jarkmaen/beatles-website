@@ -1,5 +1,6 @@
 import { ContactMessage } from "../models/index.js";
 import { Request, Response } from "express";
+import { sendDiscordNotification } from "../utils/discord.js";
 
 export const createMessage = async (req: Request, res: Response) => {
     try {
@@ -46,6 +47,8 @@ export const createMessage = async (req: Request, res: Response) => {
             last_name: last_name ?? null,
             message
         });
+
+        sendDiscordNotification(email, message, first_name, last_name);
 
         res.status(201).json(newMessage);
     } catch (error) {
