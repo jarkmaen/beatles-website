@@ -17,7 +17,7 @@ const Header = () => {
                     <HeaderNavLink
                         isDesktop
                         label="RANKINGS"
-                        to="/blogs/the-beatles-ranked"
+                        to="/blogs/ranking-every-original-beatles-song"
                     />
                     <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
                         |
