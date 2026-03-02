@@ -5,7 +5,7 @@ export interface Blog {
     intro: string;
     slug: string;
     title: string;
-    created_at: Date;
+    createdAt: Date;
 }
 
 export interface BlogsState {
@@ -28,8 +28,8 @@ export interface ManualRanking {
 
 export interface Message {
     email: string;
-    first_name?: string | null;
-    last_name?: string | null;
+    firstName?: string | null;
+    lastName?: string | null;
     message: string;
 }
 
@@ -37,7 +37,7 @@ export interface Song {
     id: number;
     album: string;
     commentary: string;
-    commentary_landing?: string | null;
+    commentaryLanding?: string | null;
     rank: number;
     SongRatings?: SongRating[];
     title: string;
@@ -47,11 +47,11 @@ export interface SongRating {
     id: number;
     song_id: number;
     bassline?: number;
-    chord_progression?: number;
-    cultural_significance?: number;
-    full_instrumentation?: number;
+    chordProgression?: number;
+    culturalSignificance?: number;
+    fullInstrumentation?: number;
     lyrics?: number;
-    originality_innovation?: number;
+    originalityInnovation?: number;
     percentage?: number;
     percussion?: number;
     solo?: number;

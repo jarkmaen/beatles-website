@@ -23,8 +23,8 @@ const About = () => {
         try {
             await messagesService.send({
                 email,
-                first_name: firstName || undefined,
-                last_name: lastName || undefined,
+                firstName: firstName || undefined,
+                lastName: lastName || undefined,
                 message
             });
 

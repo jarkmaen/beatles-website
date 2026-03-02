@@ -5,11 +5,11 @@ class SongRating extends Model {
     public id!: number;
     public song_id!: number;
     public bassline?: number;
-    public chord_progression?: number;
-    public cultural_significance?: number;
-    public full_instrumentation?: number;
+    public chordProgression?: number;
+    public culturalSignificance?: number;
+    public fullInstrumentation?: number;
     public lyrics?: number;
-    public originality_innovation?: number;
+    public originalityInnovation?: number;
     public percentage?: number;
     public percussion?: number;
     public solo?: number;
@@ -32,11 +32,23 @@ SongRating.init(
             }
         },
         bassline: DataTypes.SMALLINT,
-        chord_progression: DataTypes.SMALLINT,
-        cultural_significance: DataTypes.SMALLINT,
-        full_instrumentation: DataTypes.SMALLINT,
+        chordProgression: {
+            type: DataTypes.SMALLINT,
+            field: "chord_progression"
+        },
+        culturalSignificance: {
+            type: DataTypes.SMALLINT,
+            field: "cultural_significance"
+        },
+        fullInstrumentation: {
+            type: DataTypes.SMALLINT,
+            field: "full_instrumentation"
+        },
         lyrics: DataTypes.SMALLINT,
-        originality_innovation: DataTypes.SMALLINT,
+        originalityInnovation: {
+            type: DataTypes.SMALLINT,
+            field: "originality_innovation"
+        },
         percentage: DataTypes.DECIMAL(5, 2),
         percussion: DataTypes.SMALLINT,
         solo: DataTypes.SMALLINT,

@@ -8,7 +8,7 @@ class BlogPost extends Model {
     public intro!: string;
     public slug!: string;
     public title!: string;
-    public created_at!: Date;
+    public createdAt!: Date;
 }
 
 BlogPost.init(
@@ -39,10 +39,11 @@ BlogPost.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
-        created_at: {
+        createdAt: {
             type: DataTypes.DATE,
             allowNull: false,
-            defaultValue: DataTypes.NOW
+            defaultValue: DataTypes.NOW,
+            field: "created_at"
         }
     },
     {

@@ -7,15 +7,15 @@ type Props = {
 
 const TableData = ({ song }: Props) => {
     const categories: (keyof typeof ratingCategories)[] = [
-        "full_instrumentation",
+        "fullInstrumentation",
         "vocals",
         "lyrics",
-        "originality_innovation",
+        "originalityInnovation",
         "bassline",
         "percussion",
         "solo",
-        "chord_progression",
-        "cultural_significance"
+        "chordProgression",
+        "culturalSignificance"
     ];
 
     const songRating: SongRating = song.SongRatings![0];

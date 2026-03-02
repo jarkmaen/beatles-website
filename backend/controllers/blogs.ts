@@ -1,11 +1,11 @@
 import * as logger from "../utils/logger.js";
+import type { Request, Response } from "express";
 import { BlogPost } from "../models/index.js";
-import { Request, Response } from "express";
 
 export const getAllBlogs = async (_req: Request, res: Response) => {
     try {
         const blogs = await BlogPost.findAll({
-            order: [["created_at", "DESC"]]
+            order: [["createdAt", "DESC"]]
         });
 
         res.json(blogs);

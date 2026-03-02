@@ -1,11 +1,11 @@
 import * as logger from "../utils/logger.js";
+import type { Request, Response } from "express";
 import { ContactMessage } from "../models/index.js";
-import { Request, Response } from "express";
 import { sendDiscordNotification } from "../utils/discord.js";
 
 export const createMessage = async (req: Request, res: Response) => {
     try {
-        const { email, first_name, last_name, message } = req.body ?? {};
+        const { email, firstName, lastName, message } = req.body ?? {};
 
         if (!email || !message) {
             res.status(400).json({ error: "Email and message are required" });
@@ -14,8 +14,8 @@ export const createMessage = async (req: Request, res: Response) => {
 
         if (
             typeof email !== "string" ||
-            (first_name && typeof first_name !== "string") ||
-            (last_name && typeof last_name !== "string") ||
+            (firstName && typeof firstName !== "string") ||
+            (lastName && typeof lastName !== "string") ||
             typeof message !== "string"
         ) {
             res.status(400).json({ error: "Invalid request body" });
@@ -27,12 +27,12 @@ export const createMessage = async (req: Request, res: Response) => {
             return;
         }
 
-        if (first_name && first_name.length > 100) {
+        if (firstName && firstName.length > 100) {
             res.status(400).json({ error: "Invalid first name" });
             return;
         }
 
-        if (last_name && last_name.length > 100) {
+        if (lastName && lastName.length > 100) {
             res.status(400).json({ error: "Invalid last name" });
             return;
         }
@@ -44,12 +44,12 @@ export const createMessage = async (req: Request, res: Response) => {
 
         const newMessage = await ContactMessage.create({
             email,
-            first_name: first_name ?? null,
-            last_name: last_name ?? null,
+            firstName: firstName ?? null,
+            lastName: lastName ?? null,
             message
         });
 
-        sendDiscordNotification(email, message, first_name, last_name);
+        sendDiscordNotification(email, message, firstName, lastName);
 
         res.status(201).json(newMessage);
     } catch (error) {

@@ -9,7 +9,7 @@ export const tableHeaderData: TableHeaderDef[] = [
     { label: "SONG", sortKey: "title", tooltip: "THE TITLE OF THE SONG" },
     {
         label: "FULL INSTRUMENTATION",
-        sortKey: "full_instrumentation",
+        sortKey: "fullInstrumentation",
         tooltip:
             "0-1: HURTS THE SONG\n2-4: DOES THE JOB\n5-7: SUITS THE SONG\n8-10: LIFTS THE SONG"
     },
@@ -27,7 +27,7 @@ export const tableHeaderData: TableHeaderDef[] = [
     },
     {
         label: "ORIGINALITY/INNOVATION",
-        sortKey: "originality_innovation",
+        sortKey: "originalityInnovation",
         tooltip:
             "0-2: NOT PARTICULARLY INNOVATIVE\n3-4: HAS AN ORIGINAL ELEMENT\n5-6: NOTICABLY ORIGINAL\n7-8: GROUNDBREAKING"
     },
@@ -49,12 +49,12 @@ export const tableHeaderData: TableHeaderDef[] = [
     },
     {
         label: "CHORD PROGRESSION",
-        sortKey: "chord_progression",
+        sortKey: "chordProgression",
         tooltip: "0-2: FUNCTIONAL\n3-4: ELEVATES THE SONG"
     },
     {
         label: "CULTURAL SIGNIFICANCE",
-        sortKey: "cultural_significance",
+        sortKey: "culturalSignificance",
         tooltip: "0: NO SPECIAL SIGNIFICANCE\n1: A SPECIAL SIGNIFICANCE"
     },
     {

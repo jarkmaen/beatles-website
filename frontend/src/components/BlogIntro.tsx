@@ -30,7 +30,7 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
             <div className="dark:text-muted-dark flex items-center justify-center mb-8 mt-8 space-x-4 text-muted-light text-sm">
                 <div className="sm:text-right sm:w-full text-center w-30">
                     <span>
-                        {new Date(blog.created_at).toLocaleDateString("en-US", {
+                        {new Date(blog.createdAt).toLocaleDateString("en-US", {
                             month: "long",
                             day: "numeric",
                             year: "numeric"

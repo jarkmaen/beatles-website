@@ -98,8 +98,8 @@ const Home = () => {
                     <h5 className="dark:text-primary-dark font-bold font-lora sm:text-2xl text-primary-light text-xl">
                         Commentary
                     </h5>
-                    {songOfTheDay.commentary_landing
-                        ? renderParagraphs(songOfTheDay.commentary_landing)
+                    {songOfTheDay.commentaryLanding
+                        ? renderParagraphs(songOfTheDay.commentaryLanding)
                         : renderParagraphs(songOfTheDay.commentary)}
                 </div>
             </div>

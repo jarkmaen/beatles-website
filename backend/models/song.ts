@@ -5,7 +5,7 @@ class Song extends Model {
     public id!: number;
     public album!: string;
     public commentary!: string;
-    public commentary_landing: string | undefined;
+    public commentaryLanding: string | undefined;
     public rank!: number;
     public title!: string;
 }
@@ -25,9 +25,10 @@ Song.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
-        commentary_landing: {
+        commentaryLanding: {
             type: DataTypes.TEXT,
-            allowNull: true
+            allowNull: true,
+            field: "commentary_landing"
         },
         rank: {
             type: DataTypes.INTEGER,

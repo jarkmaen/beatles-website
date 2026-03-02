@@ -4,10 +4,10 @@ import { sequelize } from "../database/index.js";
 class ContactMessage extends Model {
     public id!: number;
     public email!: string;
-    public first_name?: string | undefined;
-    public last_name?: string | undefined;
+    public firstName?: string | undefined;
+    public lastName?: string | undefined;
     public message!: string;
-    public created_at!: Date;
+    public createdAt!: Date;
 }
 
 ContactMessage.init(
@@ -21,22 +21,25 @@ ContactMessage.init(
             type: DataTypes.STRING(255),
             allowNull: false
         },
-        first_name: {
+        firstName: {
             type: DataTypes.STRING(100),
-            allowNull: true
+            allowNull: true,
+            field: "first_name"
         },
-        last_name: {
+        lastName: {
             type: DataTypes.STRING(100),
-            allowNull: true
+            allowNull: true,
+            field: "last_name"
         },
         message: {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        created_at: {
+        createdAt: {
             type: DataTypes.DATE,
             allowNull: false,
-            defaultValue: DataTypes.NOW
+            defaultValue: DataTypes.NOW,
+            field: "created_at"
         }
     },
     {
