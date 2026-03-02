@@ -1,3 +1,4 @@
+import * as logger from "../utils/logger.js";
 import { ContactMessage } from "../models/index.js";
 import { Request, Response } from "express";
 import { sendDiscordNotification } from "../utils/discord.js";
@@ -52,6 +53,7 @@ export const createMessage = async (req: Request, res: Response) => {
 
         res.status(201).json(newMessage);
     } catch (error) {
+        logger.error(error);
         res.status(500).json({ error: "Server error" });
     }
 };

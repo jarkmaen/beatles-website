@@ -1,3 +1,4 @@
+import * as logger from "../utils/logger.js";
 import { random } from "../utils/randomNumberGenerator.js";
 import { Request, Response } from "express";
 import { Song, SongRating } from "../models/index.js";
@@ -10,6 +11,7 @@ export const getAllSongs = async (_req: Request, res: Response) => {
 
         res.json(songs);
     } catch (error) {
+        logger.error(error);
         res.status(500).json({ error: "Server error" });
     }
 };
@@ -31,6 +33,7 @@ export const getSongOfTheDay = async (_req: Request, res: Response) => {
 
         res.json(song);
     } catch (error) {
+        logger.error(error);
         res.status(500).json({ error: "Server error" });
     }
 };
