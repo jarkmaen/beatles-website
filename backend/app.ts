@@ -23,9 +23,9 @@ app.use("/api/blogs", blogsRouter);
 app.use("/api/messages", messagesRouter);
 app.use("/api/songs", songsRouter);
 
-app.use(unknownEndpoint);
+app.use("/api/*splat", unknownEndpoint);
 
-app.use((_req, res) => {
+app.get("/*splat", (_req, res) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
