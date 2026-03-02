@@ -1,5 +1,5 @@
+import * as config from "./config.js";
 import * as logger from "./logger.js";
-import { DISCORD_WEBHOOK_URL } from "./config.js";
 
 export const sendDiscordNotification = (
     email: string,
@@ -14,7 +14,7 @@ export const sendDiscordNotification = (
 
     const content = `New message from ${fullName} (${email}):\n${message}`;
 
-    fetch(DISCORD_WEBHOOK_URL, {
+    fetch(config.DISCORD_WEBHOOK_URL, {
         body: JSON.stringify({
             content: content,
             username: "Fab Two Bot"

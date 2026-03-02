@@ -1,15 +1,16 @@
+import * as config from "../utils/config.js";
 import * as logger from "../utils/logger.js";
-import { POSTGRESQL_URL } from "../utils/config.js";
 import { Sequelize } from "sequelize";
 
 export const connectToDatabase = async () => {
     try {
         await sequelize.authenticate();
+
         logger.info("Connected to the database");
-    } catch (e) {
-        logger.error(e);
+    } catch (error) {
+        logger.error(error);
         process.exit(1);
     }
 };
 
-export const sequelize = new Sequelize(POSTGRESQL_URL);
+export const sequelize = new Sequelize(config.POSTGRESQL_URL);

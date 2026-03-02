@@ -5,6 +5,7 @@ import blogsRouter from "./routes/blogs.js";
 import messagesRouter from "./routes/messages.js";
 import path from "path";
 import songsRouter from "./routes/songs.js";
+import type { Request, Response } from "express";
 import { fileURLToPath } from "url";
 import { requestLogger } from "./middlewares/requestLogger.js";
 import { unknownEndpoint } from "./middlewares/unknownEndpoint.js";
@@ -25,7 +26,7 @@ app.use("/api/songs", songsRouter);
 
 app.use("/api/*splat", unknownEndpoint);
 
-app.get("/*splat", (_req, res) => {
+app.get("/*splat", (_req: Request, res: Response) => {
     res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 

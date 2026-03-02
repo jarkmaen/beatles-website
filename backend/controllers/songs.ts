@@ -1,6 +1,6 @@
 import * as logger from "../utils/logger.js";
+import type { Request, Response } from "express";
 import { random } from "../utils/randomNumberGenerator.js";
-import { Request, Response } from "express";
 import { Song, SongRating } from "../models/index.js";
 
 export const getAllSongs = async (_req: Request, res: Response) => {
