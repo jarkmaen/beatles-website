@@ -2,12 +2,12 @@ import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/index.js";
 
 class ContactMessage extends Model {
-    public id!: number;
-    public email!: string;
-    public firstName?: string | undefined;
-    public lastName?: string | undefined;
-    public message!: string;
-    public createdAt!: Date;
+    declare id: number;
+    declare email: string;
+    declare firstName?: string;
+    declare lastName?: string;
+    declare message: string;
+    declare createdAt: Date;
 }
 
 ContactMessage.init(

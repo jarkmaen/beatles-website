@@ -2,12 +2,12 @@ import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/index.js";
 
 class Song extends Model {
-    public id!: number;
-    public album!: string;
-    public commentary!: string;
-    public commentaryLanding: string | undefined;
-    public rank!: number;
-    public title!: string;
+    declare id: number;
+    declare album: string;
+    declare commentary: string;
+    declare commentaryLanding?: string;
+    declare rank: number;
+    declare title: string;
 }
 
 Song.init(

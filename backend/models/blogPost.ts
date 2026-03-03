@@ -2,13 +2,13 @@ import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/index.js";
 
 class BlogPost extends Model {
-    public id!: number;
-    public author!: string;
-    public content!: any;
-    public intro!: string;
-    public slug!: string;
-    public title!: string;
-    public createdAt!: Date;
+    declare id: number;
+    declare author: string;
+    declare content: any;
+    declare intro: string;
+    declare slug: string;
+    declare title: string;
+    declare createdAt: Date;
 }
 
 BlogPost.init(

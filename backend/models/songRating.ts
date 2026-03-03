@@ -2,18 +2,18 @@ import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../database/index.js";
 
 class SongRating extends Model {
-    public id!: number;
-    public song_id!: number;
-    public bassline?: number;
-    public chordProgression?: number;
-    public culturalSignificance?: number;
-    public fullInstrumentation?: number;
-    public lyrics?: number;
-    public originalityInnovation?: number;
-    public percentage?: number;
-    public percussion?: number;
-    public solo?: number;
-    public vocals?: number;
+    declare id: number;
+    declare song_id: number;
+    declare bassline?: number;
+    declare chordProgression?: number;
+    declare culturalSignificance?: number;
+    declare fullInstrumentation?: number;
+    declare lyrics?: number;
+    declare originalityInnovation?: number;
+    declare percentage?: number;
+    declare percussion?: number;
+    declare solo?: number;
+    declare vocals?: number;
 }
 
 SongRating.init(
