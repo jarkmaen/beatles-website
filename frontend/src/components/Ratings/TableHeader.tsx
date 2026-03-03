@@ -1,5 +1,5 @@
 import TooltipPortal from "./TooltipPortal";
-import type { SortDirection } from "../types";
+import type { SortDirection } from "../../types";
 import { useRef, useState } from "react";
 
 type Props = {

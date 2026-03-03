@@ -1,7 +1,7 @@
 import RankedSong from "./RankedSong";
-import type { BlogContent as BlogContentType } from "../types";
-import type { RootState } from "../store";
-import { blogContentTypes } from "../constants/blogContentTypes";
+import type { BlogContent as BlogContentType } from "../../types";
+import type { RootState } from "../../store";
+import { blogContentTypes } from "../../constants/blogContentTypes";
 import { useSelector } from "react-redux";
 
 type Props = {

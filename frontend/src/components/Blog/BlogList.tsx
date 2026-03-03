@@ -1,5 +1,5 @@
 import BlogListItem from "./BlogListItem";
-import type { RootState } from "../store";
+import type { RootState } from "../../store";
 import { useSelector } from "react-redux";
 
 const BlogList = () => {

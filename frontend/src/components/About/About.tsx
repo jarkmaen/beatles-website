@@ -1,4 +1,4 @@
-import * as messagesService from "../services/messages";
+import * as messagesService from "../../services/messages";
 import Alert from "./Alert";
 import FormField from "./FormField";
 import { useState } from "react";

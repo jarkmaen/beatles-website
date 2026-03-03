@@ -1,6 +1,6 @@
 import BlogIntro from "./BlogIntro";
-import Divider from "./Divider";
-import type { Blog } from "../types";
+import Divider from "../Divider";
+import type { Blog } from "../../types";
 import { Link } from "react-router-dom";
 
 type Props = {

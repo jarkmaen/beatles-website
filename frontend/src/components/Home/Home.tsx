@@ -1,12 +1,12 @@
 import CoverImage from "./CoverImage";
-import LoadingScreen from "./LoadingScreen";
+import LoadingScreen from "../LoadingScreen";
 import RatingBar from "./RatingBar";
 import ShrinkWrapTitle from "./ShrinkWrapTitle";
-import type { RootState } from "../store";
-import type { SongRating } from "../types";
-import { albumNameCoverMap } from "../constants/albumNameCoverMap";
-import { ratingCategories } from "../constants/ratingCategories";
-import { renderParagraphs } from "../utils";
+import type { RootState } from "../../store";
+import type { SongRating } from "../../types";
+import { albumNameCoverMap } from "../../constants/albumNameCoverMap";
+import { ratingCategories } from "../../constants/ratingCategories";
+import { renderParagraphs } from "../../utils";
 import { useSelector } from "react-redux";
 
 const Home = () => {

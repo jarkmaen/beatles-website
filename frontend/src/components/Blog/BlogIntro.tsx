@@ -1,5 +1,5 @@
 import ReactMarkdown, { type Components } from "react-markdown";
-import type { Blog } from "../types";
+import type { Blog } from "../../types";
 import { Link } from "react-router-dom";
 
 type Props = {

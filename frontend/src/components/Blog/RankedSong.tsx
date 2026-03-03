@@ -1,5 +1,5 @@
-import Divider from "./Divider";
-import { renderParagraphs } from "../utils";
+import Divider from "../Divider";
+import { renderParagraphs } from "../../utils";
 
 type Props = {
     bottom: boolean;

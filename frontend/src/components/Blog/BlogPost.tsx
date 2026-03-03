@@ -1,9 +1,9 @@
 import BlogContent from "./BlogContent";
 import BlogIntro from "./BlogIntro";
-import Divider from "./Divider";
-import LoadingScreen from "./LoadingScreen";
-import PageNotFound from "./PageNotFound";
-import type { RootState } from "../store";
+import Divider from "../Divider";
+import LoadingScreen from "../LoadingScreen";
+import PageNotFound from "../PageNotFound";
+import type { RootState } from "../../store";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";

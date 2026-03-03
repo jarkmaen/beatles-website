@@ -1,10 +1,10 @@
-import About from "./components/About";
-import BlogList from "./components/BlogList";
-import BlogPost from "./components/BlogPost";
-import Header from "./components/Header";
-import Home from "./components/Home";
+import About from "./components/About/About";
+import BlogList from "./components/Blog/BlogList";
+import BlogPost from "./components/Blog/BlogPost";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
 import PageNotFound from "./components/PageNotFound";
-import Ratings from "./components/Ratings";
+import Ratings from "./components/Ratings/Ratings";
 import useInitialization from "./hooks/useInitialization";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";

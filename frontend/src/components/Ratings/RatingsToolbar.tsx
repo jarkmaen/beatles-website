@@ -1,4 +1,4 @@
-import { albumNames } from "../constants/albumNames";
+import { albumNames } from "../../constants/albumNames";
 
 type Props = {
     album: string;

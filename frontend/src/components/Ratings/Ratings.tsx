@@ -1,9 +1,9 @@
 import RatingsToolbar from "./RatingsToolbar";
 import TableData from "./TableData";
 import TableHeader from "./TableHeader";
-import type { RootState } from "../store";
-import type { Song, SongRating, SortDirection } from "../types";
-import { tableHeaderData } from "../constants/tableHeaderData";
+import type { RootState } from "../../store";
+import type { Song, SongRating, SortDirection } from "../../types";
+import { tableHeaderData } from "../../constants/tableHeaderData";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
