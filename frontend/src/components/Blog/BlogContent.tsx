@@ -1,4 +1,5 @@
 import RankedSong from "./RankedSong";
+import ReactMarkdown, { type Components } from "react-markdown";
 import type { BlogContent as BlogContentType } from "../../types";
 import type { RootState } from "../../store";
 import { blogContentTypes } from "../../constants/blogContentTypes";
@@ -10,6 +11,15 @@ type Props = {
 
 const BlogContent = ({ content }: Props) => {
     const songs = useSelector((state: RootState) => state.songs.songs);
+
+    const markdownComponents: Components = {
+        h3: ({ node, ...props }) => (
+            <h3
+                className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-2xl text-primary-light"
+                {...props}
+            />
+        )
+    };
 
     switch (content.type) {
         case blogContentTypes.defaultRanking: {
@@ -47,20 +57,12 @@ const BlogContent = ({ content }: Props) => {
                 </div>
             );
         }
-        case blogContentTypes.text: {
+        case blogContentTypes.markdown: {
             return (
                 <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
-                    {content.items.map((item, i) => {
-                        if (item.type === "heading") {
-                            return (
-                                <h3 className="dark:text-primary-dark font-lora sm:text-4xl text-2xl text-primary-light" key={i}>
-                                    {item.text}
-                                </h3>
-                            );
-                        } else if (item.type === "paragraph") {
-                            return <p key={i}>{item.text}</p>;
-                        }
-                    })}
+                    <ReactMarkdown components={markdownComponents}>
+                        {content.text}
+                    </ReactMarkdown>
                 </div>
             );
         }

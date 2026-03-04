@@ -6,7 +6,7 @@ There are currently 3 supported types:
 
 - `default_ranking`: Uses the main systematic ranking data.
 - `manual_ranking`: Custom lists with own commentary.
-- `text`: Standard articles with headings and paragraphs.
+- `markdown`: Standard text articles with Markdown support.
 
 ## Default ranking
 
@@ -45,9 +45,9 @@ VALUES (
 );
 ```
 
-## Text
+## Markdown
 
-The standard format for long-form articles or essays. The items array supports alternating heading and paragraph types to structure the page.
+The standard format for long-form articles or essays. Markdown syntax is used to structure the page content.
 
 ```sql
 INSERT INTO blog_post (author, intro, content, slug, title)
@@ -55,14 +55,8 @@ VALUES (
     'Author Name',
     'Intro text here...',
     '{
-        "type": "text",
-        "items": [
-            { "text": "Section Header", "type": "heading" },
-            { "text": "Body text goes here.", "type": "paragraph" },
-            { "text": "More body text.", "type": "paragraph" },
-            { "text": "Second Section Header", "type": "heading" },
-            { "text": "Body text for the second section.", "type": "paragraph" }
-        ]
+        "type": "markdown",
+        "text": "## Section Header\n\nThis is a paragraph with **bold** text."
     }'::jsonb,
     'my-slug-url',
     'Post Title'

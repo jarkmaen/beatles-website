@@ -26,6 +26,11 @@ export interface ManualRanking {
     }[];
 }
 
+export interface Markdown {
+    type: "markdown";
+    text: string;
+}
+
 export interface Message {
     email: string;
     firstName: string | null;
@@ -63,14 +68,5 @@ export interface SongState {
     songs: Song[];
 }
 
-export interface Text {
-    type: "text";
-    items: (
-        | { type: "heading"; text: string }
-        | { type: "paragraph"; text: string }
-    )[];
-}
-
-export type BlogContent = DefaultRanking | ManualRanking | Text;
-
+export type BlogContent = DefaultRanking | ManualRanking | Markdown;
 export type SortDirection = "asc" | "desc" | null;
