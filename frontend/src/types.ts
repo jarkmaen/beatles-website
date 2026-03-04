@@ -45,7 +45,7 @@ export interface Song {
 
 export interface SongRating {
     id: number;
-    song_id: number;
+    songId: number;
     bassline: number | null;
     chordProgression: number | null;
     culturalSignificance: number | null;

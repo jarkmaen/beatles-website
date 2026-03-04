@@ -3,7 +3,7 @@ import { sequelize } from "../database/index.js";
 
 class SongRating extends Model {
     declare id: number;
-    declare song_id: number;
+    declare songId: number;
     declare bassline: number | null;
     declare chordProgression: number | null;
     declare culturalSignificance: number | null;
@@ -23,9 +23,10 @@ SongRating.init(
             autoIncrement: true,
             primaryKey: true
         },
-        song_id: {
+        songId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            field: "song_id",
             references: {
                 key: "id",
                 model: "songs"
