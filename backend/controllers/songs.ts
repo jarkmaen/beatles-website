@@ -6,7 +6,7 @@ import { Song, SongRating } from "../models/index.js";
 export const getAllSongs = async (_req: Request, res: Response) => {
     try {
         const songs = await Song.findAll({
-            include: [{ model: SongRating }]
+            include: [{ as: "songRatings", model: SongRating }]
         });
 
         res.json(songs);
@@ -28,7 +28,7 @@ export const getSongOfTheDay = async (_req: Request, res: Response) => {
         const randomID = random(count);
 
         const song = await Song.findByPk(randomID, {
-            include: [{ model: SongRating }]
+            include: [{ as: "songRatings", model: SongRating }]
         });
 
         res.json(song);

@@ -4,8 +4,8 @@ import { sequelize } from "../database/index.js";
 class ContactMessage extends Model {
     declare id: number;
     declare email: string;
-    declare firstName?: string;
-    declare lastName?: string;
+    declare firstName: string | null;
+    declare lastName: string | null;
     declare message: string;
     declare createdAt: Date;
 }

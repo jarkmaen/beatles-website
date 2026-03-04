@@ -49,12 +49,12 @@ const Home = () => {
                         Rating Breakdown
                     </h5>
                     <div className="space-y-3">
-                        {songOfTheDay?.SongRatings?.length &&
+                        {songOfTheDay?.songRatings?.length &&
                             Object.entries(ratingCategories)
                                 .filter(
                                     ([key]) =>
                                         key !== "cultural_significance" &&
-                                        songOfTheDay.SongRatings![0][
+                                        songOfTheDay.songRatings![0][
                                             key as keyof SongRating
                                         ] !== null
                                 )
@@ -64,11 +64,11 @@ const Home = () => {
                                         [keyB, { maxPoints: maxB }]
                                     ) => {
                                         const valueA = songOfTheDay
-                                            .SongRatings![0][
+                                            .songRatings![0][
                                             keyA as keyof SongRating
                                         ] as number;
                                         const valueB = songOfTheDay
-                                            .SongRatings![0][
+                                            .songRatings![0][
                                             keyB as keyof SongRating
                                         ] as number;
 
@@ -86,7 +86,7 @@ const Home = () => {
                                         label={label}
                                         maxPoints={maxPoints}
                                         points={
-                                            songOfTheDay.SongRatings![0][
+                                            songOfTheDay.songRatings![0][
                                                 key as keyof SongRating
                                             ] as number
                                         }
@@ -108,7 +108,7 @@ const Home = () => {
                     Overall Score
                 </span>
                 <span className="font-bold font-lora text-6xl">
-                    {songOfTheDay?.SongRatings?.[0].percentage}%
+                    {songOfTheDay?.songRatings?.[0].percentage}%
                 </span>
                 <span className="dark:text-secondary-dark mt-2 text-lg text-secondary-light">
                     Rank #{songOfTheDay?.rank}

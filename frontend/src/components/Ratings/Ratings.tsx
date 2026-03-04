@@ -31,7 +31,7 @@ const Ratings = () => {
             return (song as any)[key];
         }
 
-        return song.SongRatings?.[0]?.[key as keyof SongRating] ?? 0;
+        return song.songRatings?.[0]?.[key as keyof SongRating] ?? 0;
     };
 
     if (sortDirection && sortKey) {

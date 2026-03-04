@@ -18,7 +18,7 @@ const TableData = ({ song }: Props) => {
         "culturalSignificance"
     ];
 
-    const songRating: SongRating = song.SongRatings![0];
+    const songRating: SongRating = song.songRatings![0];
     const values = categories.map((i) => songRating[i]);
 
     const points = values.reduce<number>((sum, value) => {

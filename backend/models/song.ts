@@ -5,7 +5,7 @@ class Song extends Model {
     declare id: number;
     declare album: string;
     declare commentary: string;
-    declare commentaryLanding?: string;
+    declare commentaryLanding: string | null;
     declare rank: number;
     declare title: string;
 }
@@ -27,7 +27,6 @@ Song.init(
         },
         commentaryLanding: {
             type: DataTypes.TEXT,
-            allowNull: true,
             field: "commentary_landing"
         },
         rank: {

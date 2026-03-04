@@ -28,8 +28,8 @@ export interface ManualRanking {
 
 export interface Message {
     email: string;
-    firstName?: string | null;
-    lastName?: string | null;
+    firstName: string | null;
+    lastName: string | null;
     message: string;
 }
 
@@ -37,25 +37,25 @@ export interface Song {
     id: number;
     album: string;
     commentary: string;
-    commentaryLanding?: string | null;
+    commentaryLanding: string | null;
     rank: number;
-    SongRatings?: SongRating[];
+    songRatings: SongRating[];
     title: string;
 }
 
 export interface SongRating {
     id: number;
     song_id: number;
-    bassline?: number;
-    chordProgression?: number;
-    culturalSignificance?: number;
-    fullInstrumentation?: number;
-    lyrics?: number;
-    originalityInnovation?: number;
-    percentage?: number;
-    percussion?: number;
-    solo?: number;
-    vocals?: number;
+    bassline: number | null;
+    chordProgression: number | null;
+    culturalSignificance: number | null;
+    fullInstrumentation: number | null;
+    lyrics: number | null;
+    originalityInnovation: number | null;
+    percentage: number | null;
+    percussion: number | null;
+    solo: number | null;
+    vocals: number | null;
 }
 
 export interface SongState {

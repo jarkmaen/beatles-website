@@ -4,16 +4,16 @@ import { sequelize } from "../database/index.js";
 class SongRating extends Model {
     declare id: number;
     declare song_id: number;
-    declare bassline?: number;
-    declare chordProgression?: number;
-    declare culturalSignificance?: number;
-    declare fullInstrumentation?: number;
-    declare lyrics?: number;
-    declare originalityInnovation?: number;
-    declare percentage?: number;
-    declare percussion?: number;
-    declare solo?: number;
-    declare vocals?: number;
+    declare bassline: number | null;
+    declare chordProgression: number | null;
+    declare culturalSignificance: number | null;
+    declare fullInstrumentation: number | null;
+    declare lyrics: number | null;
+    declare originalityInnovation: number | null;
+    declare percentage: number | null;
+    declare percussion: number | null;
+    declare solo: number | null;
+    declare vocals: number | null;
 }
 
 SongRating.init(
