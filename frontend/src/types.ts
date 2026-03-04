@@ -8,7 +8,7 @@ export interface Blog {
     createdAt: Date;
 }
 
-export interface BlogsState {
+export interface BlogState {
     blogs: Blog[];
     loading: boolean;
 }
@@ -58,7 +58,7 @@ export interface SongRating {
     vocals?: number;
 }
 
-export interface SongsState {
+export interface SongState {
     songOfTheDay: Song | null;
     songs: Song[];
 }

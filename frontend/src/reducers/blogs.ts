@@ -1,9 +1,10 @@
 import * as blogsService from "../services/blogs";
-import type { Blog, BlogsState } from "../types";
+import type { AppDispatch } from "../store";
+import type { Blog, BlogState } from "../types";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState: BlogsState = {
+const initialState: BlogState = {
     blogs: [],
     loading: true
 };
@@ -14,7 +15,6 @@ const slice = createSlice({
     reducers: {
         setBlogs(state, action: PayloadAction<Blog[]>) {
             state.blogs = action.payload;
-            state.loading = false;
         },
         setLoading(state, action: PayloadAction<boolean>) {
             state.loading = action.payload;
@@ -25,7 +25,7 @@ const slice = createSlice({
 const { setBlogs, setLoading } = slice.actions;
 
 export const getBlogs = () => {
-    return async (dispatch: any) => {
+    return async (dispatch: AppDispatch) => {
         dispatch(setLoading(true));
 
         try {
@@ -33,6 +33,7 @@ export const getBlogs = () => {
             dispatch(setBlogs(data));
         } catch (error) {
             console.error(error);
+        } finally {
             dispatch(setLoading(false));
         }
     };

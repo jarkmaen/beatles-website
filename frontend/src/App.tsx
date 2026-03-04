@@ -8,14 +8,9 @@ import Ratings from "./components/Ratings/Ratings";
 import RatingsLayout from "./components/Layouts/RatingsLayout";
 import useInitialization from "./hooks/useInitialization";
 import { Route, Routes } from "react-router-dom";
-import { useEffect } from "react";
 
 const App = () => {
-    const stateInitializer = useInitialization();
-
-    useEffect(() => {
-        stateInitializer();
-    }, []);
+    useInitialization();
 
     return (
         <Routes>
