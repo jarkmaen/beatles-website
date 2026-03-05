@@ -1,6 +1,6 @@
 import type { Parameter } from "./parameters";
 
-export type TableHeaderDef = {
+type TableHeaderDef = {
     label: string;
     sortKey: Parameter | "rank" | "title" | null;
     tooltip: string;

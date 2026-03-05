@@ -1,7 +1,9 @@
 import HamburgerMenu from "./HamburgerMenu";
 import HeaderNavLink from "./HeaderNavLink";
 import ThemeToggle from "./ThemeToggle";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { NAV_LINKS } from "../../constants/navLinks";
 
 const Header = () => {
     return (
@@ -14,19 +16,22 @@ const Header = () => {
             </Link>
             <div className="flex space-x-6">
                 <div className="font-montserrat hidden items-center sm:flex space-x-6 text-sm tracking-widest">
-                    <HeaderNavLink
-                        isDesktop
-                        label="RANKINGS"
-                        to="/blogs/ranking-every-original-beatles-song"
-                    />
-                    <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
-                        |
-                    </span>
-                    <HeaderNavLink isDesktop label="RATINGS" to="/ratings" />
-                    <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
-                        |
-                    </span>
-                    <HeaderNavLink isDesktop label="ABOUT" to="/about" />
+                    {NAV_LINKS.filter((link) => !link.mobileOnly).map(
+                        (link, i, arr) => (
+                            <Fragment key={link.to}>
+                                <HeaderNavLink
+                                    isDesktop
+                                    label={link.label}
+                                    to={link.to}
+                                />
+                                {i < arr.length - 1 && (
+                                    <span className="dark:text-subtle-accent-dark select-none text-subtle-accent-light">
+                                        |
+                                    </span>
+                                )}
+                            </Fragment>
+                        )
+                    )}
                 </div>
                 <HamburgerMenu />
                 <ThemeToggle />

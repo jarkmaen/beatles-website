@@ -1,5 +1,7 @@
 import Divider from "../Divider";
 import HeaderNavLink from "./HeaderNavLink";
+import { Fragment } from "react";
+import { NAV_LINKS } from "../../constants/navLinks";
 import { useEffect, useRef, useState } from "react";
 
 const HamburgerMenu = () => {
@@ -19,10 +21,12 @@ const HamburgerMenu = () => {
 
         if (isOpen) {
             document.addEventListener("mousedown", handleClickOutside);
+            document.addEventListener("touchstart", handleClickOutside);
         }
 
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("touchstart", handleClickOutside);
         };
     }, [isOpen]);
 
@@ -37,13 +41,17 @@ const HamburgerMenu = () => {
             {isOpen && (
                 <div className="absolute bg-surface-light border border-border-light dark:bg-surface-dark dark:border-border-dark mr-0 p-4 right-4 rounded-lg shadow-xl top-[52px] w-48 z-50">
                     <div className="flex-col font-montserrat text-sm tracking-widest">
-                        <HeaderNavLink label="HOME" to="/" />
-                        <Divider marginSize={4} />
-                        <HeaderNavLink label="RANKINGS" to="/blogs/ranking-every-original-beatles-song" />
-                        <Divider marginSize={4} />
-                        <HeaderNavLink label="RATINGS" to="/ratings" />
-                        <Divider marginSize={4} />
-                        <HeaderNavLink label="ABOUT" to="/about" />
+                        {NAV_LINKS.map((link, i) => (
+                            <Fragment key={link.to}>
+                                <HeaderNavLink
+                                    label={link.label}
+                                    to={link.to}
+                                />
+                                {i < NAV_LINKS.length - 1 && (
+                                    <Divider marginSize={4} />
+                                )}
+                            </Fragment>
+                        ))}
                     </div>
                 </div>
             )}
