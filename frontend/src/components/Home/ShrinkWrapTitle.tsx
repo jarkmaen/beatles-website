@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
 type Props = {
-    title: string | undefined;
+    title: string;
 };
 
 const ShrinkWrapTitle = ({ title }: Props) => {

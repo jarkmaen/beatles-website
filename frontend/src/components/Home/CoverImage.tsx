@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 type Props = {
-    src: string | undefined;
+    src: string;
 };
 
 const CoverImage = ({ src }: Props) => {

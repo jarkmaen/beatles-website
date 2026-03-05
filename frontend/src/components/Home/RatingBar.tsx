@@ -30,7 +30,7 @@ const RatingBar = ({ label, maxPoints, points }: Props) => {
             </div>
             <div className="bg-gray-200 dark:bg-gray-700 h-2.5 mt-1 rounded-full w-full">
                 <div
-                    className={`bg-gradient-to-r h-2.5 rounded-full ${barColor}`}
+                    className={`bg-gradient-to-r ${barColor} h-2.5 rounded-full`}
                     style={{ width: `${percentage}%` }}
                 ></div>
             </div>
