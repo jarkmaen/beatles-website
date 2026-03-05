@@ -1,4 +1,4 @@
-export const ratingCategories = {
+export const PARAMETERS = {
     bassline: { label: "Bassline", maxPoints: 5 },
     chordProgression: { label: "Chord Progression", maxPoints: 4 },
     culturalSignificance: { label: "Cultural Significance", maxPoints: 1 },
@@ -9,3 +9,5 @@ export const ratingCategories = {
     solo: { label: "Solo", maxPoints: 4 },
     vocals: { label: "Vocals", maxPoints: 10 }
 } as const;
+
+export type Parameter = keyof typeof PARAMETERS;

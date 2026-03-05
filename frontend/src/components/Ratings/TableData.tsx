@@ -1,12 +1,12 @@
 import type { Song, SongRating } from "../../types";
-import { ratingCategories } from "../../constants/ratingCategories";
+import { PARAMETERS } from "../../constants/parameters";
 
 type Props = {
     song: Song;
 };
 
 const TableData = ({ song }: Props) => {
-    const categories: (keyof typeof ratingCategories)[] = [
+    const categories: (keyof typeof PARAMETERS)[] = [
         "fullInstrumentation",
         "vocals",
         "lyrics",
@@ -29,7 +29,7 @@ const TableData = ({ song }: Props) => {
         const value = values[j];
         return (
             sum +
-            (typeof value === "number" ? ratingCategories[i].maxPoints : 0)
+            (typeof value === "number" ? PARAMETERS[i].maxPoints : 0)
         );
     }, 0);
 

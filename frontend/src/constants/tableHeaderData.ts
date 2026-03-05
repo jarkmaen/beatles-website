@@ -1,6 +1,8 @@
+import type { Parameter } from "./parameters";
+
 export type TableHeaderDef = {
     label: string;
-    sortKey: string | null;
+    sortKey: Parameter | "rank" | "title" | null;
     tooltip: string;
 };
 
@@ -17,7 +19,7 @@ export const tableHeaderData: TableHeaderDef[] = [
         label: "VOCALS",
         sortKey: "vocals",
         tooltip:
-            "0-3: GOOD, NOTHING SPECIAL\n4-6: GOOD WITH STANDOUT MOMENTS\n7-8: ALLROUND GREAT VOCALS\n9-10: EXCEPTIONAL (LEAD/HARMONIES)"
+            "0-3: GOOD, NOTHING SPECIAL\n4-6: GOOD WITH STANDOUT MOMENTS\n7-8: ALL-ROUND GREAT VOCALS\n9-10: EXCEPTIONAL (LEAD/HARMONIES)"
     },
     {
         label: "LYRICS",
@@ -60,6 +62,6 @@ export const tableHeaderData: TableHeaderDef[] = [
     {
         label: "TOTAL POINTS",
         sortKey: null,
-        tooltip: "SUMMED POINTS / MAX POTENTIAL POINTS\n(ONLY RATED CATEGORIES)"
+        tooltip: "SUMMED POINTS / MAX POTENTIAL POINTS\n(ONLY RATED PARAMETERS)"
     }
 ] as const;

@@ -13,7 +13,7 @@ import whiteAlbumCover from "../assets/images/the_beatles.jpg";
 import withTheBeatlesCover from "../assets/images/with_the_beatles.png";
 import yellowSubmarineCover from "../assets/images/yellow_submarine.jpg";
 
-export const albumNameCoverMap: Record<string, string> = {
+export const ALBUM_COVER_MAP = {
     "A Hard Day's Night": hardDaysNightCover,
     "Abbey Road": abbeyRoadCover,
     "Beatles for Sale": beatlesForSaleCover,
@@ -29,3 +29,9 @@ export const albumNameCoverMap: Record<string, string> = {
     "With the Beatles": withTheBeatlesCover,
     "Yellow Submarine": yellowSubmarineCover
 } as const;
+
+export const ALBUM_NAMES = Object.keys(ALBUM_COVER_MAP) as Array<
+    keyof typeof ALBUM_COVER_MAP
+>;
+
+export type AlbumName = keyof typeof ALBUM_COVER_MAP;

@@ -1,4 +1,4 @@
-import { albumNames } from "../../constants/albumNames";
+import { ALBUM_NAMES } from "../../constants/albums";
 
 type Props = {
     album: string;
@@ -32,7 +32,7 @@ const RatingsToolbar = ({ album, search, setAlbum, setSearch }: Props) => {
                         value={album}
                     >
                         <option value="">All albums and singles</option>
-                        {albumNames.map((name) => {
+                        {ALBUM_NAMES.map((name) => {
                             const label = name === "Single" ? "Singles" : name;
                             return (
                                 <option key={name} value={name}>

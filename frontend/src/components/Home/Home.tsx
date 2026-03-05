@@ -4,8 +4,8 @@ import RatingBar from "./RatingBar";
 import ShrinkWrapTitle from "./ShrinkWrapTitle";
 import type { RootState } from "../../store";
 import type { SongRating } from "../../types";
-import { albumNameCoverMap } from "../../constants/albumNameCoverMap";
-import { ratingCategories } from "../../constants/ratingCategories";
+import { ALBUM_COVER_MAP } from "../../constants/albums";
+import { PARAMETERS } from "../../constants/parameters";
 import { renderParagraphs } from "../../utils";
 import { useSelector } from "react-redux";
 
@@ -28,7 +28,7 @@ const Home = () => {
                     <CoverImage
                         src={
                             songOfTheDay
-                                ? albumNameCoverMap[songOfTheDay.album]
+                                ? ALBUM_COVER_MAP[songOfTheDay.album]
                                 : undefined
                         }
                     />
@@ -50,7 +50,7 @@ const Home = () => {
                     </h5>
                     <div className="space-y-3">
                         {songOfTheDay?.songRatings?.length &&
-                            Object.entries(ratingCategories)
+                            Object.entries(PARAMETERS)
                                 .filter(
                                     ([key]) =>
                                         key !== "cultural_significance" &&

@@ -1,12 +1,12 @@
+import * as T from "../../types";
 import RankedSong from "./RankedSong";
 import ReactMarkdown, { type Components } from "react-markdown";
-import type { BlogContent as BlogContentType } from "../../types";
 import type { RootState } from "../../store";
-import { blogContentTypes } from "../../constants/blogContentTypes";
+import { BLOG_CONTENT_TYPES } from "../../constants/blogContentTypes";
 import { useSelector } from "react-redux";
 
 type Props = {
-    content: BlogContentType;
+    content: T.BlogContent;
 };
 
 const BlogContent = ({ content }: Props) => {
@@ -22,7 +22,7 @@ const BlogContent = ({ content }: Props) => {
     };
 
     switch (content.type) {
-        case blogContentTypes.defaultRanking: {
+        case BLOG_CONTENT_TYPES.DEFAULT_RANKING: {
             return (
                 <div className="space-y-8">
                     {songs
@@ -41,7 +41,7 @@ const BlogContent = ({ content }: Props) => {
                 </div>
             );
         }
-        case blogContentTypes.manualRanking: {
+        case BLOG_CONTENT_TYPES.MANUAL_RANKING: {
             return (
                 <div className="space-y-8">
                     {content.items.map((item, i) => (
@@ -57,7 +57,7 @@ const BlogContent = ({ content }: Props) => {
                 </div>
             );
         }
-        case blogContentTypes.markdown: {
+        case BLOG_CONTENT_TYPES.MARKDOWN: {
             return (
                 <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
                     <ReactMarkdown components={markdownComponents}>

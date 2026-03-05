@@ -1,3 +1,7 @@
+import type { AlbumName } from "./constants/albums";
+import type { Parameter } from "./constants/parameters";
+import { BLOG_CONTENT_TYPES } from "./constants/blogContentTypes";
+
 export interface Blog {
     id: number;
     author: string;
@@ -14,11 +18,11 @@ export interface BlogState {
 }
 
 export interface DefaultRanking {
-    type: "default_ranking";
+    type: typeof BLOG_CONTENT_TYPES.DEFAULT_RANKING;
 }
 
 export interface ManualRanking {
-    type: "manual_ranking";
+    type: typeof BLOG_CONTENT_TYPES.MANUAL_RANKING;
     items: {
         commentary: string;
         rank: number;
@@ -27,7 +31,7 @@ export interface ManualRanking {
 }
 
 export interface Markdown {
-    type: "markdown";
+    type: typeof BLOG_CONTENT_TYPES.MARKDOWN;
     text: string;
 }
 
@@ -40,7 +44,7 @@ export interface Message {
 
 export interface Song {
     id: number;
-    album: string;
+    album: AlbumName;
     commentary: string;
     commentaryLanding: string | null;
     rank: number;
@@ -48,19 +52,10 @@ export interface Song {
     title: string;
 }
 
-export interface SongRating {
+export interface SongRating extends Record<Parameter, number | null> {
     id: number;
     songId: number;
-    bassline: number | null;
-    chordProgression: number | null;
-    culturalSignificance: number | null;
-    fullInstrumentation: number | null;
-    lyrics: number | null;
-    originalityInnovation: number | null;
     percentage: number | null;
-    percussion: number | null;
-    solo: number | null;
-    vocals: number | null;
 }
 
 export interface SongState {

@@ -1,5 +1,5 @@
-export const blogContentTypes = {
-    defaultRanking: "default_ranking",
-    manualRanking: "manual_ranking",
-    markdown: "markdown"
+export const BLOG_CONTENT_TYPES = {
+    DEFAULT_RANKING: "default_ranking",
+    MANUAL_RANKING: "manual_ranking",
+    MARKDOWN: "markdown"
 } as const;
