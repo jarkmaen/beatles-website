@@ -26,6 +26,18 @@
         />
         <meta charset="UTF-8" />
         <meta content="initial-scale=1.0, width=device-width" name="viewport" />
+        <script>
+            (function () {
+                const storedDark = localStorage.getItem("isDark") || "true";
+                const isDark = storedDark === "true";
+
+                if (isDark) {
+                    document.documentElement.classList.add("dark");
+                } else {
+                    document.documentElement.classList.remove("dark");
+                }
+            })();
+        </script>
         <title>Fab Two</title>
     </head>
     <body

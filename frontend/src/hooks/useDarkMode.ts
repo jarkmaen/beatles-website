@@ -5,7 +5,7 @@ const useDarkMode = (): [
     React.Dispatch<React.SetStateAction<boolean>>
 ] => {
     const [isDark, setIsDark] = useState(() => {
-        return localStorage.getItem("isDark") === "true";
+        return document.documentElement.classList.contains("dark");
     });
 
     useEffect(() => {
