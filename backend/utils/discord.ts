@@ -4,13 +4,12 @@ import * as logger from "./logger.js";
 export const sendDiscordNotification = (
     email: string,
     message: string,
-    firstName?: string,
-    lastName?: string
+    firstName: string | null,
+    lastName: string | null
 ) => {
     const fullName =
-        [firstName, lastName]
-            .filter((name) => name !== null && name !== undefined)
-            .join(" ") || "Anonymous";
+        [firstName, lastName].filter((name) => name !== null).join(" ") ||
+        "Anonymous";
 
     const content = `New message from ${fullName} (${email}):\n${message}`;
 

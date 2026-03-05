@@ -9,16 +9,16 @@ export const validateMessage = (
 
     if (
         typeof email !== "string" ||
-        (firstName !== undefined && typeof firstName !== "string") ||
-        (lastName !== undefined && typeof lastName !== "string") ||
+        (firstName !== null && typeof firstName !== "string") ||
+        (lastName !== null && typeof lastName !== "string") ||
         typeof message !== "string"
     ) {
         return res.status(400).json({ error: "Invalid request body" });
     }
 
     const trimmedEmail: string = email.trim();
-    const trimmedFirstName: string | undefined = firstName?.trim();
-    const trimmedLastName: string | undefined = lastName?.trim();
+    const trimmedFirstName: string | null = firstName?.trim() || null;
+    const trimmedLastName: string | null = lastName?.trim() || null;
     const trimmedMessage: string = message.trim();
 
     if (!trimmedEmail || !trimmedMessage) {
