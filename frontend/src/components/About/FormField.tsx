@@ -19,8 +19,7 @@ const FormField = ({
     type,
     value
 }: Props) => {
-    const baseClasses =
-        "bg-surface-light block border-0 dark:bg-surface-dark dark:inset-ring-border-dark dark:text-primary-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none px-3 py-2 rounded-md shadow-xs text-primary-light w-full";
+    const Tag = textarea ? "textarea" : "input";
 
     return (
         <div>
@@ -28,25 +27,17 @@ const FormField = ({
                 {label} {required && <span className="text-red-500">*</span>}
             </label>
             <div className="mt-2">
-                {textarea ? (
-                    <textarea
-                        className={baseClasses}
-                        maxLength={maxLength}
-                        onChange={(e) => setValue(e.target.value)}
-                        required={required}
-                        rows={rows}
-                        value={value}
-                    />
-                ) : (
-                    <input
-                        className={baseClasses}
-                        maxLength={maxLength}
-                        onChange={(e) => setValue(e.target.value)}
-                        required={required}
-                        type={type}
-                        value={value}
-                    />
-                )}
+                <Tag
+                    className={
+                        "bg-surface-light block border-0 dark:bg-surface-dark dark:inset-ring-border-dark dark:text-primary-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none px-3 py-2 rounded-md shadow-xs text-primary-light w-full"
+                    }
+                    maxLength={maxLength}
+                    onChange={(e) => setValue(e.target.value)}
+                    required={required}
+                    rows={textarea ? rows : undefined}
+                    type={textarea ? undefined : type}
+                    value={value}
+                />
             </div>
         </div>
     );
