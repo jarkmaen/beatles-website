@@ -34,6 +34,7 @@ const RatingsToolbar = ({ album, search, setAlbum, setSearch }: Props) => {
                         <option value="">All albums and singles</option>
                         {ALBUM_NAMES.map((name) => {
                             const label = name === "Single" ? "Singles" : name;
+
                             return (
                                 <option key={name} value={name}>
                                     {label}

@@ -26,12 +26,12 @@ const Ratings = () => {
 
     const sortedSongs = [...filteredSongs];
 
-    const getValue = (key: string, song: Song): number | string => {
+    const getValue = (key: string, song: Song): number | string | null => {
         if (key === "rank" || key === "title") {
-            return (song as any)[key];
+            return song[key];
         }
 
-        return song.songRatings?.[0]?.[key as keyof SongRating] ?? 0;
+        return song.songRatings[0][key as keyof SongRating] ?? null;
     };
 
     if (sortDirection && sortKey) {
@@ -39,24 +39,33 @@ const Ratings = () => {
             const valueA = getValue(sortKey, a);
             const valueB = getValue(sortKey, b);
 
+            const isEmptyA = valueA === null;
+            const isEmptyB = valueB === null;
+
+            if (isEmptyA && isEmptyB) {
+                return 0;
+            }
+
+            if (isEmptyA) {
+                return 1;
+            }
+
+            if (isEmptyB) {
+                return -1;
+            }
+
             if (typeof valueA === "string" && typeof valueB === "string") {
                 const cmp = valueA.localeCompare(valueB);
 
-                if (cmp !== 0) {
-                    return sortDirection === "asc" ? cmp : -cmp;
-                }
+                return sortDirection === "asc" ? cmp : -cmp;
             } else {
                 const numberA = Number(valueA);
                 const numberB = Number(valueB);
 
-                if (numberA !== numberB) {
-                    return sortDirection === "asc"
-                        ? numberA - numberB
-                        : numberB - numberA;
-                }
+                return sortDirection === "asc"
+                    ? numberA - numberB
+                    : numberB - numberA;
             }
-
-            return 0;
         });
     }
 
@@ -66,13 +75,18 @@ const Ratings = () => {
         }
 
         if (sortKey !== key) {
-            setSortDirection("asc");
             setSortKey(key);
-        } else if (sortDirection === "asc") {
+            setSortDirection("asc");
+            return;
+        }
+
+        if (sortDirection === "asc") {
             setSortDirection("desc");
-        } else {
+        } else if (sortDirection === "desc") {
             setSortDirection(null);
             setSortKey(null);
+        } else {
+            setSortDirection("asc");
         }
     };
 
@@ -88,15 +102,15 @@ const Ratings = () => {
                 <table className="table-fixed text-left text-sm">
                     <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
                         <tr>
-                            {tableHeaderData.map((h) => (
+                            {tableHeaderData.map((header) => (
                                 <TableHeader
                                     activeSortKey={sortKey}
-                                    columnSortKey={h.sortKey}
-                                    key={h.label}
-                                    label={h.label}
+                                    columnSortKey={header.sortKey}
+                                    key={header.label}
+                                    label={header.label}
                                     onSort={handleSort}
                                     sortDirection={sortDirection}
-                                    tooltip={h.tooltip}
+                                    tooltip={header.tooltip}
                                 />
                             ))}
                         </tr>

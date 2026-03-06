@@ -25,20 +25,21 @@ const TableHeader = ({
     } | null>(null);
 
     const iconRef = useRef<HTMLSpanElement>(null);
-    const isActive = activeSortKey === columnSortKey;
 
     const headerContentClass =
         columnSortKey === "title"
             ? "flex items-center w-[230px]"
             : "flex items-center";
 
+    const isActive = activeSortKey === columnSortKey;
+
     const icon = !isActive
         ? "unfold_more"
         : sortDirection === "asc"
-        ? "arrow_upward"
-        : sortDirection === "desc"
-        ? "arrow_downward"
-        : "unfold_more";
+          ? "arrow_upward"
+          : sortDirection === "desc"
+            ? "arrow_downward"
+            : "unfold_more";
 
     const hideTooltip = () => setTooltipPosition(null);
 

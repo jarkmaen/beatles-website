@@ -1,11 +1,11 @@
 import { createPortal } from "react-dom";
 
-type TooltipPortalProps = {
+type Props = {
     children: React.ReactNode;
     position: { top: number; left: number };
 };
 
-const TooltipPortal = ({ children, position }: TooltipPortalProps) => {
+const TooltipPortal = ({ children, position }: Props) => {
     return createPortal(
         <div
             className="fixed pointer-events-none"

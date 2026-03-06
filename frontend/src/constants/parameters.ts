@@ -1,3 +1,15 @@
+export const PARAMETER_ORDER = [
+    "fullInstrumentation",
+    "vocals",
+    "lyrics",
+    "originalityInnovation",
+    "bassline",
+    "percussion",
+    "solo",
+    "chordProgression",
+    "culturalSignificance"
+] as const;
+
 export const PARAMETERS = {
     bassline: { label: "Bassline", maxPoints: 5 },
     chordProgression: { label: "Chord Progression", maxPoints: 4 },

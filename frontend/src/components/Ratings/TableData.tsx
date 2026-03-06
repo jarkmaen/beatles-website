@@ -1,37 +1,26 @@
-import type { Song, SongRating } from "../../types";
-import { PARAMETERS } from "../../constants/parameters";
+import type { Song } from "../../types";
+import { PARAMETER_ORDER, PARAMETERS } from "../../constants/parameters";
 
 type Props = {
     song: Song;
 };
 
 const TableData = ({ song }: Props) => {
-    const categories: (keyof typeof PARAMETERS)[] = [
-        "fullInstrumentation",
-        "vocals",
-        "lyrics",
-        "originalityInnovation",
-        "bassline",
-        "percussion",
-        "solo",
-        "chordProgression",
-        "culturalSignificance"
-    ];
+    const rating = song.songRatings[0];
 
-    const songRating: SongRating = song.songRatings![0];
-    const values = categories.map((i) => songRating[i]);
+    const values = PARAMETER_ORDER.map(
+        (key) => rating[key as keyof typeof rating]
+    );
 
-    const points = values.reduce<number>((sum, value) => {
-        return sum + (typeof value === "number" ? value : 0);
+    const maxPoints = values.reduce<number>((sum, value, i) => {
+        if (value !== null) {
+            return sum + PARAMETERS[PARAMETER_ORDER[i]].maxPoints;
+        }
+
+        return sum;
     }, 0);
 
-    const totalPoints = categories.reduce<number>((sum, i, j) => {
-        const value = values[j];
-        return (
-            sum +
-            (typeof value === "number" ? PARAMETERS[i].maxPoints : 0)
-        );
-    }, 0);
+    const points = values.reduce<number>((sum, value) => sum + (value ?? 0), 0);
 
     return (
         <>
@@ -45,11 +34,11 @@ const TableData = ({ song }: Props) => {
                 {song.title}
             </th>
             {values.map((value, i) => (
-                <td className="px-6 py-4" key={categories[i]}>
-                    {value === null || value === undefined ? "N/A" : value}
+                <td className="px-6 py-4" key={Object.keys(PARAMETERS)[i]}>
+                    {value === null ? "-" : value}
                 </td>
             ))}
-            <td className="px-6 py-4">{`${points}/${totalPoints}`}</td>
+            <td className="px-6 py-4">{`${points}/${maxPoints}`}</td>
         </>
     );
 };
