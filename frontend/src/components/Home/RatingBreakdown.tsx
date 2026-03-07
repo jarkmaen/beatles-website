@@ -14,13 +14,13 @@ const RatingBreakdown = ({ rating }: Props) => {
                 key !== "culturalSignificance" &&
                 rating[key as keyof SongRating] !== null
         )
-        .sort((keyA, keyB) => {
+        .sort((a, b) => {
             const valueA =
-                (rating[keyA as keyof SongRating] as number) /
-                PARAMETERS[keyA].maxPoints;
+                (rating[a as keyof SongRating] as number) /
+                PARAMETERS[a].maxPoints;
             const valueB =
-                (rating[keyB as keyof SongRating] as number) /
-                PARAMETERS[keyB].maxPoints;
+                (rating[b as keyof SongRating] as number) /
+                PARAMETERS[b].maxPoints;
 
             return valueB - valueA;
         });

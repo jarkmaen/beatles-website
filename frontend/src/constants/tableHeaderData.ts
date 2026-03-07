@@ -8,7 +8,7 @@ type TableHeaderDef = {
 
 export const tableHeaderData: TableHeaderDef[] = [
     { label: "#", sortKey: "rank", tooltip: "SONG RANK" },
-    { label: "SONG", sortKey: "title", tooltip: "THE TITLE OF THE SONG" },
+    { label: "SONG", sortKey: "title", tooltip: "SONG TITLE" },
     {
         label: "FULL INSTRUMENTATION",
         sortKey: "fullInstrumentation",

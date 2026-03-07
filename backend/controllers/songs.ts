@@ -25,9 +25,9 @@ export const getSongOfTheDay = async (_req: Request, res: Response) => {
             return;
         }
 
-        const randomID = random(count);
+        const randomId = random(count);
 
-        const song = await Song.findByPk(randomID, {
+        const song = await Song.findByPk(randomId, {
             include: [{ as: "songRatings", model: SongRating }]
         });
 
