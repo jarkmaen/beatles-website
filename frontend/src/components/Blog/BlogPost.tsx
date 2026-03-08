@@ -27,7 +27,7 @@ const BlogPost = () => {
     return (
         <div className="max-w-4xl mx-auto">
             <BlogIntro blog={blog} isBlogPostPage={true} />
-            <Divider />
+            <Divider marginSize={8} />
             <BlogContent content={blog.content} />
         </div>
     );

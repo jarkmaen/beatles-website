@@ -66,4 +66,5 @@ export interface SongState {
 }
 
 export type BlogContent = DefaultRanking | ManualRanking | Markdown;
+export type MarginSize = 4 | 8 | 12;
 export type SortDirection = "asc" | "desc" | null;

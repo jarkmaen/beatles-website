@@ -18,7 +18,7 @@ const BlogListItem = ({ blog, bottom }: Props) => {
             >
                 READ MORE
             </Link>
-            {!bottom && <Divider />}
+            {!bottom && <Divider marginSize={8} />}
         </div>
     );
 };

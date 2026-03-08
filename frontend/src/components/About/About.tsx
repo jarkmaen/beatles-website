@@ -1,5 +1,6 @@
 import * as messagesService from "../../services/messages";
 import Alert from "./Alert";
+import Divider from "../Divider";
 import FormField from "./FormField";
 import { useState } from "react";
 
@@ -69,7 +70,7 @@ const About = () => {
                     We'll try to get back to you as soon as we can!
                 </p>
             </div>
-            <hr className="border-divider-light dark:border-divider-dark my-12" />
+            <Divider marginSize={12} />
             <h2 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-5xl text-3xl text-center text-primary-light">
                 Get in Touch
             </h2>
