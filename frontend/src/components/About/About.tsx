@@ -123,7 +123,7 @@ const About = () => {
                     />
                 )}
                 <button
-                    className="bg-primary-light cursor-pointer dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black disabled:cursor-not-allowed disabled:opacity-50 flex font-bold hover:bg-primary-light/90 justify-center px-6 py-3 rounded-md shadow-sm text-sm text-white transition-colors"
+                    className="bg-primary-light cursor-pointer dark:bg-primary-dark dark:hover:bg-primary-dark/90 dark:text-black disabled:cursor-not-allowed disabled:opacity-50 flex font-bold hover:bg-primary-light/90 justify-center px-6 py-3 rounded-md shadow-sm text-sm text-white transition"
                     disabled={isSubmitting}
                     type="submit"
                 >

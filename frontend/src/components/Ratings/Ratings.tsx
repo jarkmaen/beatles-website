@@ -100,7 +100,7 @@ const Ratings = () => {
             />
             <div className="dark:text-muted-dark overflow-auto text-secondary-light">
                 <table className="table-fixed text-left text-sm">
-                    <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider">
+                    <thead className="bg-table-header-light dark:bg-table-header-dark sticky text-xs top-0 tracking-wider transition">
                         <tr>
                             {tableHeaderData.map((header) => (
                                 <TableHeader
@@ -118,7 +118,7 @@ const Ratings = () => {
                     <tbody className="divide-y">
                         {sortedSongs.map((song) => (
                             <tr
-                                className="bg-surface-light border-divider-light dark:bg-surface-dark dark:border-divider-dark dark:hover:bg-table-header-dark hover:bg-table-header-light transition-colors"
+                                className="bg-surface-light border-divider-light dark:bg-surface-dark dark:border-divider-dark dark:hover:bg-table-header-dark hover:bg-table-header-light transition"
                                 key={song.id}
                             >
                                 <TableData song={song} />

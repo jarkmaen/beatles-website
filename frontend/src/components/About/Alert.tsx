@@ -46,7 +46,7 @@ const Alert = ({ message, onClose, variant }: Props) => {
                         </div>
                         <div className="flex items-center ml-6">
                             <button
-                                className={`cursor-pointer ${styles.button} inline-flex p-1.5 rounded-md transition-colors`}
+                                className={`cursor-pointer ${styles.button} inline-flex p-1.5 rounded-md transition`}
                                 onClick={onClose}
                                 type="button"
                             >
