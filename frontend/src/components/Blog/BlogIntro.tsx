@@ -1,6 +1,7 @@
-import ReactMarkdown, { type Components } from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import type { Blog } from "../../types";
 import { Link } from "react-router-dom";
+import { MarkdownA } from "../MarkdownConfig";
 
 type Props = {
     blog: Blog;
@@ -8,14 +9,6 @@ type Props = {
 };
 
 const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
-    const markdownComponents: Components = {
-        a: ({ children, href, ...props }) => (
-            <Link to={href ?? ""} {...props}>
-                {children}
-            </Link>
-        )
-    };
-
     return (
         <>
             {isBlogPostPage ? (
@@ -46,13 +39,13 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
             </div>
             {isBlogPostPage ? (
                 <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
-                    <ReactMarkdown components={markdownComponents}>
+                    <ReactMarkdown components={{ a: MarkdownA }}>
                         {blog.intro}
                     </ReactMarkdown>
                 </div>
             ) : (
                 <div className="dark:prose-invert h-40 hyphens-auto max-w-none overflow-hidden prose relative sm:prose-lg">
-                    <ReactMarkdown components={markdownComponents}>
+                    <ReactMarkdown components={{ a: MarkdownA }}>
                         {blog.intro}
                     </ReactMarkdown>
                     <div className="absolute bg-gradient-to-t bottom-0 dark:from-dark from-light h-12 left-0 to-transparent transition-colors w-full"></div>

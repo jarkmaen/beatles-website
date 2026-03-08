@@ -23,11 +23,7 @@ export interface DefaultRanking {
 
 export interface ManualRanking {
     type: typeof BLOG_CONTENT_TYPES.MANUAL_RANKING;
-    items: {
-        commentary: string;
-        rank: number;
-        title: string;
-    }[];
+    items: RankedItem[];
 }
 
 export interface Markdown {
@@ -40,6 +36,12 @@ export interface Message {
     firstName: string | null;
     lastName: string | null;
     message: string;
+}
+
+export interface RankedItem {
+    commentary: string;
+    rank: number;
+    title: string;
 }
 
 export interface Song {

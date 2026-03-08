@@ -1,8 +1,10 @@
 import * as T from "../../types";
 import RankedSong from "./RankedSong";
-import ReactMarkdown, { type Components } from "react-markdown";
+import ReactMarkdown from "react-markdown";
+import type { RankedItem } from "../../types";
 import type { RootState } from "../../store";
 import { BLOG_CONTENT_TYPES } from "../../constants/blogContentTypes";
+import { MarkdownH3 } from "../MarkdownConfig";
 import { useSelector } from "react-redux";
 
 type Props = {
@@ -12,55 +14,28 @@ type Props = {
 const BlogContent = ({ content }: Props) => {
     const songs = useSelector((state: RootState) => state.songs.songs);
 
-    const markdownComponents: Components = {
-        h3: ({ node, ...props }) => (
-            <h3
-                className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-2xl text-primary-light"
-                {...props}
+    const renderSongs = (items: RankedItem[]) =>
+        items.map((song, i) => (
+            <RankedSong
+                bottom={i === items.length - 1}
+                commentary={song.commentary}
+                key={i}
+                rank={song.rank}
+                title={song.title}
             />
-        )
-    };
+        ));
 
     switch (content.type) {
         case BLOG_CONTENT_TYPES.DEFAULT_RANKING: {
-            return (
-                <div className="space-y-8">
-                    {songs
-                        .slice()
-                        .sort((a, b) => b.rank - a.rank)
-                        .map((song, i) => (
-                            <div key={song.id}>
-                                <RankedSong
-                                    bottom={i === songs.length - 1}
-                                    commentary={song.commentary}
-                                    rank={song.rank}
-                                    title={song.title}
-                                />
-                            </div>
-                        ))}
-                </div>
-            );
+            return renderSongs([...songs].sort((a, b) => b.rank - a.rank));
         }
         case BLOG_CONTENT_TYPES.MANUAL_RANKING: {
-            return (
-                <div className="space-y-8">
-                    {content.items.map((item, i) => (
-                        <div key={i}>
-                            <RankedSong
-                                bottom={i === content.items.length - 1}
-                                commentary={item.commentary}
-                                rank={item.rank}
-                                title={item.title}
-                            />
-                        </div>
-                    ))}
-                </div>
-            );
+            return renderSongs(content.items);
         }
         case BLOG_CONTENT_TYPES.MARKDOWN: {
             return (
                 <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
-                    <ReactMarkdown components={markdownComponents}>
+                    <ReactMarkdown components={{ h3: MarkdownH3 }}>
                         {content.text}
                     </ReactMarkdown>
                 </div>
