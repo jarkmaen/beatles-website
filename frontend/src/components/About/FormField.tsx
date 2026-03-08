@@ -1,6 +1,6 @@
 type Props = {
     label: string;
-    maxLength?: number;
+    maxLength: number;
     required?: boolean;
     rows?: number;
     setValue: React.Dispatch<React.SetStateAction<string>>;
@@ -12,10 +12,10 @@ type Props = {
 const FormField = ({
     label,
     maxLength,
-    required,
+    required = false,
     rows,
     setValue,
-    textarea,
+    textarea = false,
     type,
     value
 }: Props) => {

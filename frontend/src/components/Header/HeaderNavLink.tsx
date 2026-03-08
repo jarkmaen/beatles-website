@@ -6,7 +6,7 @@ type Props = {
     to: string;
 };
 
-const HeaderNavLink = ({ isDesktop, label, to }: Props) => {
+const HeaderNavLink = ({ isDesktop = false, label, to }: Props) => {
     return (
         <div className={`text-center ${isDesktop ? "w-[90px]" : "w-full"}`}>
             <NavLink
