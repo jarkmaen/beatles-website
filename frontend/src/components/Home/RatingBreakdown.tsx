@@ -1,13 +1,17 @@
+import OverallScore from "./OverallScore";
 import RatingBar from "./RatingBar";
 import type { Parameter } from "../../constants/parameters";
-import type { SongRating } from "../../types";
+import type { Song, SongRating } from "../../types";
 import { PARAMETERS } from "../../constants/parameters";
 
 type Props = {
-    rating: SongRating;
+    isLongText: boolean;
+    song: Song;
 };
 
-const RatingBreakdown = ({ rating }: Props) => {
+const RatingBreakdown = ({ isLongText, song }: Props) => {
+    const rating = song.songRatings[0];
+
     const sortedParameters = (Object.keys(PARAMETERS) as Parameter[])
         .filter(
             (key) =>
@@ -26,23 +30,30 @@ const RatingBreakdown = ({ rating }: Props) => {
         });
 
     return (
-        <div className="space-y-4">
-            <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
-                Rating Breakdown
-            </h5>
-            <div className="space-y-3">
-                {sortedParameters.map((key) => {
-                    const { label, maxPoints } = PARAMETERS[key];
+        <div className="lg:space-y-16">
+            <div className="space-y-4">
+                <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
+                    Rating Breakdown
+                </h5>
+                <div className="space-y-3">
+                    {sortedParameters.map((key) => {
+                        const { label, maxPoints } = PARAMETERS[key];
 
-                    return (
-                        <RatingBar
-                            key={key}
-                            label={label}
-                            maxPoints={maxPoints}
-                            points={rating[key as keyof SongRating] as number}
-                        />
-                    );
-                })}
+                        return (
+                            <RatingBar
+                                key={key}
+                                label={label}
+                                maxPoints={maxPoints}
+                                points={
+                                    rating[key as keyof SongRating] as number
+                                }
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+            <div className="flex-col hidden lg:flex text-center">
+                {isLongText && <OverallScore song={song} />}
             </div>
         </div>
     );

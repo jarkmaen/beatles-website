@@ -1,16 +1,28 @@
 import CoverImage from "./CoverImage";
 import LoadingScreen from "../LoadingScreen";
+import OverallScore from "./OverallScore";
 import RatingBreakdown from "./RatingBreakdown";
 import ShrinkWrapTitle from "./ShrinkWrapTitle";
 import type { RootState } from "../../store";
 import { ALBUM_COVER_MAP } from "../../constants/albums";
 import { renderParagraphs } from "../../utils";
+import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 
 const Home = () => {
+    const [isLongText, setIsLongText] = useState(false);
+
+    const commentaryRef = useRef<HTMLDivElement>(null);
+
     const songOfTheDay = useSelector(
         (state: RootState) => state.songs.songOfTheDay
     );
+
+    useEffect(() => {
+        if (commentaryRef.current) {
+            setIsLongText(commentaryRef.current.offsetHeight >= 620);
+        }
+    }, [songOfTheDay]);
 
     if (!songOfTheDay) {
         return <LoadingScreen />;
@@ -36,8 +48,11 @@ const Home = () => {
                 </div>
             </div>
             <div className="gap-8 grid grid-cols-1 lg:gap-12 lg:grid-cols-2 lg:mt-16 max-w-4xl mt-12 mx-auto">
-                <RatingBreakdown rating={songOfTheDay.songRatings[0]} />
-                <div className="dark:prose-invert hyphens-auto max-w-none md:prose-lg prose">
+                <RatingBreakdown isLongText={isLongText} song={songOfTheDay} />
+                <div
+                    className="dark:prose-invert hyphens-auto max-w-none md:prose-lg prose"
+                    ref={commentaryRef}
+                >
                     <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
                         Commentary
                     </h5>
@@ -46,16 +61,10 @@ const Home = () => {
                         : renderParagraphs(songOfTheDay.commentary)}
                 </div>
             </div>
-            <div className="flex flex-col lg:mt-16 mt-12 text-center">
-                <span className="dark:text-muted-dark text-muted-light">
-                    Overall Score
-                </span>
-                <span className="font-bold font-lora text-6xl">
-                    {songOfTheDay.songRatings[0].percentage}%
-                </span>
-                <span className="dark:text-secondary-dark mt-2 text-lg text-secondary-light">
-                    Rank #{songOfTheDay.rank}
-                </span>
+            <div
+                className={`flex flex-col ${isLongText ? "lg:hidden" : ""} lg:mt-16 mt-12 text-center`}
+            >
+                <OverallScore song={songOfTheDay} />
             </div>
         </>
     );
