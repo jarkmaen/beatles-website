@@ -53,9 +53,12 @@ const Home = () => {
                     className="dark:prose-invert hyphens-auto max-w-none md:prose-lg prose"
                     ref={commentaryRef}
                 >
-                    <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
-                        Commentary
-                    </h5>
+                    <div className="bg-light dark:bg-dark lg:-mt-4 lg:pt-4 lg:sticky lg:top-0 transition z-10">
+                        <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
+                            Commentary
+                        </h5>
+                        <div className="absolute bg-gradient-to-b dark:from-dark from-light h-8 hidden left-0 lg:block pointer-events-none right-0 to-transparent transition" />
+                    </div>
                     {songOfTheDay.commentaryLanding
                         ? renderParagraphs(songOfTheDay.commentaryLanding)
                         : renderParagraphs(songOfTheDay.commentary)}

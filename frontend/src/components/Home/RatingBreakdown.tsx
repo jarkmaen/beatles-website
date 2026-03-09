@@ -30,7 +30,7 @@ const RatingBreakdown = ({ isLongText, song }: Props) => {
         });
 
     return (
-        <div className="lg:space-y-16">
+        <div className="lg:self-start lg:space-y-16 lg:sticky lg:top-4">
             <div className="space-y-4">
                 <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
                     Rating Breakdown
