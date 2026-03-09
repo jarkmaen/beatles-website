@@ -31,7 +31,10 @@ const HamburgerMenu = () => {
     }, [isOpen]);
 
     return (
-        <div className="flex items-center justify-center" ref={menuRef}>
+        <div
+            className="flex items-center justify-center relative"
+            ref={menuRef}
+        >
             <button
                 className="dark:hover:text-primary-dark dark:text-secondary-dark flex hover:text-primary-light items-center justify-center lg:hidden text-secondary-light"
                 onClick={() => setOpen((prev) => !prev)}
@@ -39,7 +42,7 @@ const HamburgerMenu = () => {
                 <span className="material-symbols-outlined">dehaze</span>
             </button>
             {isOpen && (
-                <div className="absolute bg-surface-light border border-border-light dark:bg-surface-dark dark:border-border-dark mr-0 p-4 right-4 rounded-lg shadow-xl top-[52px] w-48 z-50">
+                <div className="absolute bg-surface-light border border-border-light dark:bg-surface-dark dark:border-border-dark mr-0 p-4 -right-12 rounded-lg shadow-xl top-[40px] w-48 z-50">
                     <div className="flex-col font-montserrat text-sm tracking-widest">
                         {NAV_LINKS.map((link, i) => (
                             <Fragment key={link.to}>
