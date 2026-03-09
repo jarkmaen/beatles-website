@@ -7,15 +7,15 @@ import { NAV_LINKS } from "../../constants/navLinks";
 
 const Header = () => {
     return (
-        <header className="flex justify-between py-3 sm:py-6">
+        <header className="flex justify-between lg:py-6 py-3">
             <Link
-                className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-3xl text-primary-light tracking-wider"
+                className="dark:text-primary-dark font-bold font-lora lg:text-4xl text-3xl text-primary-light tracking-wider"
                 to="/"
             >
                 Fab Two
             </Link>
             <div className="flex space-x-6">
-                <div className="font-montserrat hidden items-center sm:flex space-x-6 text-sm tracking-widest">
+                <div className="font-montserrat hidden items-center lg:flex space-x-6 text-sm tracking-widest">
                     {NAV_LINKS.filter((link) => !link.mobileOnly).map(
                         (link, i, arr) => (
                             <Fragment key={link.to}>

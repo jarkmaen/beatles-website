@@ -43,10 +43,10 @@ const About = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
-            <h1 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-6xl text-5xl text-center text-primary-light">
+            <h1 className="dark:text-primary-dark font-bold font-lora lg:text-6xl mb-8 text-5xl text-center text-primary-light">
                 About Us
             </h1>
-            <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
+            <div className="dark:prose-invert hyphens-auto lg:prose-lg max-w-none prose">
                 <p>
                     Fab Two is a collaboration between two Beatles enthusiasts,
                     Jarkko and Jonas. Out of love for the music of The Beatles,
@@ -71,7 +71,7 @@ const About = () => {
                 </p>
             </div>
             <Divider marginSize={12} />
-            <h2 className="dark:text-primary-dark font-bold font-lora mb-8 sm:text-5xl text-3xl text-center text-primary-light">
+            <h2 className="dark:text-primary-dark font-bold font-lora lg:text-5xl mb-8 text-3xl text-center text-primary-light">
                 Get in Touch
             </h2>
             <form className="space-y-6" onSubmit={handleSubmit}>

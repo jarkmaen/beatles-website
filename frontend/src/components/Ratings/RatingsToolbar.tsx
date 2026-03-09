@@ -9,8 +9,8 @@ type Props = {
 
 const RatingsToolbar = ({ album, search, setAlbum, setSearch }: Props) => {
     return (
-        <div className="container mx-auto px-4 py-4 sm:px-8 sm:py-6">
-            <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="container lg:px-8 lg:py-6 mx-auto px-4 py-4">
+            <div className="flex flex-col gap-4 lg:flex-row">
                 <div className="flex-grow relative">
                     <input
                         className="bg-surface-light border-0 dark:bg-surface-dark dark:inset-ring-border-dark focus:inset-ring-2 focus:inset-ring-border-focus inset-ring inset-ring-border-light outline-none pl-10 pr-4 py-2 rounded-md transition w-full"

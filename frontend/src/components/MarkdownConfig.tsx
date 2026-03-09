@@ -9,7 +9,7 @@ export const MarkdownA: Components["a"] = ({ children, href, ...props }) => (
 
 export const MarkdownH3: Components["h3"] = ({ ...props }) => (
     <h3
-        className="dark:text-primary-dark font-bold font-lora sm:text-4xl text-2xl text-primary-light"
+        className="dark:text-primary-dark font-bold font-lora lg:text-4xl text-2xl text-primary-light"
         {...props}
     />
 );

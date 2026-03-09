@@ -33,7 +33,7 @@ const HamburgerMenu = () => {
     return (
         <div className="flex items-center justify-center" ref={menuRef}>
             <button
-                className="dark:hover:text-primary-dark dark:text-secondary-dark flex hover:text-primary-light items-center justify-center sm:hidden text-secondary-light"
+                className="dark:hover:text-primary-dark dark:text-secondary-dark flex hover:text-primary-light items-center justify-center lg:hidden text-secondary-light"
                 onClick={() => setOpen((prev) => !prev)}
             >
                 <span className="material-symbols-outlined">dehaze</span>

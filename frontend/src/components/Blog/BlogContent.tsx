@@ -34,7 +34,7 @@ const BlogContent = ({ content }: Props) => {
         }
         case BLOG_CONTENT_TYPES.MARKDOWN: {
             return (
-                <div className="dark:prose-invert hyphens-auto max-w-none prose sm:prose-lg">
+                <div className="dark:prose-invert hyphens-auto lg:prose-lg max-w-none prose">
                     <ReactMarkdown components={{ h3: MarkdownH3 }}>
                         {content.text}
                     </ReactMarkdown>
