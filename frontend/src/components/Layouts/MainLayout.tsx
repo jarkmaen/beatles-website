@@ -7,7 +7,7 @@ const MainLayout = () => {
     return (
         <div className="container lg:px-8 mx-auto px-4">
             <Header key={location.pathname} />
-            <div className="block border-divider-light border-t dark:border-divider-dark lg:hidden ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] w-screen" />
+            <div className="block border-divider-light border-t dark:border-divider-dark ml-[calc(50%_-_50vw)] mr-[calc(50%_-_50vw)] transition w-screen" />
             <main className="lg:py-12 py-8">
                 <Outlet />
             </main>

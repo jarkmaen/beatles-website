@@ -27,7 +27,7 @@ const RatingBreakdown = ({ rating }: Props) => {
 
     return (
         <div className="space-y-4">
-            <h5 className="dark:text-primary-dark font-bold font-lora lg:text-2xl text-primary-light text-xl">
+            <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
                 Rating Breakdown
             </h5>
             <div className="space-y-3">

@@ -29,7 +29,7 @@ const Home = () => {
                             BEATLES SONG OF THE DAY
                         </h6>
                         <ShrinkWrapTitle title={songOfTheDay.title} />
-                        <span className="dark:text-secondary-dark font-body lg:text-2xl text-secondary-light text-xl">
+                        <span className="dark:text-secondary-dark font-body md:text-2xl text-secondary-light text-xl">
                             {songOfTheDay.album}
                         </span>
                     </div>
@@ -37,8 +37,8 @@ const Home = () => {
             </div>
             <div className="gap-8 grid grid-cols-1 lg:gap-12 lg:grid-cols-2 lg:mt-16 max-w-4xl mt-12 mx-auto">
                 <RatingBreakdown rating={songOfTheDay.songRatings[0]} />
-                <div className="dark:prose-invert hyphens-auto lg:prose-lg max-w-none prose">
-                    <h5 className="dark:text-primary-dark font-bold font-lora lg:text-2xl text-primary-light text-xl">
+                <div className="dark:prose-invert hyphens-auto max-w-none md:prose-lg prose">
+                    <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
                         Commentary
                     </h5>
                     {songOfTheDay.commentaryLanding

@@ -76,7 +76,7 @@ const ShrinkWrapTitle = ({ title }: Props) => {
             >
                 {title}
             </h1>
-            <h1 className="block dark:text-primary-dark font-bold font-lora lg:hidden text-4xl text-primary-light">
+            <h1 className="block dark:text-primary-dark font-bold font-lora lg:hidden md:text-5xl text-4xl text-primary-light">
                 {title}
             </h1>
         </>

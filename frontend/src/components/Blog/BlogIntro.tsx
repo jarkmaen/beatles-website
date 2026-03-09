@@ -12,11 +12,11 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
     return (
         <>
             {isBlogPostPage ? (
-                <h2 className="dark:text-primary-dark font-bold font-lora lg:text-5xl text-3xl text-center text-primary-light">
+                <h2 className="dark:text-primary-dark font-bold font-lora lg:text-5xl md:text-4xl text-3xl text-center text-primary-light">
                     {blog.title}
                 </h2>
             ) : (
-                <h2 className="dark:hover:text-secondary-dark dark:text-primary-dark font-bold font-lora hover:text-secondary-light lg:text-5xl text-3xl text-center text-primary-light transition">
+                <h2 className="dark:hover:text-secondary-dark dark:text-primary-dark font-bold font-lora hover:text-secondary-light lg:text-5xl md:text-4xl text-3xl text-center text-primary-light transition">
                     <Link to={`/blogs/${blog.slug}`}>{blog.title}</Link>
                 </h2>
             )}
@@ -38,13 +38,13 @@ const BlogIntro = ({ blog, isBlogPostPage }: Props) => {
                 </div>
             </div>
             {isBlogPostPage ? (
-                <div className="dark:prose-invert hyphens-auto lg:prose-lg max-w-none prose">
+                <div className="dark:prose-invert hyphens-auto max-w-none md:prose-lg prose">
                     <ReactMarkdown components={{ a: MarkdownA }}>
                         {blog.intro}
                     </ReactMarkdown>
                 </div>
             ) : (
-                <div className="dark:prose-invert h-40 hyphens-auto lg:prose-lg max-w-none overflow-hidden prose relative">
+                <div className="dark:prose-invert h-40 hyphens-auto max-w-none md:prose-lg overflow-hidden prose relative">
                     <ReactMarkdown components={{ a: MarkdownA }}>
                         {blog.intro}
                     </ReactMarkdown>
