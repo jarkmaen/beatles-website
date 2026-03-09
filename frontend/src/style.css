@@ -19,6 +19,22 @@
         format("woff2");
 }
 
+@layer base {
+    * {
+        scrollbar-width: thin;
+    }
+
+    html {
+        color-scheme: light;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    html.dark {
+        color-scheme: dark;
+    }
+}
+
 @plugin "@tailwindcss/typography";
 
 @theme {
