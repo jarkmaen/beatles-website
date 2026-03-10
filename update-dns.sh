@@ -6,7 +6,7 @@ TOKEN=$(curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-meta
 
 IP=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/public-ipv4)
 
-curl -X PATCH https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/dns_records/$CF_RECORD_ID \
+curl -s -X PATCH https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/dns_records/$CF_RECORD_ID \
     -H "Authorization: Bearer $CF_API_TOKEN" \
     -H "Content-Type: application/json" \
     -d "{
@@ -15,6 +15,6 @@ curl -X PATCH https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/dns_records
           \"proxied\": true,
           \"ttl\": 1,
           \"type\": \"A\"
-        }"
+        }" > /dev/null
 
 echo "DNS updated to $IP."
