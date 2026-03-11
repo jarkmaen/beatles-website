@@ -6,6 +6,7 @@ A full stack web application for sharing a systematic ranking of every Beatles s
 
 ```mermaid
 graph LR
+    CF{{"Cloudflare Edge<br/>(fabtwo.net)"}}
     Developer((Developer))
     User((User))
 
@@ -13,17 +14,23 @@ graph LR
         Deploy[deploy.sh]
 
         subgraph Docker [Docker]
-            subgraph Container [App Container]
+            subgraph AppContainer [App Container]
                 Frontend[React<br/>Frontend]
                 Backend[NodeJS +<br/>Express]
             end
 
-            DB[(PostgreSQL<br/>Database)]
+            subgraph DBContainer [DB Container]
+                DB[(PostgreSQL<br/>Database)]
+            end
+
+            subgraph TunnelContainer [Cloudflare Container]
+                Tunnel[Cloudflare Tunnel]
+            end
         end
     end
 
     subgraph DevOps [DevOps]
-        Repository[Repository]
+        Repository[GitHub Repository]
         Actions[GitHub Actions]
     end
 
@@ -33,10 +40,12 @@ graph LR
     Deploy -- "git pull" --> Repository
     Deploy -- "compose" --> Docker
 
-    Frontend <--> |"API Requests"| Backend
+    Frontend <-- REST API --> Backend
     Backend <--> DB
 
-    User -- "Port 80" --> Container
+    User <-- "HTTPS" --> CF
+    Tunnel <-- "outbound connection" --> CF
+    Tunnel <-- "port 3000" --> AppContainer
 ```
 
 ## Tech stack
