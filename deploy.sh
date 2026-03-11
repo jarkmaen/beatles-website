@@ -6,6 +6,6 @@ echo "Fetching latest changes from Git..."
 git pull
 
 echo "Building new image and bringing services up..."
-sudo docker compose up --build -d
+sudo docker compose up -d --build --remove-orphans
 
 echo "Deployment successful."
