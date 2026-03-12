@@ -5,10 +5,13 @@ set -e
 echo "Fetching latest changes from Git..."
 git pull
 
+echo "Building new images..."
+sudo docker compose build --pull
+
+echo "Restarting services..."
+sudo docker compose up --remove-orphans -d
+
 echo "Cleaning unused Docker resources..."
 sudo docker system prune -f
-
-echo "Building new image and bringing services up..."
-sudo docker compose up --build --remove-orphans -d
 
 echo "Deployment successful."
