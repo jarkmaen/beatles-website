@@ -32,12 +32,12 @@ const Home = () => {
         <>
             <div className="flex justify-center">
                 <div className="flex flex-col gap-8 items-center justify-center lg:flex-row max-w-5xl">
-                    <h6 className="dark:text-muted-dark font-body lg:hidden text-muted-light text-lg tracking-widest">
+                    <h6 className="dark:text-muted-dark font-body lg:hidden text-center text-muted-light text-lg tracking-widest">
                         BEATLES SONG OF THE DAY
                     </h6>
                     <CoverImage src={ALBUM_COVER_MAP[songOfTheDay.album]} />
                     <div className="lg:text-left text-center">
-                        <h6 className="dark:text-muted-dark font-body hidden lg:block mb-2 text-center text-muted-light text-xl tracking-widest">
+                        <h6 className="dark:text-muted-dark font-body hidden lg:block mb-2 text-muted-light text-xl tracking-widest">
                             BEATLES SONG OF THE DAY
                         </h6>
                         <ShrinkWrapTitle title={songOfTheDay.title} />
