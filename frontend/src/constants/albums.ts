@@ -1,17 +1,17 @@
-import abbeyRoadCover from "../assets/images/abbey_road.jpg";
-import beatlesForSaleCover from "../assets/images/beatles_for_sale.jpg";
-import hardDaysNightCover from "../assets/images/a_hard_days_night.jpg";
-import helpCover from "../assets/images/help.png";
-import letItBeCover from "../assets/images/let_it_be.png";
-import magicalMysteryTourCover from "../assets/images/magical_mystery_tour.jpg";
-import pastMastersCover from "../assets/images/past_masters.png";
-import pleasePleaseMeCover from "../assets/images/please_please_me.png";
-import revolverCover from "../assets/images/revolver.jpg";
-import rubberSoulCover from "../assets/images/rubber_soul.png";
-import sgtPepperCover from "../assets/images/sgt_pepper.jpg";
-import whiteAlbumCover from "../assets/images/the_beatles.jpg";
-import withTheBeatlesCover from "../assets/images/with_the_beatles.png";
-import yellowSubmarineCover from "../assets/images/yellow_submarine.jpg";
+import abbeyRoadCover from "../assets/images/abbey_road.webp";
+import beatlesForSaleCover from "../assets/images/beatles_for_sale.webp";
+import hardDaysNightCover from "../assets/images/a_hard_days_night.webp";
+import helpCover from "../assets/images/help.webp";
+import letItBeCover from "../assets/images/let_it_be.webp";
+import magicalMysteryTourCover from "../assets/images/magical_mystery_tour.webp";
+import pastMastersCover from "../assets/images/past_masters.webp";
+import pleasePleaseMeCover from "../assets/images/please_please_me.webp";
+import revolverCover from "../assets/images/revolver.webp";
+import rubberSoulCover from "../assets/images/rubber_soul.webp";
+import sgtPepperCover from "../assets/images/sgt_pepper.webp";
+import whiteAlbumCover from "../assets/images/the_beatles.webp";
+import withTheBeatlesCover from "../assets/images/with_the_beatles.webp";
+import yellowSubmarineCover from "../assets/images/yellow_submarine.webp";
 
 export const ALBUM_COVER_MAP = {
     "A Hard Day's Night": hardDaysNightCover,
