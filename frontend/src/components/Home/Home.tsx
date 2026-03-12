@@ -40,7 +40,10 @@ const Home = () => {
                     <h6 className="dark:text-muted-dark font-body lg:hidden text-center text-muted-light text-lg tracking-widest">
                         BEATLES SONG OF THE DAY
                     </h6>
-                    <CoverImage src={ALBUM_COVER_MAP[songOfTheDay.album]} />
+                    <CoverImage
+                        alt={songOfTheDay.album}
+                        src={ALBUM_COVER_MAP[songOfTheDay.album]}
+                    />
                     <div className="lg:text-left text-center">
                         <h6 className="dark:text-muted-dark font-body hidden lg:block mb-2 text-muted-light text-xl tracking-widest">
                             BEATLES SONG OF THE DAY
