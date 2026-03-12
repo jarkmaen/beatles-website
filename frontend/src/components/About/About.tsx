@@ -43,6 +43,8 @@ const About = () => {
 
     return (
         <div className="max-w-4xl mx-auto">
+            <title>About | Fab Two</title>
+            <meta content="Learn more about the Fab Two project and how to get in touch." name="description" ></meta>
             <h2 className="dark:text-primary-dark font-bold font-lora lg:text-5xl mb-8 text-4xl text-center text-primary-light">
                 About Us
             </h2>

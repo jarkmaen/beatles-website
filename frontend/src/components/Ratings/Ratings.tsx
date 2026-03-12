@@ -92,6 +92,11 @@ const Ratings = () => {
 
     return (
         <>
+            <title>Ratings | Fab Two</title>
+            <meta
+                content="The complete Beatles song ratings table. View our ratings for every original track. Filter by album or search for any song."
+                name="description"
+            ></meta>
             <RatingsToolbar
                 album={album}
                 search={search}

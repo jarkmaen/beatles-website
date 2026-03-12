@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 const PageNotFound = () => {
     return (
         <div className="flex flex-col items-center justify-center lg:-mt-[48px] lg:min-h-[calc(100vh-185px)] max-w-2xl mx-auto sm:-mt-[32px] sm:min-h-[calc(100vh-125px)]">
+            <title>404 Not Found | Fab Two</title>
             <h1 className="dark:text-backdrop-dark font-bold font-lora select-none sm:text-[11rem] text-9xl text-backdrop-light transition">
                 404
             </h1>

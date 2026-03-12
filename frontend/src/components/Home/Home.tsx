@@ -30,6 +30,11 @@ const Home = () => {
 
     return (
         <>
+            <title>Beatles Song of the Day | Fab Two</title>
+            <meta
+                content="Discover a new Beatles masterpiece every day. Daily ratings and commentary for every song by the world's greatest band."
+                name="description"
+            ></meta>
             <div className="flex justify-center">
                 <div className="flex flex-col gap-8 items-center justify-center lg:flex-row max-w-5xl">
                     <h6 className="dark:text-muted-dark font-body lg:hidden text-center text-muted-light text-lg tracking-widest">

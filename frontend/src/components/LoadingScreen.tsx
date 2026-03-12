@@ -1,6 +1,8 @@
 const LoadingScreen = () => {
     return (
         <div className="-mt-[32px] flex flex-col items-center justify-center lg:-mt-[48px] lg:min-h-[calc(100vh-185px)] max-w-xl min-h-[calc(100vh-125px)] mx-auto">
+            <title>Loading... | Fab Two</title>
+            <meta content="noindex" name="robots" />
             <div className="h-20 mb-10 relative w-20">
                 <div className="absolute border-4 border-gray-200 dark:border-gray-800 inset-0 rounded-full" />
                 <div className="absolute animate-spin border-4 border-t-primary-light border-transparent dark:border-t-primary-dark inset-0 rounded-full" />

@@ -7,6 +7,11 @@ const BlogList = () => {
 
     return (
         <div className="max-w-4xl mx-auto space-y-16">
+            <title>Blog | Fab Two</title>
+            <meta
+                content="Read the latest blog posts from Fab Two. Join us as we rank music, explore their solo careers and uncover hidden gems from the world of the Beatles."
+                name="description"
+            ></meta>
             {blogs.map((blog, i) => (
                 <BlogListItem
                     blog={blog}

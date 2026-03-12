@@ -18,6 +18,12 @@ const BlogPost = () => {
 
     const blog = blogs.find((b) => b.slug === slug);
 
+    useEffect(() => {
+        if (blog) {
+            document.title = `${blog.title} | Fab Two`;
+        }
+    }, [blog]);
+
     if (loading) {
         return <LoadingScreen />;
     } else if (!blog) {
