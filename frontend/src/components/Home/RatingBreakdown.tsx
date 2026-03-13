@@ -30,7 +30,7 @@ const RatingBreakdown = ({ isLongText, song }: Props) => {
         });
 
     return (
-        <div className="lg:self-start lg:space-y-16 lg:sticky lg:top-4">
+        <div className="lg:self-start lg:sticky lg:top-4">
             <div className="space-y-4">
                 <h5 className="dark:text-primary-dark font-bold font-lora md:text-2xl text-primary-light text-xl">
                     Rating Breakdown
@@ -52,9 +52,11 @@ const RatingBreakdown = ({ isLongText, song }: Props) => {
                     })}
                 </div>
             </div>
-            <div className="flex-col hidden lg:flex text-center">
-                {isLongText && <OverallScore song={song} />}
-            </div>
+            {isLongText && (
+                <div className="flex-col hidden lg:flex lg:mt-16 text-center">
+                    <OverallScore song={song} />
+                </div>
+            )}
         </div>
     );
 };
