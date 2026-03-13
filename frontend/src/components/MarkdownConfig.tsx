@@ -1,5 +1,5 @@
+import type { Components } from "react-markdown";
 import { Link } from "react-router-dom";
-import { type Components } from "react-markdown";
 
 export const MarkdownA: Components["a"] = ({ children, href, ...props }) => (
     <Link to={href ?? ""} {...props}>
