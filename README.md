@@ -1,10 +1,10 @@
-# Fab Two - Beatles Website
+# Fab Two
 
 ## Overview
 
 A full stack web application for sharing a systematic ranking, as well as blog posts about the Beatles. My friend and I rated every track based on multiple parameters (like instrumentation, vocals, lyrics...) to try to create an "objective" ranking of their entire discography. Our rating data and commentary for each song can be found on the site. The home page also has a "Beatles Song of the Day" feature.
 
-You can visit the website here: [fabtwo.net](https://fabtwo.net/)
+Visit the website here: [fabtwo.net](https://fabtwo.net/)
 
 ```mermaid
 graph LR
