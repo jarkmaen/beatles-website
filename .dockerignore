@@ -1,5 +1,5 @@
 .env
-.github
+.github/
 .gitignore
 documentation/
 README.md
