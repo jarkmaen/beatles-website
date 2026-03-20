@@ -1,16 +1,16 @@
 # Blog posts
 
-This document tracks the different formats for the content column in the blog_post table and shows example SQL inserts for each. All content is stored as JSONB.
+Adding new blog posts to the application is done through SQL commands. This document defines the blog content types and gives example SQL inserts for each.
 
-There are currently 3 supported types:
+There are currently three supported types:
 
-- `default_ranking`: Uses the main systematic ranking data.
-- `manual_ranking`: Custom lists with own commentary.
-- `markdown`: Standard text articles with Markdown support.
+- `default_ranking`: Reserved for the application's main Beatles discography ranking blog post.
+- `manual_ranking`: Custom ranking lists with own commentary.
+- `markdown`: Standard text based articles with Markdown support.
 
 ## Default ranking
 
-Automated template that pulls the systematic ranking data directly from the database/logic. No manual item entry required.
+Automated template that pulls the ranking data from the database.
 
 ```sql
 INSERT INTO blog_post (author, intro, content, slug, title)
@@ -25,7 +25,7 @@ VALUES (
 
 ## Manual ranking
 
-Used for custom lists (e.g., "Top 10 George Harrison Tracks"). Each item requires a commentary, a rank and a title.
+For custom ranking lists such as "Top 10 George Harrison Tracks". Each item requires a commentary, a rank and a title.
 
 ```sql
 INSERT INTO blog_post (author, intro, content, slug, title)
@@ -47,7 +47,7 @@ VALUES (
 
 ## Markdown
 
-The standard format for long-form articles or essays. Markdown syntax is used to structure the page content.
+For standard text based articles. Markdown syntax is used to structure the page content.
 
 ```sql
 INSERT INTO blog_post (author, intro, content, slug, title)
