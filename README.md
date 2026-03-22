@@ -18,7 +18,7 @@ graph LR
         subgraph Docker [Docker]
             subgraph AppContainer [App Container]
                 Frontend[React<br/>Frontend]
-                Backend[NodeJS +<br/>Express]
+                Backend[Node.js +<br/>Express]
             end
 
             subgraph DBContainer [DB Container]
